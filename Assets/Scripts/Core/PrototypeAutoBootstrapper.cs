@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TanamSawit.Managers;
 using TanamSawit.Buildings;
 using TanamSawit.SaveSystem;
@@ -37,15 +38,22 @@ namespace TanamSawit.Core
                 managersHost.AddComponent<EnvironmentalKarmaManager>();
                 managersHost.AddComponent<RivalManager>();
                 managersHost.AddComponent<SaveManager>();
+                managersHost.AddComponent<SettingsManager>();
 
                 // Pasang visual 2D Grid & Ecology Spawner
                 managersHost.AddComponent<GridManager>();
                 managersHost.AddComponent<EcologySpawner>();
 
-                // Pasang HUD Prototype Interaktif di layar Game View
-                managersHost.AddComponent<TycoonHUD>();
+                // Scene opening gameplay dipakai untuk karakter yang dapat dijalankan.
+                // HUD prototype memakai OnGUI dan selalu berada di depan SpriteRenderer,
+                // jadi jangan buat HUD pada scene ini agar karakter tetap terlihat.
+                bool isOpeningGameplay = SceneManager.GetActiveScene().name == "opening gameplay";
+                if (!isOpeningGameplay)
+                    managersHost.AddComponent<TycoonHUD>();
 
-                Debug.Log("<color=#00FF66><b>[Tanam Sawit]</b> Semua Manager & HUD berhasil diaktifkan secara otomatis!</color>");
+                Debug.Log(isOpeningGameplay
+                    ? "<color=#00FF66><b>[Tanam Sawit]</b> Manager opening gameplay aktif tanpa HUD prototype.</color>"
+                    : "<color=#00FF66><b>[Tanam Sawit]</b> Semua Manager & HUD berhasil diaktifkan secara otomatis!</color>");
             }
         }
     }

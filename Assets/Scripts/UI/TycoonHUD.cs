@@ -18,7 +18,7 @@ namespace TanamSawit.UI
         [SerializeField] private bool showPrototypeGUI = true;
 
         private int selectedTab = 0;
-        private readonly string[] tabNames = new string[] { "🌾 Kebun", "🚜 Lahan", "💳 Kredit", "📊 Sepupu", "💾 Save" };
+        private readonly string[] tabNames = new string[] { "🌾 Kebun", "🚜 Lahan", "💳 Kredit", "📊 Sepupu", "💾 Save", "⚙️ Setting" };
         private string lastSaveMessage = "";
 
         private void OnEnable()
@@ -48,6 +48,12 @@ namespace TanamSawit.UI
 
             // Box Panel Utama
             GUI.Box(new Rect(15, 15, 480, 520), "<b>=== TANAM SAWIT: CORE GAMEPLAY PROTOTYPE ===</b>");
+
+            // Tombol Cepat Pengaturan di Pojok Kanan Header
+            if (GUI.Button(new Rect(398, 18, 90, 22), "⚙️ Setting"))
+            {
+                SettingsManager.Instance?.ToggleSettings();
+            }
 
             GUILayout.BeginArea(new Rect(25, 45, 460, 480));
 
@@ -83,6 +89,9 @@ namespace TanamSawit.UI
                     break;
                 case 4:
                     DrawSaveLoadTab();
+                    break;
+                case 5:
+                    DrawSettingsTab();
                     break;
             }
 
@@ -337,6 +346,32 @@ namespace TanamSawit.UI
 
                 GUILayout.Space(8);
                 GUILayout.Label("<color=#CCCCCC><b>Catatan Sistem:</b>\n• Auto-save otomatis berjalan setiap berganti bulan baru.\n• Data disimpan dalam format JSON terstruktur di disk lokal.</color>");
+            }
+            GUILayout.EndVertical();
+        }
+
+        private void DrawSettingsTab()
+        {
+            GUILayout.BeginVertical("box");
+            GUILayout.Label("<b>PENGATURAN GAME (SETTINGS)</b>");
+            GUILayout.Space(6);
+            GUILayout.Label("Klik tombol di bawah untuk menampilkan jendela popup Pengaturan lengkap (Volume Sliding Bar, Mode Fullscreen/Windowed, dan Tombol Tutup).");
+            GUILayout.Space(10);
+
+            if (GUILayout.Button("<b>⚙️ BUKA JENDELA POPUP PENGATURAN</b>", GUILayout.Height(36)))
+            {
+                SettingsManager.Instance?.OpenSettings();
+            }
+
+            GUILayout.Space(12);
+
+            // Ringkasan Cepat Status Audio & Layar
+            if (SettingsManager.Instance != null)
+            {
+                int vol = Mathf.RoundToInt(SettingsManager.Instance.MasterVolume * 100f);
+                string screenMode = SettingsManager.Instance.IsFullscreen ? "Fullscreen (Layar Penuh)" : "Windowed (Mode Jendela)";
+                GUILayout.Label($"<b>Status Audio:</b> Volume Master {vol}%");
+                GUILayout.Label($"<b>Mode Tampilan:</b> {screenMode}");
             }
             GUILayout.EndVertical();
         }

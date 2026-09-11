@@ -1,0 +1,5514 @@
+fileFormatVersion: 2
+guid: bfa94074862b97e4ab4a7d5074576659
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2302145542135609079
+    second: ExplorerWalk_0
+  - first:
+      213: 8338173045431098026
+    second: ExplorerWalk_1
+  - first:
+      213: 5179980287692446011
+    second: ExplorerWalk_2
+  - first:
+      213: -1147316206987845339
+    second: ExplorerWalk_3
+  - first:
+      213: -4330809274605841331
+    second: ExplorerWalk_4
+  - first:
+      213: 2749766815721487043
+    second: ExplorerWalk_5
+  - first:
+      213: 5241385876957030035
+    second: ExplorerWalk_6
+  - first:
+      213: 7290427878145267779
+    second: ExplorerWalk_7
+  - first:
+      213: -7717142056432171023
+    second: ExplorerWalk_8
+  - first:
+      213: -8406671989991359202
+    second: ExplorerWalk_9
+  - first:
+      213: -1784864827768063878
+    second: ExplorerWalk_10
+  - first:
+      213: -3461700888550467619
+    second: ExplorerWalk_11
+  - first:
+      213: 3264759715813572673
+    second: ExplorerWalk_12
+  - first:
+      213: -7410862811064477221
+    second: ExplorerWalk_13
+  - first:
+      213: 1834327200735548428
+    second: ExplorerWalk_14
+  - first:
+      213: 5882346043108450526
+    second: ExplorerWalk_15
+  - first:
+      213: -4768632012095928111
+    second: ExplorerWalk_16
+  - first:
+      213: 4223729571256872874
+    second: ExplorerWalk_17
+  - first:
+      213: 7492223078708927359
+    second: ExplorerWalk_18
+  - first:
+      213: 4943229028628771355
+    second: ExplorerWalk_19
+  - first:
+      213: 4442986424765774385
+    second: ExplorerWalk_20
+  - first:
+      213: -3171656654023285089
+    second: ExplorerWalk_21
+  - first:
+      213: -1572601903473074017
+    second: ExplorerWalk_22
+  - first:
+      213: 1604828985698526629
+    second: ExplorerWalk_23
+  - first:
+      213: 1457052290813719569
+    second: ExplorerWalk_24
+  - first:
+      213: -5811354555987343146
+    second: ExplorerWalk_25
+  - first:
+      213: -6509930786613005801
+    second: ExplorerWalk_26
+  - first:
+      213: 1674221929247382324
+    second: ExplorerWalk_27
+  - first:
+      213: -3808423691598600620
+    second: ExplorerWalk_28
+  - first:
+      213: 2179528143972498023
+    second: ExplorerWalk_29
+  - first:
+      213: 3236821056005923235
+    second: ExplorerWalk_30
+  - first:
+      213: -3798511703611137817
+    second: ExplorerWalk_31
+  - first:
+      213: -7209772143394580219
+    second: ExplorerWalk_32
+  - first:
+      213: 6112924827339445447
+    second: ExplorerWalk_33
+  - first:
+      213: 7749990911574001452
+    second: ExplorerWalk_34
+  - first:
+      213: -8206255370090592416
+    second: ExplorerWalk_35
+  - first:
+      213: 7783427665461261817
+    second: ExplorerWalk_36
+  - first:
+      213: -7002771151554936984
+    second: ExplorerWalk_37
+  - first:
+      213: -9079123971346315827
+    second: ExplorerWalk_38
+  - first:
+      213: -6142892565102497670
+    second: ExplorerWalk_39
+  - first:
+      213: -8568137413551506650
+    second: ExplorerWalk_40
+  - first:
+      213: -3281036282258540029
+    second: ExplorerWalk_41
+  - first:
+      213: 3234870639214116665
+    second: ExplorerWalk_42
+  - first:
+      213: -4036606366780000204
+    second: ExplorerWalk_43
+  - first:
+      213: -6929518234815753600
+    second: ExplorerWalk_44
+  - first:
+      213: 4541829868547987780
+    second: ExplorerWalk_45
+  - first:
+      213: -5173477236348852677
+    second: ExplorerWalk_46
+  - first:
+      213: 6834915960169885737
+    second: ExplorerWalk_47
+  - first:
+      213: -5956287123009521904
+    second: ExplorerWalk_48
+  - first:
+      213: -7809697128816732086
+    second: ExplorerWalk_49
+  - first:
+      213: 8722312799172395317
+    second: ExplorerWalk_50
+  - first:
+      213: -7935074849074350513
+    second: ExplorerWalk_51
+  - first:
+      213: 2602173466157445153
+    second: ExplorerWalk_52
+  - first:
+      213: 7786837684892066178
+    second: ExplorerWalk_53
+  - first:
+      213: -6842895931979464834
+    second: ExplorerWalk_54
+  - first:
+      213: 4471612132858007108
+    second: ExplorerWalk_55
+  - first:
+      213: 5953090032516894220
+    second: ExplorerWalk_56
+  - first:
+      213: -7515286331614098044
+    second: ExplorerWalk_57
+  - first:
+      213: -2251412436733195993
+    second: ExplorerWalk_58
+  - first:
+      213: 6540595998097383259
+    second: ExplorerWalk_59
+  - first:
+      213: 604123915923496247
+    second: ExplorerWalk_60
+  - first:
+      213: -8264361220041758264
+    second: ExplorerWalk_61
+  - first:
+      213: -3777589065484786185
+    second: ExplorerWalk_62
+  - first:
+      213: -6438957758284348207
+    second: ExplorerWalk_63
+  - first:
+      213: -6502292065286254552
+    second: ExplorerWalk_64
+  - first:
+      213: -6197367834031021520
+    second: ExplorerWalk_65
+  - first:
+      213: -5855493998842575469
+    second: ExplorerWalk_66
+  - first:
+      213: -2304440147191336200
+    second: ExplorerWalk_67
+  - first:
+      213: -1498310108349910144
+    second: ExplorerWalk_68
+  - first:
+      213: -8104407442969719052
+    second: ExplorerWalk_69
+  - first:
+      213: 5321297989309098966
+    second: ExplorerWalk_70
+  - first:
+      213: -4680587854631147085
+    second: ExplorerWalk_71
+  - first:
+      213: 5825372638329165193
+    second: ExplorerWalk_72
+  - first:
+      213: 1090303747271967696
+    second: ExplorerWalk_73
+  - first:
+      213: -7513535937499014987
+    second: ExplorerWalk_74
+  - first:
+      213: -1040701597099114946
+    second: ExplorerWalk_75
+  - first:
+      213: -4878326332303739279
+    second: ExplorerWalk_76
+  - first:
+      213: -4317429828534548297
+    second: ExplorerWalk_77
+  - first:
+      213: -4875083533494322632
+    second: ExplorerWalk_78
+  - first:
+      213: -7115869366288252961
+    second: ExplorerWalk_79
+  - first:
+      213: 4511814489883610124
+    second: ExplorerWalk_80
+  - first:
+      213: 15611866440057272
+    second: ExplorerWalk_81
+  - first:
+      213: 6208225065828148636
+    second: ExplorerWalk_82
+  - first:
+      213: 5178980177676585378
+    second: ExplorerWalk_83
+  - first:
+      213: 1086686024860899892
+    second: ExplorerWalk_84
+  - first:
+      213: -7329126960218937166
+    second: ExplorerWalk_85
+  - first:
+      213: 6018711803966034723
+    second: ExplorerWalk_86
+  - first:
+      213: 6926815533746259572
+    second: ExplorerWalk_87
+  - first:
+      213: 3317368629204262035
+    second: ExplorerWalk_88
+  - first:
+      213: -5487789637716297534
+    second: ExplorerWalk_89
+  - first:
+      213: 8053972631124788549
+    second: ExplorerWalk_90
+  - first:
+      213: 493707723794711616
+    second: ExplorerWalk_91
+  - first:
+      213: -5141848632613373357
+    second: ExplorerWalk_92
+  - first:
+      213: 5207029907800441602
+    second: ExplorerWalk_93
+  - first:
+      213: -8533309078605218936
+    second: ExplorerWalk_94
+  - first:
+      213: -2736031825048848047
+    second: ExplorerWalk_95
+  - first:
+      213: 3374358787260933402
+    second: ExplorerWalk_96
+  - first:
+      213: 1217355899909344811
+    second: ExplorerWalk_97
+  - first:
+      213: 8620869905367796195
+    second: ExplorerWalk_98
+  - first:
+      213: 8815551512647910984
+    second: ExplorerWalk_99
+  - first:
+      213: 6383121005484472722
+    second: ExplorerWalk_100
+  - first:
+      213: -8141574480221818843
+    second: ExplorerWalk_101
+  - first:
+      213: 9186858633046375199
+    second: ExplorerWalk_102
+  - first:
+      213: 6859587773514932978
+    second: ExplorerWalk_103
+  - first:
+      213: -7432459598915961935
+    second: ExplorerWalk_104
+  - first:
+      213: 3364971993619531133
+    second: ExplorerWalk_105
+  - first:
+      213: -1349833882663346468
+    second: ExplorerWalk_106
+  - first:
+      213: 580541226966429129
+    second: ExplorerWalk_107
+  - first:
+      213: -3123331859254924110
+    second: ExplorerWalk_108
+  - first:
+      213: 1787378502347135589
+    second: ExplorerWalk_109
+  - first:
+      213: 6068218749919003672
+    second: ExplorerWalk_110
+  - first:
+      213: 3499333653742683549
+    second: ExplorerWalk_111
+  - first:
+      213: -3894036192874959419
+    second: ExplorerWalk_112
+  - first:
+      213: 5109615971953210445
+    second: ExplorerWalk_113
+  - first:
+      213: 8632970764714402406
+    second: ExplorerWalk_114
+  - first:
+      213: 7661187400002452989
+    second: ExplorerWalk_115
+  - first:
+      213: -6034737025422584944
+    second: ExplorerWalk_116
+  - first:
+      213: 633044518189309277
+    second: ExplorerWalk_117
+  - first:
+      213: 3058473109006390263
+    second: ExplorerWalk_118
+  - first:
+      213: 7698277598113468991
+    second: ExplorerWalk_119
+  - first:
+      213: -658952272976467098
+    second: ExplorerWalk_120
+  - first:
+      213: 7038677681674722842
+    second: ExplorerWalk_121
+  - first:
+      213: -8788952304431076292
+    second: ExplorerWalk_122
+  - first:
+      213: -4849344005061705110
+    second: ExplorerWalk_123
+  - first:
+      213: 7898174570040844613
+    second: ExplorerWalk_124
+  - first:
+      213: 1416224386027198706
+    second: ExplorerWalk_125
+  - first:
+      213: 8379354684717871600
+    second: ExplorerWalk_126
+  - first:
+      213: -2065908651560599502
+    second: ExplorerWalk_127
+  - first:
+      213: -4722523333814541508
+    second: ExplorerWalk_128
+  - first:
+      213: 1154009950614759677
+    second: ExplorerWalk_129
+  - first:
+      213: 5098288348063841153
+    second: ExplorerWalk_130
+  - first:
+      213: 4152167515140031149
+    second: ExplorerWalk_131
+  - first:
+      213: -7617463653907051339
+    second: ExplorerWalk_132
+  - first:
+      213: -86648327789712343
+    second: ExplorerWalk_133
+  - first:
+      213: -2534847365147427984
+    second: ExplorerWalk_134
+  - first:
+      213: -462092875624230309
+    second: ExplorerWalk_135
+  - first:
+      213: 492020843424519515
+    second: ExplorerWalk_136
+  - first:
+      213: 2537713936048806406
+    second: ExplorerWalk_137
+  - first:
+      213: 7286897893825065798
+    second: ExplorerWalk_138
+  - first:
+      213: 6589564780628667596
+    second: ExplorerWalk_139
+  - first:
+      213: 8199341469087834473
+    second: ExplorerWalk_140
+  - first:
+      213: 837270278324865517
+    second: ExplorerWalk_141
+  - first:
+      213: 8947741583063841988
+    second: ExplorerWalk_142
+  - first:
+      213: -6440741470111301492
+    second: ExplorerWalk_143
+  - first:
+      213: -946608177473374717
+    second: ExplorerWalk_144
+  - first:
+      213: 1061832023760113669
+    second: ExplorerWalk_145
+  - first:
+      213: 5263025100712717813
+    second: ExplorerWalk_146
+  - first:
+      213: 5183823731898962676
+    second: ExplorerWalk_147
+  - first:
+      213: 1066163562358669865
+    second: ExplorerWalk_148
+  - first:
+      213: -7019689296790666443
+    second: ExplorerWalk_149
+  - first:
+      213: 8349151949056356074
+    second: ExplorerWalk_150
+  - first:
+      213: -3891189937086516884
+    second: ExplorerWalk_151
+  - first:
+      213: 5836823014842653814
+    second: ExplorerWalk_152
+  - first:
+      213: 7553334198444495398
+    second: ExplorerWalk_153
+  - first:
+      213: 6766225893719176928
+    second: ExplorerWalk_154
+  - first:
+      213: 7850319700290376315
+    second: ExplorerWalk_155
+  - first:
+      213: 1308099483354370518
+    second: ExplorerWalk_156
+  - first:
+      213: -8340113856512159840
+    second: ExplorerWalk_157
+  - first:
+      213: 3638194806805160314
+    second: ExplorerWalk_158
+  - first:
+      213: 1214689642345955558
+    second: ExplorerWalk_159
+  - first:
+      213: -8359474861477874477
+    second: ExplorerWalk_160
+  - first:
+      213: -4999797541418415796
+    second: ExplorerWalk_161
+  - first:
+      213: -2994000127879811173
+    second: ExplorerWalk_162
+  - first:
+      213: 8183868298240264417
+    second: ExplorerWalk_163
+  - first:
+      213: 8143169583547779405
+    second: ExplorerWalk_164
+  - first:
+      213: -1153325357993405351
+    second: ExplorerWalk_165
+  - first:
+      213: -4824772357163515983
+    second: ExplorerWalk_166
+  - first:
+      213: 308895836835734391
+    second: ExplorerWalk_167
+  - first:
+      213: 4577122506984626974
+    second: ExplorerWalk_168
+  - first:
+      213: -7548621381687377320
+    second: ExplorerWalk_169
+  - first:
+      213: -405346971006300294
+    second: ExplorerWalk_170
+  - first:
+      213: -4322145470260885545
+    second: ExplorerWalk_171
+  - first:
+      213: -7567510085379497699
+    second: ExplorerWalk_172
+  - first:
+      213: -7463470937360379004
+    second: ExplorerWalk_173
+  - first:
+      213: -4840328430824408552
+    second: ExplorerWalk_174
+  - first:
+      213: -566308573358335385
+    second: ExplorerWalk_175
+  - first:
+      213: 4699436832962774828
+    second: ExplorerWalk_176
+  - first:
+      213: -1034036814377400414
+    second: ExplorerWalk_177
+  - first:
+      213: -8588770597526630804
+    second: ExplorerWalk_178
+  - first:
+      213: -2127249565329265975
+    second: ExplorerWalk_179
+  - first:
+      213: 3934106114533524662
+    second: ExplorerWalk_180
+  - first:
+      213: -923444460354666932
+    second: ExplorerWalk_181
+  - first:
+      213: -3505439574865136731
+    second: ExplorerWalk_182
+  - first:
+      213: -9050226572971101183
+    second: ExplorerWalk_183
+  - first:
+      213: 4829120858610533913
+    second: ExplorerWalk_184
+  - first:
+      213: 6222650506068210640
+    second: ExplorerWalk_185
+  - first:
+      213: 8781906620946084037
+    second: ExplorerWalk_186
+  - first:
+      213: -2107471297564004487
+    second: ExplorerWalk_187
+  - first:
+      213: -4903458960915098763
+    second: ExplorerWalk_188
+  - first:
+      213: -5137757934145102346
+    second: ExplorerWalk_189
+  - first:
+      213: 4883797722696971457
+    second: ExplorerWalk_190
+  - first:
+      213: -3387617917770647187
+    second: ExplorerWalk_191
+  - first:
+      213: 3114499640032996868
+    second: ExplorerWalk_192
+  - first:
+      213: -5953487684045471863
+    second: ExplorerWalk_193
+  - first:
+      213: 476356538343433179
+    second: ExplorerWalk_194
+  - first:
+      213: 8940417043173972077
+    second: ExplorerWalk_195
+  - first:
+      213: -3834787181143019456
+    second: ExplorerWalk_196
+  - first:
+      213: -8691391682484394119
+    second: ExplorerWalk_197
+  - first:
+      213: 590516594566660100
+    second: ExplorerWalk_198
+  - first:
+      213: 1773742179503434920
+    second: ExplorerWalk_199
+  - first:
+      213: -5981613325602636719
+    second: ExplorerWalk_200
+  - first:
+      213: -3136983324289333084
+    second: ExplorerWalk_201
+  - first:
+      213: 3260027220695647853
+    second: ExplorerWalk_202
+  - first:
+      213: -6887917269124971374
+    second: ExplorerWalk_203
+  - first:
+      213: -4075267101871183545
+    second: ExplorerWalk_204
+  - first:
+      213: -43618430344703643
+    second: ExplorerWalk_205
+  - first:
+      213: 5790324552369730851
+    second: ExplorerWalk_206
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 4096
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 0
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ExplorerWalk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 85
+        height: 750
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90902c3a3d22d00e0800000000000000
+      internalID: -2302145542135609079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 723
+        width: 15
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa58a0153427b370800000000000000
+      internalID: 8338173045431098026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_2
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 613
+        width: 174
+        height: 139
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b391f6f70acf2e740800000000000000
+      internalID: 5179980287692446011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_3
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 305
+        height: 752
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 521e07d0df9e310f0800000000000000
+      internalID: -1147316206987845339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_4
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 719
+        width: 33
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d44d62d09efd5e3c0800000000000000
+      internalID: -4330809274605841331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_5
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 727
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ca7c3a9952292620800000000000000
+      internalID: 2749766815721487043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_6
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 723
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 396e5ce5fa42db840800000000000000
+      internalID: 5241385876957030035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_7
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 633
+        width: 88
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3481471678dcc2560800000000000000
+      internalID: 7290427878145267779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_8
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 648
+        width: 129
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f70225df2437e490800000000000000
+      internalID: -7717142056432171023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_9
+      rect:
+        serializedVersion: 2
+        x: 736
+        y: 671
+        width: 47
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1db6559d50855b80800000000000000
+      internalID: -8406671989991359202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_10
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 569
+        width: 135
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a78bbc055e2ea37e0800000000000000
+      internalID: -1784864827768063878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_11
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 703
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd79b4bf16195ffc0800000000000000
+      internalID: -3461700888550467619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_12
+      rect:
+        serializedVersion: 2
+        x: 872
+        y: 705
+        width: 43
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 140c2120aa1ce4d20800000000000000
+      internalID: 3264759715813572673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_13
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 1
+        width: 103
+        height: 751
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd9595ba983572990800000000000000
+      internalID: -7410862811064477221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_14
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 727
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04dda1ded6d47910800000000000000
+      internalID: 1834327200735548428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_15
+      rect:
+        serializedVersion: 2
+        x: 908
+        y: 743
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed067696f8a42a150800000000000000
+      internalID: 5882346043108450526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_16
+      rect:
+        serializedVersion: 2
+        x: 945
+        y: 703
+        width: 53
+        height: 49
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d84776437a62ddb0800000000000000
+      internalID: -4768632012095928111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_17
+      rect:
+        serializedVersion: 2
+        x: 953
+        y: 725
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf2412baa3bd9a30800000000000000
+      internalID: 4223729571256872874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_18
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 661
+        width: 58
+        height: 91
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7bdd60d139b9f760800000000000000
+      internalID: 7492223078708927359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_19
+      rect:
+        serializedVersion: 2
+        x: 1026
+        y: 650
+        width: 57
+        height: 102
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1231d67c90e99440800000000000000
+      internalID: 4943229028628771355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_20
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 715
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13afb060d98a8ad30800000000000000
+      internalID: 4442986424765774385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_21
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 724
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f96207bc3130cf3d0800000000000000
+      internalID: -3171656654023285089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_22
+      rect:
+        serializedVersion: 2
+        x: 1061
+        y: 682
+        width: 42
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f90626a96eefc2ae0800000000000000
+      internalID: -1572601903473074017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_23
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 642
+        width: 137
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a5afc1b57f754610800000000000000
+      internalID: 1604828985698526629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_24
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 699
+        width: 77
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 114fe15b65d783410800000000000000
+      internalID: 1457052290813719569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_25
+      rect:
+        serializedVersion: 2
+        x: 1242
+        y: 642
+        width: 135
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d8c68a32dbe95fa0800000000000000
+      internalID: -5811354555987343146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_26
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 706
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7127d8fc07418a5a0800000000000000
+      internalID: -6509930786613005801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_27
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 688
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43b95f769f70c3710800000000000000
+      internalID: 1674221929247382324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_28
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 0
+        width: 118
+        height: 752
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 456651494d2c52bc0800000000000000
+      internalID: -3808423691598600620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_29
+      rect:
+        serializedVersion: 2
+        x: 1409
+        y: 713
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76a727f9c4d3f3e10800000000000000
+      internalID: 2179528143972498023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_30
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 0
+        width: 393
+        height: 649
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a1ecbcd99f7bec20800000000000000
+      internalID: 3236821056005923235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_31
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 722
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e0281f1bb9f84bc0800000000000000
+      internalID: -3798511703611137817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_32
+      rect:
+        serializedVersion: 2
+        x: 1474
+        y: 641
+        width: 85
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50995714f6eb1fb90800000000000000
+      internalID: -7209772143394580219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_33
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 649
+        width: 105
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c4db382eb875d450800000000000000
+      internalID: 6112924827339445447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_34
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 714
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c27cfd04caf7d8b60800000000000000
+      internalID: 7749990911574001452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_35
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 646
+        width: 101
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 067cb9138368d1e80800000000000000
+      internalID: -8206255370090592416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_36
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 288
+        width: 120
+        height: 464
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f534ce293a440c60800000000000000
+      internalID: 7783427665461261817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_37
+      rect:
+        serializedVersion: 2
+        x: 1835
+        y: 720
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86ff63c6db821de90800000000000000
+      internalID: -7002771151554936984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_38
+      rect:
+        serializedVersion: 2
+        x: 1838
+        y: 727
+        width: 21
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc54b20f9d8700280800000000000000
+      internalID: -9079123971346315827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_39
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 0
+        width: 135
+        height: 752
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a707dab22cf00caa0800000000000000
+      internalID: -6142892565102497670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_40
+      rect:
+        serializedVersion: 2
+        x: 1848
+        y: 682
+        width: 45
+        height: 70
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62b37861b6cd71980800000000000000
+      internalID: -8568137413551506650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_41
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 711
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30abfcc82ea6772d0800000000000000
+      internalID: -3281036282258540029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_42
+      rect:
+        serializedVersion: 2
+        x: 1965
+        y: 640
+        width: 210
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93fb2b015b194ec20800000000000000
+      internalID: 3234870639214116665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_43
+      rect:
+        serializedVersion: 2
+        x: 2003
+        y: 723
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4387ff175e71bf7c0800000000000000
+      internalID: -4036606366780000204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_44
+      rect:
+        serializedVersion: 2
+        x: 2175
+        y: 641
+        width: 80
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 082173d21e765df90800000000000000
+      internalID: -6929518234815753600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_45
+      rect:
+        serializedVersion: 2
+        x: 2213
+        y: 707
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 449df09a332d70f30800000000000000
+      internalID: 4541829868547987780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_46
+      rect:
+        serializedVersion: 2
+        x: 2222
+        y: 725
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b366bd12ddd1438b0800000000000000
+      internalID: -5173477236348852677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_47
+      rect:
+        serializedVersion: 2
+        x: 2255
+        y: 0
+        width: 110
+        height: 752
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 920f2935adf7ade50800000000000000
+      internalID: 6834915960169885737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_48
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 0
+        width: 411
+        height: 649
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 017b8cc5b64075da0800000000000000
+      internalID: -5956287123009521904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_49
+      rect:
+        serializedVersion: 2
+        x: 2355
+        y: 537
+        width: 94
+        height: 215
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a489d71c6d16e9390800000000000000
+      internalID: -7809697128816732086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_50
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 705
+        width: 46
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 531838e2741eb0970800000000000000
+      internalID: 8722312799172395317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_51
+      rect:
+        serializedVersion: 2
+        x: 2451
+        y: 646
+        width: 95
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4679c27773f0e190800000000000000
+      internalID: -7935074849074350513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_52
+      rect:
+        serializedVersion: 2
+        x: 2454
+        y: 734
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 120f2460bf6cc1420800000000000000
+      internalID: 2602173466157445153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_53
+      rect:
+        serializedVersion: 2
+        x: 2547
+        y: 649
+        width: 128
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 281ed933e97601c60800000000000000
+      internalID: 7786837684892066178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_54
+      rect:
+        serializedVersion: 2
+        x: 2648
+        y: 681
+        width: 47
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ff563b7662901a0800000000000000
+      internalID: -6842895931979464834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_55
+      rect:
+        serializedVersion: 2
+        x: 2687
+        y: 169
+        width: 72
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e04501b8b5e0e30800000000000000
+      internalID: 4471612132858007108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_56
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 0
+        width: 349
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0e861008df9d9250800000000000000
+      internalID: 5953090032516894220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_57
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 0
+        width: 366
+        height: 648
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d0bca26e654b790800000000000000
+      internalID: -7515286331614098044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_58
+      rect:
+        serializedVersion: 2
+        x: 964
+        y: 0
+        width: 401
+        height: 645
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7290f99315061c0e0800000000000000
+      internalID: -2251412436733195993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_59
+      rect:
+        serializedVersion: 2
+        x: 1236
+        y: 639
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5f9fed186dd4ca50800000000000000
+      internalID: 6540595998097383259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_60
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 633
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73d10f03087426800800000000000000
+      internalID: 604123915923496247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_61
+      rect:
+        serializedVersion: 2
+        x: 1919
+        y: 0
+        width: 365
+        height: 642
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c9a5efb1471f4d80800000000000000
+      internalID: -8264361220041758264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_62
+      rect:
+        serializedVersion: 2
+        x: 2185
+        y: 639
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f5216c62ce439bc0800000000000000
+      internalID: -3777589065484786185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_63
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 625
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d447bda80a34a6a0800000000000000
+      internalID: -6438957758284348207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_64
+      rect:
+        serializedVersion: 2
+        x: 2299
+        y: 623
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82095c631d733c5a0800000000000000
+      internalID: -6502292065286254552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_65
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 560
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 032262e3ac68ef9a0800000000000000
+      internalID: -6197367834031021520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_66
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 561
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3958e865b3b1dbea0800000000000000
+      internalID: -5855493998842575469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_67
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 550
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f2f28445ebf400e0800000000000000
+      internalID: -2304440147191336200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_68
+      rect:
+        serializedVersion: 2
+        x: 2345
+        y: 559
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0833d6415eee43be0800000000000000
+      internalID: -1498310108349910144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_69
+      rect:
+        serializedVersion: 2
+        x: 2415
+        y: 557
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fe02ce9e5c578f80800000000000000
+      internalID: -8104407442969719052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_70
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 553
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dbe4cce35c09d940800000000000000
+      internalID: 5321297989309098966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_71
+      rect:
+        serializedVersion: 2
+        x: 881
+        y: 551
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b9e3b025263b0fb0800000000000000
+      internalID: -4680587854631147085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_72
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 547
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 985d3e7ec81e7d050800000000000000
+      internalID: 5825372638329165193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_73
+      rect:
+        serializedVersion: 2
+        x: 1373
+        y: 539
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d34c614b79812f00800000000000000
+      internalID: 1090303747271967696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_74
+      rect:
+        serializedVersion: 2
+        x: 2299
+        y: 543
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b85d3e8fde8ab790800000000000000
+      internalID: -7513535937499014987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_75
+      rect:
+        serializedVersion: 2
+        x: 1829
+        y: 533
+        width: 14
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3eb9bb496fae81f0800000000000000
+      internalID: -1040701597099114946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_76
+      rect:
+        serializedVersion: 2
+        x: 2379
+        y: 525
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 176f9981c04bc4cb0800000000000000
+      internalID: -4878326332303739279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_77
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 517
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b8c58712786514c0800000000000000
+      internalID: -4317429828534548297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_78
+      rect:
+        serializedVersion: 2
+        x: 1368
+        y: 517
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83af6b70b59385cb0800000000000000
+      internalID: -4875083533494322632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_79
+      rect:
+        serializedVersion: 2
+        x: 1877
+        y: 517
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdffd4a438a5f3d90800000000000000
+      internalID: -7115869366288252961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_80
+      rect:
+        serializedVersion: 2
+        x: 2414
+        y: 508
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0c09f9bf5f2d9e30800000000000000
+      internalID: 4511814489883610124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_81
+      rect:
+        serializedVersion: 2
+        x: 1943
+        y: 497
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b1c079e8e6773000800000000000000
+      internalID: 15611866440057272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_82
+      rect:
+        serializedVersion: 2
+        x: 2371
+        y: 503
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c95ec560ecb082650800000000000000
+      internalID: 6208225065828148636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_83
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 477
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a9c33d380f6fd740800000000000000
+      internalID: 5178980177676585378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_84
+      rect:
+        serializedVersion: 2
+        x: 2325
+        y: 477
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43a173e9e2fa41f00800000000000000
+      internalID: 1086686024860899892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_85
+      rect:
+        serializedVersion: 2
+        x: 2732
+        y: 481
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b8696e6cd5b94a90800000000000000
+      internalID: -7329126960218937166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_86
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 465
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32398d84f72c68350800000000000000
+      internalID: 6018711803966034723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_87
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 453
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4768a91370ef02060800000000000000
+      internalID: 6926815533746259572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_88
+      rect:
+        serializedVersion: 2
+        x: 2387
+        y: 453
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39c9ebc2139a90e20800000000000000
+      internalID: 3317368629204262035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_89
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 441
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c8b9d9666477d3b0800000000000000
+      internalID: -5487789637716297534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_90
+      rect:
+        serializedVersion: 2
+        x: 2299
+        y: 436
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54549ecaf6575cf60800000000000000
+      internalID: 8053972631124788549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_91
+      rect:
+        serializedVersion: 2
+        x: 1450
+        y: 429
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04486ab1f800ad600800000000000000
+      internalID: 493707723794711616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_92
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 431
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a704c49eb74a8b0800000000000000
+      internalID: -5141848632613373357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_93
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 417
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 203c745fc16134840800000000000000
+      internalID: 5207029907800441602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_94
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 414
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88bbe1bba98939980800000000000000
+      internalID: -8533309078605218936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_95
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 417
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 159bccd1d89a70ad0800000000000000
+      internalID: -2736031825048848047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_96
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 420
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a15e76b507124de20800000000000000
+      internalID: 3374358787260933402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_97
+      rect:
+        serializedVersion: 2
+        x: 1875
+        y: 415
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e825bbdbae4e010800000000000000
+      internalID: 1217355899909344811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 409
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e98d4ce08b73a770800000000000000
+      internalID: 8620869905367796195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_99
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 410
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 846498ad461275a70800000000000000
+      internalID: 8815551512647910984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_100
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 408
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2997c3a3cb6659850800000000000000
+      internalID: 6383121005484472722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_101
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 401
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5203ef96521530f80800000000000000
+      internalID: -8141574480221818843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_102
+      rect:
+        serializedVersion: 2
+        x: 1357
+        y: 397
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1bb570b0474e7f70800000000000000
+      internalID: 9186858633046375199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_103
+      rect:
+        serializedVersion: 2
+        x: 2387
+        y: 397
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f268f18cb6223f50800000000000000
+      internalID: 6859587773514932978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_104
+      rect:
+        serializedVersion: 2
+        x: 1417
+        y: 391
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bbfb27af599ad890800000000000000
+      internalID: -7432459598915961935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_105
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 391
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7584d62338c2be20800000000000000
+      internalID: 3364971993619531133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_106
+      rect:
+        serializedVersion: 2
+        x: 1805
+        y: 383
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cde90164c3d644de0800000000000000
+      internalID: -1349833882663346468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_107
+      rect:
+        serializedVersion: 2
+        x: 2729
+        y: 379
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cdadca8b2f7e0800800000000000000
+      internalID: 580541226966429129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_108
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 375
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bc237dd832b7a4d0800000000000000
+      internalID: -3123331859254924110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_109
+      rect:
+        serializedVersion: 2
+        x: 2387
+        y: 375
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a1297274b0ec810800000000000000
+      internalID: 1787378502347135589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_110
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 354
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81489406dc4a63450800000000000000
+      internalID: 6068218749919003672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_111
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 363
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9507e5fa61209030800000000000000
+      internalID: 3499333653742683549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_112
+      rect:
+        serializedVersion: 2
+        x: 981
+        y: 362
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cd6c2dc6ba95f9c0800000000000000
+      internalID: -3894036192874959419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_113
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 362
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d44fee297a009e640800000000000000
+      internalID: 5109615971953210445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_114
+      rect:
+        serializedVersion: 2
+        x: 2263
+        y: 355
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 662622bcb297ec770800000000000000
+      internalID: 8632970764714402406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_115
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 349
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd38de7951025a60800000000000000
+      internalID: 7661187400002452989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_116
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 347
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0931ac616ae404ca0800000000000000
+      internalID: -6034737025422584944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_117
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 351
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5d9ea1a2a609c800800000000000000
+      internalID: 633044518189309277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_118
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 338
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f319619611e17a20800000000000000
+      internalID: 3058473109006390263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_119
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 336
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3296e130b6c5da60800000000000000
+      internalID: 7698277598113468991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_120
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 334
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66b2d45266eead6f0800000000000000
+      internalID: -658952272976467098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_121
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 339
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1e11b81f086ea160800000000000000
+      internalID: 7038677681674722842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_122
+      rect:
+        serializedVersion: 2
+        x: 2369
+        y: 339
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3ce88ae17e570680800000000000000
+      internalID: -8788952304431076292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_123
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 329
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6280a0025ba3bcb0800000000000000
+      internalID: -4849344005061705110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_124
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 317
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541ee45dce3fb9d60800000000000000
+      internalID: 7898174570040844613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_125
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 321
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f8956b539077a310800000000000000
+      internalID: 1416224386027198706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_126
+      rect:
+        serializedVersion: 2
+        x: 1001
+        y: 314
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f13d95a0b2794470800000000000000
+      internalID: 8379354684717871600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_127
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 313
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 230035de60b6453e0800000000000000
+      internalID: -2065908651560599502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_128
+      rect:
+        serializedVersion: 2
+        x: 2383
+        y: 313
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c33ad748c0a367eb0800000000000000
+      internalID: -4722523333814541508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_129
+      rect:
+        serializedVersion: 2
+        x: 1375
+        y: 305
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df8a8a59fedd30010800000000000000
+      internalID: 1154009950614759677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_130
+      rect:
+        serializedVersion: 2
+        x: 1494
+        y: 301
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18bbbdc9d32c0c640800000000000000
+      internalID: 5098288348063841153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_131
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 290
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da286db1b567f9930800000000000000
+      internalID: 4152167515140031149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_132
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 273
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bccb637a25594690800000000000000
+      internalID: -7617463653907051339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_133
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 273
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92c66b11ec92ccef0800000000000000
+      internalID: -86648327789712343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_134
+      rect:
+        serializedVersion: 2
+        x: 1469
+        y: 273
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07b7d8860c962dcd0800000000000000
+      internalID: -2534847365147427984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_135
+      rect:
+        serializedVersion: 2
+        x: 1803
+        y: 273
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b52dd275af05699f0800000000000000
+      internalID: -462092875624230309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_136
+      rect:
+        serializedVersion: 2
+        x: 2715
+        y: 276
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b55186aa95204d600800000000000000
+      internalID: 492020843424519515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_137
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 257
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60a5fb32165c73320800000000000000
+      internalID: 2537713936048806406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_138
+      rect:
+        serializedVersion: 2
+        x: 2415
+        y: 259
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6433cfbd603402560800000000000000
+      internalID: 7286897893825065798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_139
+      rect:
+        serializedVersion: 2
+        x: 2735
+        y: 265
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cccebc54146d27b50800000000000000
+      internalID: 6589564780628667596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_140
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 249
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9612c19cf99e9c170800000000000000
+      internalID: 8199341469087834473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_141
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 249
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de9cb80d1e49e9b00800000000000000
+      internalID: 837270278324865517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_142
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 249
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ccf2880093cc2c70800000000000000
+      internalID: 8947741583063841988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_143
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 249
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8083e7e1c3ed96a0800000000000000
+      internalID: -6440741470111301492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_144
+      rect:
+        serializedVersion: 2
+        x: 1365
+        y: 249
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3063830c0e8fcd2f0800000000000000
+      internalID: -946608177473374717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_145
+      rect:
+        serializedVersion: 2
+        x: 2731
+        y: 255
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5001b5b89926cbe00800000000000000
+      internalID: 1061832023760113669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_146
+      rect:
+        serializedVersion: 2
+        x: 486
+        y: 231
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fd22f3c1750a0940800000000000000
+      internalID: 5263025100712717813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_147
+      rect:
+        serializedVersion: 2
+        x: 2343
+        y: 239
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f2d3161834a0f740800000000000000
+      internalID: 5183823731898962676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_148
+      rect:
+        serializedVersion: 2
+        x: 2369
+        y: 234
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9228ad67c16cbce00800000000000000
+      internalID: 1066163562358669865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_149
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 227
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5334e27c6cd059e90800000000000000
+      internalID: -7019689296790666443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_150
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 225
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aeea34346752ed370800000000000000
+      internalID: 8349151949056356074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_151
+      rect:
+        serializedVersion: 2
+        x: 1410
+        y: 221
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61326e5e57bff9c0800000000000000
+      internalID: -3891189937086516884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_152
+      rect:
+        serializedVersion: 2
+        x: 2299
+        y: 223
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c55807b9f800150800000000000000
+      internalID: 5836823014842653814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_153
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 215
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62218182f65d2d860800000000000000
+      internalID: 7553334198444495398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_154
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 219
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e67e21f99676ed50800000000000000
+      internalID: 6766225893719176928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_155
+      rect:
+        serializedVersion: 2
+        x: 2330
+        y: 215
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b721f05bc20f1fc60800000000000000
+      internalID: 7850319700290376315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_156
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 209
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d1953cac8d472210800000000000000
+      internalID: 1308099483354370518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_157
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 203
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0af8744a2a6f14c80800000000000000
+      internalID: -8340113856512159840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_158
+      rect:
+        serializedVersion: 2
+        x: 2721
+        y: 209
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a71ea4b96e67d7230800000000000000
+      internalID: 3638194806805160314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_159
+      rect:
+        serializedVersion: 2
+        x: 1487
+        y: 197
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e080644bc17bd010800000000000000
+      internalID: 1214689642345955558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_160
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 201
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d4bdc467ed2dfb80800000000000000
+      internalID: -8359474861477874477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_161
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 185
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4942ea40a62d9ab0800000000000000
+      internalID: -4999797541418415796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_162
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 167
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9fef302fbc2376d0800000000000000
+      internalID: -2994000127879811173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_163
+      rect:
+        serializedVersion: 2
+        x: 1451
+        y: 165
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e801357bd0f29170800000000000000
+      internalID: 8183868298240264417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_164
+      rect:
+        serializedVersion: 2
+        x: 991
+        y: 159
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4981258799520170800000000000000
+      internalID: 8143169583547779405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_165
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 151
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9545a5e82b09effe0800000000000000
+      internalID: -1153325357993405351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_166
+      rect:
+        serializedVersion: 2
+        x: 2371
+        y: 151
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bff4299a17fa0db0800000000000000
+      internalID: -4824772357163515983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_167
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 153
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773e033802b694400800000000000000
+      internalID: 308895836835734391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_168
+      rect:
+        serializedVersion: 2
+        x: 107
+        y: 143
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1b93426ba4358f30800000000000000
+      internalID: 4577122506984626974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_169
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 149
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8520b9009d8ed3790800000000000000
+      internalID: -7548621381687377320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_170
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 143
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7f8366d31bef5af0800000000000000
+      internalID: -405346971006300294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_171
+      rect:
+        serializedVersion: 2
+        x: 1366
+        y: 149
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d749813897a404c0800000000000000
+      internalID: -4322145470260885545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_172
+      rect:
+        serializedVersion: 2
+        x: 1359
+        y: 131
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d11e4c6fbadcaf690800000000000000
+      internalID: -7567510085379497699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_173
+      rect:
+        serializedVersion: 2
+        x: 1379
+        y: 137
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 483de23c9bc6c6890800000000000000
+      internalID: -7463470937360379004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_174
+      rect:
+        serializedVersion: 2
+        x: 2395
+        y: 135
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81abc74ffe2b3dcb0800000000000000
+      internalID: -4840328430824408552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_175
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 119
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76ad7bb5a511428f0800000000000000
+      internalID: -566308573358335385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_176
+      rect:
+        serializedVersion: 2
+        x: 2385
+        y: 125
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c270221a6e0c73140800000000000000
+      internalID: 4699436832962774828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_177
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 62
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a7cb52fefc56a1f0800000000000000
+      internalID: -1034036814377400414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_178
+      rect:
+        serializedVersion: 2
+        x: 1439
+        y: 63
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6e0b1595ae8ec880800000000000000
+      internalID: -8588770597526630804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_179
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 61
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cae1fd7acd7a72e0800000000000000
+      internalID: -2127249565329265975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_180
+      rect:
+        serializedVersion: 2
+        x: 1424
+        y: 52
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b48679daa0c89630800000000000000
+      internalID: 3934106114533524662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_181
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 55
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ef1cae7244f23f0800000000000000
+      internalID: -923444460354666932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_182
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 55
+        width: 10
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a3319e774d2a5fc0800000000000000
+      internalID: -3505439574865136731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_183
+      rect:
+        serializedVersion: 2
+        x: 2570
+        y: 51
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 104b14dc1e2276280800000000000000
+      internalID: -9050226572971101183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_184
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 47
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91609eac5db740340800000000000000
+      internalID: 4829120858610533913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_185
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 43
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d3b99f8aab4b5650800000000000000
+      internalID: 6222650506068210640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_186
+      rect:
+        serializedVersion: 2
+        x: 1058
+        y: 41
+        width: 12
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c074201b899fd970800000000000000
+      internalID: 8781906620946084037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_187
+      rect:
+        serializedVersion: 2
+        x: 1407
+        y: 37
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97fad5e4502c0c2e0800000000000000
+      internalID: -2107471297564004487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_188
+      rect:
+        serializedVersion: 2
+        x: 2556
+        y: 41
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57313fffd0a63fbb0800000000000000
+      internalID: -4903458960915098763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_189
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 31
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fd1651416403b8b0800000000000000
+      internalID: -5137757934145102346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_190
+      rect:
+        serializedVersion: 2
+        x: 817
+        y: 37
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c4f630472cb6c340800000000000000
+      internalID: 4883797722696971457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_191
+      rect:
+        serializedVersion: 2
+        x: 1219
+        y: 39
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d693880c373ccf0d0800000000000000
+      internalID: -3387617917770647187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_192
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 34
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40eaf39dbece83b20800000000000000
+      internalID: 3114499640032996868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_193
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 35
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98f7ec98e76f06da0800000000000000
+      internalID: -5953487684045471863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_194
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 31
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3256e6fbb5c9600800000000000000
+      internalID: 476356538343433179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_195
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 26
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d689b32beedb21c70800000000000000
+      internalID: 8940417043173972077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_196
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 23
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 040bfb6506918cac0800000000000000
+      internalID: -3834787181143019456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_197
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 29
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 977abb15059f16780800000000000000
+      internalID: -8691391682484394119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_198
+      rect:
+        serializedVersion: 2
+        x: 1601
+        y: 26
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4008e1dc6bfe13800800000000000000
+      internalID: 590516594566660100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_199
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 26
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aced645d199d9810800000000000000
+      internalID: 1773742179503434920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_200
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 18
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15c36bf4f5a0dfca0800000000000000
+      internalID: -5981613325602636719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_201
+      rect:
+        serializedVersion: 2
+        x: 1220
+        y: 18
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a8096979423774d0800000000000000
+      internalID: -3136983324289333084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_202
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 21
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d660baf1c71fd3d20800000000000000
+      internalID: 3260027220695647853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_203
+      rect:
+        serializedVersion: 2
+        x: 1711
+        y: 18
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 294078bccb33960a0800000000000000
+      internalID: -6887917269124971374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_204
+      rect:
+        serializedVersion: 2
+        x: 2014
+        y: 21
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 749e12c992eb177c0800000000000000
+      internalID: -4075267101871183545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_205
+      rect:
+        serializedVersion: 2
+        x: 1033
+        y: 10
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 561d4a9c449056ff0800000000000000
+      internalID: -43618430344703643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ExplorerWalk_206
+      rect:
+        serializedVersion: 2
+        x: 1095
+        y: 0
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 325783e708d5b5050800000000000000
+      internalID: 5790324552369730851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      ExplorerWalk_0: -2302145542135609079
+      ExplorerWalk_1: 8338173045431098026
+      ExplorerWalk_10: -1784864827768063878
+      ExplorerWalk_100: 6383121005484472722
+      ExplorerWalk_101: -8141574480221818843
+      ExplorerWalk_102: 9186858633046375199
+      ExplorerWalk_103: 6859587773514932978
+      ExplorerWalk_104: -7432459598915961935
+      ExplorerWalk_105: 3364971993619531133
+      ExplorerWalk_106: -1349833882663346468
+      ExplorerWalk_107: 580541226966429129
+      ExplorerWalk_108: -3123331859254924110
+      ExplorerWalk_109: 1787378502347135589
+      ExplorerWalk_11: -3461700888550467619
+      ExplorerWalk_110: 6068218749919003672
+      ExplorerWalk_111: 3499333653742683549
+      ExplorerWalk_112: -3894036192874959419
+      ExplorerWalk_113: 5109615971953210445
+      ExplorerWalk_114: 8632970764714402406
+      ExplorerWalk_115: 7661187400002452989
+      ExplorerWalk_116: -6034737025422584944
+      ExplorerWalk_117: 633044518189309277
+      ExplorerWalk_118: 3058473109006390263
+      ExplorerWalk_119: 7698277598113468991
+      ExplorerWalk_12: 3264759715813572673
+      ExplorerWalk_120: -658952272976467098
+      ExplorerWalk_121: 7038677681674722842
+      ExplorerWalk_122: -8788952304431076292
+      ExplorerWalk_123: -4849344005061705110
+      ExplorerWalk_124: 7898174570040844613
+      ExplorerWalk_125: 1416224386027198706
+      ExplorerWalk_126: 8379354684717871600
+      ExplorerWalk_127: -2065908651560599502
+      ExplorerWalk_128: -4722523333814541508
+      ExplorerWalk_129: 1154009950614759677
+      ExplorerWalk_13: -7410862811064477221
+      ExplorerWalk_130: 5098288348063841153
+      ExplorerWalk_131: 4152167515140031149
+      ExplorerWalk_132: -7617463653907051339
+      ExplorerWalk_133: -86648327789712343
+      ExplorerWalk_134: -2534847365147427984
+      ExplorerWalk_135: -462092875624230309
+      ExplorerWalk_136: 492020843424519515
+      ExplorerWalk_137: 2537713936048806406
+      ExplorerWalk_138: 7286897893825065798
+      ExplorerWalk_139: 6589564780628667596
+      ExplorerWalk_14: 1834327200735548428
+      ExplorerWalk_140: 8199341469087834473
+      ExplorerWalk_141: 837270278324865517
+      ExplorerWalk_142: 8947741583063841988
+      ExplorerWalk_143: -6440741470111301492
+      ExplorerWalk_144: -946608177473374717
+      ExplorerWalk_145: 1061832023760113669
+      ExplorerWalk_146: 5263025100712717813
+      ExplorerWalk_147: 5183823731898962676
+      ExplorerWalk_148: 1066163562358669865
+      ExplorerWalk_149: -7019689296790666443
+      ExplorerWalk_15: 5882346043108450526
+      ExplorerWalk_150: 8349151949056356074
+      ExplorerWalk_151: -3891189937086516884
+      ExplorerWalk_152: 5836823014842653814
+      ExplorerWalk_153: 7553334198444495398
+      ExplorerWalk_154: 6766225893719176928
+      ExplorerWalk_155: 7850319700290376315
+      ExplorerWalk_156: 1308099483354370518
+      ExplorerWalk_157: -8340113856512159840
+      ExplorerWalk_158: 3638194806805160314
+      ExplorerWalk_159: 1214689642345955558
+      ExplorerWalk_16: -4768632012095928111
+      ExplorerWalk_160: -8359474861477874477
+      ExplorerWalk_161: -4999797541418415796
+      ExplorerWalk_162: -2994000127879811173
+      ExplorerWalk_163: 8183868298240264417
+      ExplorerWalk_164: 8143169583547779405
+      ExplorerWalk_165: -1153325357993405351
+      ExplorerWalk_166: -4824772357163515983
+      ExplorerWalk_167: 308895836835734391
+      ExplorerWalk_168: 4577122506984626974
+      ExplorerWalk_169: -7548621381687377320
+      ExplorerWalk_17: 4223729571256872874
+      ExplorerWalk_170: -405346971006300294
+      ExplorerWalk_171: -4322145470260885545
+      ExplorerWalk_172: -7567510085379497699
+      ExplorerWalk_173: -7463470937360379004
+      ExplorerWalk_174: -4840328430824408552
+      ExplorerWalk_175: -566308573358335385
+      ExplorerWalk_176: 4699436832962774828
+      ExplorerWalk_177: -1034036814377400414
+      ExplorerWalk_178: -8588770597526630804
+      ExplorerWalk_179: -2127249565329265975
+      ExplorerWalk_18: 7492223078708927359
+      ExplorerWalk_180: 3934106114533524662
+      ExplorerWalk_181: -923444460354666932
+      ExplorerWalk_182: -3505439574865136731
+      ExplorerWalk_183: -9050226572971101183
+      ExplorerWalk_184: 4829120858610533913
+      ExplorerWalk_185: 6222650506068210640
+      ExplorerWalk_186: 8781906620946084037
+      ExplorerWalk_187: -2107471297564004487
+      ExplorerWalk_188: -4903458960915098763
+      ExplorerWalk_189: -5137757934145102346
+      ExplorerWalk_19: 4943229028628771355
+      ExplorerWalk_190: 4883797722696971457
+      ExplorerWalk_191: -3387617917770647187
+      ExplorerWalk_192: 3114499640032996868
+      ExplorerWalk_193: -5953487684045471863
+      ExplorerWalk_194: 476356538343433179
+      ExplorerWalk_195: 8940417043173972077
+      ExplorerWalk_196: -3834787181143019456
+      ExplorerWalk_197: -8691391682484394119
+      ExplorerWalk_198: 590516594566660100
+      ExplorerWalk_199: 1773742179503434920
+      ExplorerWalk_2: 5179980287692446011
+      ExplorerWalk_20: 4442986424765774385
+      ExplorerWalk_200: -5981613325602636719
+      ExplorerWalk_201: -3136983324289333084
+      ExplorerWalk_202: 3260027220695647853
+      ExplorerWalk_203: -6887917269124971374
+      ExplorerWalk_204: -4075267101871183545
+      ExplorerWalk_205: -43618430344703643
+      ExplorerWalk_206: 5790324552369730851
+      ExplorerWalk_21: -3171656654023285089
+      ExplorerWalk_22: -1572601903473074017
+      ExplorerWalk_23: 1604828985698526629
+      ExplorerWalk_24: 1457052290813719569
+      ExplorerWalk_25: -5811354555987343146
+      ExplorerWalk_26: -6509930786613005801
+      ExplorerWalk_27: 1674221929247382324
+      ExplorerWalk_28: -3808423691598600620
+      ExplorerWalk_29: 2179528143972498023
+      ExplorerWalk_3: -1147316206987845339
+      ExplorerWalk_30: 3236821056005923235
+      ExplorerWalk_31: -3798511703611137817
+      ExplorerWalk_32: -7209772143394580219
+      ExplorerWalk_33: 6112924827339445447
+      ExplorerWalk_34: 7749990911574001452
+      ExplorerWalk_35: -8206255370090592416
+      ExplorerWalk_36: 7783427665461261817
+      ExplorerWalk_37: -7002771151554936984
+      ExplorerWalk_38: -9079123971346315827
+      ExplorerWalk_39: -6142892565102497670
+      ExplorerWalk_4: -4330809274605841331
+      ExplorerWalk_40: -8568137413551506650
+      ExplorerWalk_41: -3281036282258540029
+      ExplorerWalk_42: 3234870639214116665
+      ExplorerWalk_43: -4036606366780000204
+      ExplorerWalk_44: -6929518234815753600
+      ExplorerWalk_45: 4541829868547987780
+      ExplorerWalk_46: -5173477236348852677
+      ExplorerWalk_47: 6834915960169885737
+      ExplorerWalk_48: -5956287123009521904
+      ExplorerWalk_49: -7809697128816732086
+      ExplorerWalk_5: 2749766815721487043
+      ExplorerWalk_50: 8722312799172395317
+      ExplorerWalk_51: -7935074849074350513
+      ExplorerWalk_52: 2602173466157445153
+      ExplorerWalk_53: 7786837684892066178
+      ExplorerWalk_54: -6842895931979464834
+      ExplorerWalk_55: 4471612132858007108
+      ExplorerWalk_56: 5953090032516894220
+      ExplorerWalk_57: -7515286331614098044
+      ExplorerWalk_58: -2251412436733195993
+      ExplorerWalk_59: 6540595998097383259
+      ExplorerWalk_6: 5241385876957030035
+      ExplorerWalk_60: 604123915923496247
+      ExplorerWalk_61: -8264361220041758264
+      ExplorerWalk_62: -3777589065484786185
+      ExplorerWalk_63: -6438957758284348207
+      ExplorerWalk_64: -6502292065286254552
+      ExplorerWalk_65: -6197367834031021520
+      ExplorerWalk_66: -5855493998842575469
+      ExplorerWalk_67: -2304440147191336200
+      ExplorerWalk_68: -1498310108349910144
+      ExplorerWalk_69: -8104407442969719052
+      ExplorerWalk_7: 7290427878145267779
+      ExplorerWalk_70: 5321297989309098966
+      ExplorerWalk_71: -4680587854631147085
+      ExplorerWalk_72: 5825372638329165193
+      ExplorerWalk_73: 1090303747271967696
+      ExplorerWalk_74: -7513535937499014987
+      ExplorerWalk_75: -1040701597099114946
+      ExplorerWalk_76: -4878326332303739279
+      ExplorerWalk_77: -4317429828534548297
+      ExplorerWalk_78: -4875083533494322632
+      ExplorerWalk_79: -7115869366288252961
+      ExplorerWalk_8: -7717142056432171023
+      ExplorerWalk_80: 4511814489883610124
+      ExplorerWalk_81: 15611866440057272
+      ExplorerWalk_82: 6208225065828148636
+      ExplorerWalk_83: 5178980177676585378
+      ExplorerWalk_84: 1086686024860899892
+      ExplorerWalk_85: -7329126960218937166
+      ExplorerWalk_86: 6018711803966034723
+      ExplorerWalk_87: 6926815533746259572
+      ExplorerWalk_88: 3317368629204262035
+      ExplorerWalk_89: -5487789637716297534
+      ExplorerWalk_9: -8406671989991359202
+      ExplorerWalk_90: 8053972631124788549
+      ExplorerWalk_91: 493707723794711616
+      ExplorerWalk_92: -5141848632613373357
+      ExplorerWalk_93: 5207029907800441602
+      ExplorerWalk_94: -8533309078605218936
+      ExplorerWalk_95: -2736031825048848047
+      ExplorerWalk_96: 3374358787260933402
+      ExplorerWalk_97: 1217355899909344811
+      ExplorerWalk_98: 8620869905367796195
+      ExplorerWalk_99: 8815551512647910984
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
