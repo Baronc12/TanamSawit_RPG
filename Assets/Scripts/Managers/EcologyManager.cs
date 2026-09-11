@@ -25,11 +25,17 @@ namespace TanamSawit.Managers
         [SerializeField] private KarmaLevel activeKarma = KarmaLevel.Aman;
         public KarmaLevel ActiveKarma => activeKarma;
 
-        [Header("Evaluasi Akhir Tahun ke-10")]
-        [Tooltip("Tahun evaluasi akhir warisan kakek.")]
-        [SerializeField] private int targetYear = 2034; // 10 tahun dari 2024
+        [Header("Evaluasi Akhir Waktu (Dinamis)")]
+        [Tooltip("Durasi evaluasi permainan (dalam tahun) dihitung sejak tahun awal game.")]
+        [SerializeField] private int evaluationDurationYears = 10;
+        public int EvaluationDurationYears => evaluationDurationYears;
+
         [Tooltip("Target Net Worth untuk memenangkan Good Ending (Rp 1 Miliar).")]
         [SerializeField] private double targetNetWorthForGoodEnding = 1_000_000_000;
+
+        [Header("Target Tahun Terhitung (Dinamis)")]
+        [SerializeField] private int computedTargetYear;
+        public int ComputedTargetYear => computedTargetYear;
 
         [Header("Riwayat Peristiwa Terakhir")]
         [TextArea(2, 3)]
@@ -39,6 +45,7 @@ namespace TanamSawit.Managers
         // Flags agar event besar tidak berulang setiap hari
         private bool elephantRaidTriggered = false;
         private bool secretEndingTriggered = false;
+        private bool isGameOverTriggered = false;
 
         public event Action<KarmaLevel, string> OnEcologyEvent;
         public event Action<string> OnEndingTriggered;
@@ -61,11 +68,23 @@ namespace TanamSawit.Managers
 
         private void Start()
         {
-            // Sambungkan ke TimeManager
+            // Sambungkan ke TimeManager dan hitung target tahun secara dinamis
             if (TimeManager.Instance != null)
             {
                 TimeManager.Instance.OnDayPassed += HandleDailyEcologyCheck;
                 TimeManager.Instance.OnYearPassed += HandleYearlyEndingCheck;
+                computedTargetYear = TimeManager.Instance.CurrentYear + evaluationDurationYears;
+            }
+            else
+            {
+                // Fallback aman jika TimeManager belum siap
+                computedTargetYear = 2024 + evaluationDurationYears;
+            }
+
+            // Sambungkan ke EconomyManager untuk mendeteksi kebangkrutan dini
+            if (EconomyManager.Instance != null)
+            {
+                EconomyManager.Instance.OnBankruptcy += HandleBankruptcy;
             }
         }
 
@@ -75,6 +94,11 @@ namespace TanamSawit.Managers
             {
                 TimeManager.Instance.OnDayPassed -= HandleDailyEcologyCheck;
                 TimeManager.Instance.OnYearPassed -= HandleYearlyEndingCheck;
+            }
+
+            if (EconomyManager.Instance != null)
+            {
+                EconomyManager.Instance.OnBankruptcy -= HandleBankruptcy;
             }
         }
 
@@ -173,6 +197,10 @@ namespace TanamSawit.Managers
         /// </summary>
         public void TriggerSecretEnding()
         {
+            if (isGameOverTriggered) return;
+            isGameOverTriggered = true;
+            secretEndingTriggered = true;
+
             latestEcologyNews = "[SECRET ENDING - KIAMAT LINGKUNGAN] 100% Hutan Gundul! Banjir bandang dan tanah longsor dahsyat menyapu seluruh kebun, aset, dan desa! MC kehilangan segalanya!";
             Debug.LogError(latestEcologyNews);
             NotifyEcology(KarmaLevel.KiamatLongsor, latestEcologyNews);
@@ -180,12 +208,39 @@ namespace TanamSawit.Managers
 
             GameManager.Instance?.ChangeState(GameState.GameOver);
         }
+
+        /// <summary>
+        /// Dipanggil saat pemain mengalami kebangkrutan total (Net Worth jatuh di bawah ambang batas toleransi).
+        /// Memicu Bad Ending dini dan mengubah GameState ke GameOver.
+        /// </summary>
+        public void HandleBankruptcy()
+        {
+            if (isGameOverTriggered || secretEndingTriggered) return;
+            isGameOverTriggered = true;
+
+            string netWorthFormatted = EconomyManager.Instance != null ? EconomyManager.FormatCurrency(EconomyManager.Instance.GetNetWorth()) : "Rp 0";
+            string thresholdFormatted = EconomyManager.Instance != null ? EconomyManager.FormatCurrency(EconomyManager.Instance.BankruptcyThreshold) : "Rp -50.000.000";
+
+            string bankruptcyEnding = $"[BAD ENDING: BANGKRUT]\nGame Over! Perusahaan perkebunan Anda bangkrut total! Net Worth ({netWorthFormatted}) telah jatuh di bawah batas minimum ({thresholdFormatted}). Hutang tak terbayar dan seluruh lahan disita!";
+            Debug.LogError(bankruptcyEnding);
+            latestEcologyNews = bankruptcyEnding;
+            NotifyEcology(KarmaLevel.Aman, bankruptcyEnding);
+            OnEndingTriggered?.Invoke(bankruptcyEnding);
+
+            GameManager.Instance?.ChangeState(GameState.GameOver);
+        }
         #endregion
 
-        #region Evaluasi Tahun ke-10 (Good vs Bad Ending)
+        #region Evaluasi Akhir Waktu (Good vs Bad Ending)
         private void HandleYearlyEndingCheck(int currentYear)
         {
-            if (currentYear >= targetYear)
+            // Pastikan target tahun sudah terhitung
+            if (computedTargetYear <= 0)
+            {
+                computedTargetYear = (TimeManager.Instance != null ? TimeManager.Instance.CurrentYear : 2024) + evaluationDurationYears;
+            }
+
+            if (currentYear >= computedTargetYear)
             {
                 EvaluateTenYearDeadline();
             }
@@ -193,7 +248,8 @@ namespace TanamSawit.Managers
 
         public void EvaluateTenYearDeadline()
         {
-            if (secretEndingTriggered) return;
+            if (isGameOverTriggered || secretEndingTriggered) return;
+            isGameOverTriggered = true;
 
             double netWorth = EconomyManager.Instance != null ? EconomyManager.Instance.GetNetWorth() : 0;
             string endingTitle;
@@ -212,6 +268,16 @@ namespace TanamSawit.Managers
             OnEndingTriggered?.Invoke(endingTitle);
 
             GameManager.Instance?.ChangeState(GameState.GameOver);
+        }
+
+        /// <summary>
+        /// Mereset flag ending (misal saat Load Game atau Restart).
+        /// </summary>
+        public void ResetEndingStates()
+        {
+            isGameOverTriggered = false;
+            secretEndingTriggered = false;
+            elephantRaidTriggered = false;
         }
         #endregion
 

@@ -220,6 +220,9 @@ namespace TanamSawit.Managers
                 double rentenirInterest = rentenirDebt * rentenirDailyRate;
                 rentenirDebt += rentenirInterest;
             }
+
+            // Segarkan Net Worth setelah akumulasi bunga harian
+            EconomyManager.Instance?.RefreshNetWorth();
         }
 
         /// <summary>

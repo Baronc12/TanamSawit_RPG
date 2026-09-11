@@ -47,6 +47,16 @@ namespace TanamSawit.Managers
         [SerializeField] private double otherAssetsValuation = 0;
         #endregion
 
+        #region Ambang Batas Kebangkrutan
+        [Header("Ambang Batas Kebangkrutan (Game Over Dini)")]
+        [Tooltip("Batas minimum Net Worth sebelum pemain dinyatakan bangkrut total (default: Rp -50.000.000).")]
+        [SerializeField] private double bankruptcyThreshold = -50_000_000;
+        public double BankruptcyThreshold => bankruptcyThreshold;
+
+        private bool hasTriggeredBankruptcy = false;
+        public bool HasTriggeredBankruptcy => hasTriggeredBankruptcy;
+        #endregion
+
         #region Events (Observer Pattern)
         /// <summary>
         /// Dipanggil saat saldo uang berubah. Parameter: (currentMoney, deltaMoney).
@@ -62,6 +72,11 @@ namespace TanamSawit.Managers
         /// Dipanggil saat Total Net Worth dievaluasi ulang. Parameter: (currentNetWorth).
         /// </summary>
         public event Action<double> OnNetWorthChanged;
+
+        /// <summary>
+        /// Dipanggil saat Net Worth pemain jatuh di bawah ambang batas kebangkrutan (Game Over dini).
+        /// </summary>
+        public event Action OnBankruptcy;
         #endregion
 
         private void Awake()
@@ -91,7 +106,7 @@ namespace TanamSawit.Managers
             // Trigger event awal agar UI langsung sinkron saat start
             OnMoneyChanged?.Invoke(currentMoney, 0);
             OnLandPercentageChanged?.Invoke(currentLandPercentage, 0);
-            OnNetWorthChanged?.Invoke(GetNetWorth());
+            RefreshNetWorth();
         }
 
         #region Operasi Uang
@@ -120,7 +135,7 @@ namespace TanamSawit.Managers
             Debug.Log($"[EconomyManager] +{FormatCurrency(amount)} | Sumber: {(string.IsNullOrEmpty(source) ? "Pemasukan Umum" : source)} | Total Kas: {FormatCurrency(currentMoney)}");
 
             OnMoneyChanged?.Invoke(currentMoney, amount);
-            OnNetWorthChanged?.Invoke(GetNetWorth());
+            RefreshNetWorth();
         }
 
         /// <summary>
@@ -147,7 +162,7 @@ namespace TanamSawit.Managers
             Debug.Log($"[EconomyManager] -{FormatCurrency(amount)} | Keperluan: {(string.IsNullOrEmpty(reason) ? "Pengeluaran Umum" : reason)} | Sisa Kas: {FormatCurrency(currentMoney)}");
 
             OnMoneyChanged?.Invoke(currentMoney, -amount);
-            OnNetWorthChanged?.Invoke(GetNetWorth());
+            RefreshNetWorth();
             return true;
         }
         #endregion
@@ -168,7 +183,7 @@ namespace TanamSawit.Managers
             Debug.Log($"[EconomyManager] Kepemilikan lahan bertambah +{delta:F1}%. Total saat ini: {currentLandPercentage:F1}%");
 
             OnLandPercentageChanged?.Invoke(currentLandPercentage, delta);
-            OnNetWorthChanged?.Invoke(GetNetWorth());
+            RefreshNetWorth();
 
             if (currentLandPercentage >= 100f)
             {
@@ -206,7 +221,7 @@ namespace TanamSawit.Managers
             float delta = currentLandPercentage - previous;
 
             OnLandPercentageChanged?.Invoke(currentLandPercentage, delta);
-            OnNetWorthChanged?.Invoke(GetNetWorth());
+            RefreshNetWorth();
         }
 
         /// <summary>
@@ -216,7 +231,7 @@ namespace TanamSawit.Managers
         {
             currentMoney = Math.Max(0, amount);
             OnMoneyChanged?.Invoke(currentMoney, 0);
-            OnNetWorthChanged?.Invoke(GetNetWorth());
+            RefreshNetWorth();
         }
 
         /// <summary>
@@ -228,21 +243,56 @@ namespace TanamSawit.Managers
             currentLandPercentage = Mathf.Clamp(landPct, 0f, 100f);
             otherAssetsValuation = Math.Max(0, otherAssets);
 
+            // Reset flag kebangkrutan saat memuat data save
+            hasTriggeredBankruptcy = false;
+
             OnMoneyChanged?.Invoke(currentMoney, 0);
             OnLandPercentageChanged?.Invoke(currentLandPercentage, 0);
-            OnNetWorthChanged?.Invoke(GetNetWorth());
+            RefreshNetWorth();
         }
         #endregion
 
-        #region Perhitungan Net Worth (Kekayaan Bersih)
+        #region Perhitungan Net Worth & Deteksi Kebangkrutan
         /// <summary>
         /// Menghitung total valuasi kekayaan pemain:
-        /// Kas Tunai + (Persentase Lahan * Valuasi per 1%) + Aset Lainnya.
+        /// Kas Tunai + (Persentase Lahan * Valuasi per 1%) + Aset Lainnya - Total Hutang.
         /// </summary>
         public double GetNetWorth()
         {
             double landValue = currentLandPercentage * landValuationPerPercent;
-            return currentMoney + landValue + otherAssetsValuation;
+            double totalDebt = LoanManager.Instance != null ? LoanManager.Instance.TotalDebt : 0;
+            return (currentMoney + landValue + otherAssetsValuation) - totalDebt;
+        }
+
+        /// <summary>
+        /// Mengevaluasi apakah Net Worth pemain berada di bawah ambang batas kebangkrutan.
+        /// Hanya memicu event OnBankruptcy SEKALI jika ambang batas dilewati.
+        /// </summary>
+        public void CheckBankruptcy()
+        {
+            if (!hasTriggeredBankruptcy && GetNetWorth() <= bankruptcyThreshold)
+            {
+                hasTriggeredBankruptcy = true;
+                Debug.LogError($"[EconomyManager] KEBANGKRUTAN TERJADI! Net Worth ({FormatCurrency(GetNetWorth())}) telah jatuh di bawah batas minimum ({FormatCurrency(bankruptcyThreshold)}).");
+                OnBankruptcy?.Invoke();
+            }
+        }
+
+        /// <summary>
+        /// Memperbarui event OnNetWorthChanged dan mengevaluasi status kebangkrutan.
+        /// </summary>
+        public void RefreshNetWorth()
+        {
+            OnNetWorthChanged?.Invoke(GetNetWorth());
+            CheckBankruptcy();
+        }
+
+        /// <summary>
+        /// Mereset flag kebangkrutan (dipanggil saat Load Game atau Game Restart).
+        /// </summary>
+        public void ResetBankruptcyState(bool forceState = false)
+        {
+            hasTriggeredBankruptcy = forceState;
         }
 
         /// <summary>
@@ -251,7 +301,7 @@ namespace TanamSawit.Managers
         public void SetOtherAssetsValuation(double value)
         {
             otherAssetsValuation = Math.Max(0, value);
-            OnNetWorthChanged?.Invoke(GetNetWorth());
+            RefreshNetWorth();
         }
         #endregion
 

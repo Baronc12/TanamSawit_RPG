@@ -202,16 +202,16 @@ namespace TanamSawit.SaveSystem
                     TimeManager.Instance.SetDate(data.currentDay, data.currentMonth, data.currentYear);
                 }
 
-                // 2. Pulihkan Ekonomi & Lahan
-                if (EconomyManager.Instance != null)
-                {
-                    EconomyManager.Instance.LoadState(data.currentMoney, data.currentLandPercentage, data.otherAssetsValuation);
-                }
-
-                // 3. Pulihkan Hutang & Kos-kosan
+                // 2. Pulihkan Hutang & Kos-kosan terlebih dahulu agar valuasi liabilitas tepat
                 if (LoanManager.Instance != null)
                 {
                     LoanManager.Instance.LoadState(data.bankDebt, data.pinjolDebt, data.rentenirDebt, data.ownedBoardingHouses);
+                }
+
+                // 3. Pulihkan Ekonomi & Lahan (mereset flag kebangkrutan)
+                if (EconomyManager.Instance != null)
+                {
+                    EconomyManager.Instance.LoadState(data.currentMoney, data.currentLandPercentage, data.otherAssetsValuation);
                 }
 
                 // 4. Pulihkan Pekerja & Pabrik
@@ -233,10 +233,24 @@ namespace TanamSawit.SaveSystem
                     );
                 }
 
-                // 6. Pulihkan Sepupu Rival
+                // 6. Pulihkan Sepupu Rival & Reset State Ending
                 if (RivalManager.Instance != null)
                 {
                     RivalManager.Instance.LoadState(data.cousinNetWorth, (GameEnding)data.finalEnding);
+                }
+
+                if (EcologyManager.Instance != null)
+                {
+                    EcologyManager.Instance.ResetEndingStates();
+                }
+
+                // Pulihkan state ke Playing jika save data masih sehat
+                if (GameManager.Instance != null && GameManager.Instance.CurrentState == GameState.GameOver)
+                {
+                    if (EconomyManager.Instance == null || !EconomyManager.Instance.HasTriggeredBankruptcy)
+                    {
+                        GameManager.Instance.ChangeState(GameState.Playing);
+                    }
                 }
 
                 lastSaveTime = data.saveTimestamp;
