@@ -68,10 +68,25 @@ namespace TanamSawit.Player
             float horizontal = 0f;
             float vertical = 0f;
 
-            if (Input.GetKey(KeyCode.A)) horizontal -= 1f;
-            if (Input.GetKey(KeyCode.D)) horizontal += 1f;
-            if (Input.GetKey(KeyCode.S)) vertical -= 1f;
-            if (Input.GetKey(KeyCode.W)) vertical += 1f;
+#if ENABLE_INPUT_SYSTEM
+            var kb = UnityEngine.InputSystem.Keyboard.current;
+            if (kb != null)
+            {
+                if (kb.aKey.isPressed || kb.leftArrowKey.isPressed) horizontal -= 1f;
+                if (kb.dKey.isPressed || kb.rightArrowKey.isPressed) horizontal += 1f;
+                if (kb.sKey.isPressed || kb.downArrowKey.isPressed) vertical -= 1f;
+                if (kb.wKey.isPressed || kb.upArrowKey.isPressed) vertical += 1f;
+                return new Vector2(horizontal, vertical);
+            }
+#endif
+            try
+            {
+                if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) horizontal -= 1f;
+                if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) horizontal += 1f;
+                if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)) vertical -= 1f;
+                if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow)) vertical += 1f;
+            }
+            catch {}
 
             return new Vector2(horizontal, vertical);
         }
@@ -127,8 +142,8 @@ namespace TanamSawit.Player
     /// </summary>
     public static class OpeningGameplayPlayerBootstrapper
     {
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void CreatePlayerForOpeningGameplay()
+        // Dinonaktifkan agar tidak ada eksekusi otomatis saat Play
+        public static void CreatePlayerForOpeningGameplay()
         {
             if (SceneManager.GetActiveScene().name != "opening gameplay") return;
 

@@ -50,9 +50,12 @@ namespace TanamSawit.UI
         private bool stylesInitialized = false;
 
         #region Auto-Bootstrapping
-        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
-        private static void EnsureInstanceExists()
+        // Dinonaktifkan agar tidak otomatis membuat objek di scene yang ingin dimulai dari nol
+        public static void EnsureInstanceExists()
         {
+            string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            if (IsExcludedScene(currentSceneName)) return;
+
             if (Instance == null)
             {
                 GameObject managersGo = GameObject.Find("[MANAGERS]");
@@ -71,10 +74,24 @@ namespace TanamSawit.UI
                 }
             }
         }
+
+        public static bool IsExcludedScene(string sceneName)
+        {
+            if (string.IsNullOrEmpty(sceneName)) return false;
+            string lower = sceneName.ToLower();
+            return lower.Contains("movement") || lower.Contains("prototype_movement") || lower == "opening gameplay";
+        }
         #endregion
 
         private void Awake()
         {
+            string currentSceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+            if (IsExcludedScene(currentSceneName))
+            {
+                Destroy(gameObject);
+                return;
+            }
+
             if (Instance != null && Instance != this)
             {
                 Destroy(gameObject);
@@ -104,7 +121,7 @@ namespace TanamSawit.UI
             // Tekan tombol ESC di keyboard untuk menutup popup jika sedang terbuka
             if (isPopupOpen)
             {
-                if (Input.GetKeyDown(KeyCode.Escape))
+                if (IsEscapePressed())
                 {
                     CloseSettings();
                     return;
@@ -113,10 +130,61 @@ namespace TanamSawit.UI
             else
             {
                 // Deteksi klik mouse pada objek 'setting' di scene jika popup belum terbuka
-                if (Input.GetMouseButtonDown(0))
+                if (IsMouseButtonDown())
                 {
                     CheckInSceneSettingClick();
                 }
+            }
+        }
+
+        private static bool IsEscapePressed()
+        {
+#if ENABLE_INPUT_SYSTEM
+            if (UnityEngine.InputSystem.Keyboard.current != null && UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
+                return true;
+#endif
+            try
+            {
+                return Input.GetKeyDown(KeyCode.Escape);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private static bool IsMouseButtonDown()
+        {
+#if ENABLE_INPUT_SYSTEM
+            if (UnityEngine.InputSystem.Mouse.current != null && UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
+                return true;
+#endif
+            try
+            {
+                return Input.GetMouseButtonDown(0);
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private static Vector3 GetMousePosition()
+        {
+#if ENABLE_INPUT_SYSTEM
+            if (UnityEngine.InputSystem.Mouse.current != null)
+            {
+                Vector2 pos = UnityEngine.InputSystem.Mouse.current.position.ReadValue();
+                return new Vector3(pos.x, pos.y, 0f);
+            }
+#endif
+            try
+            {
+                return Input.mousePosition;
+            }
+            catch
+            {
+                return Vector3.zero;
             }
         }
 
@@ -185,7 +253,7 @@ namespace TanamSawit.UI
             Camera cam = Camera.main;
             if (cam == null) return;
 
-            Vector3 mouseWorldPos = cam.ScreenToWorldPoint(Input.mousePosition);
+            Vector3 mouseWorldPos = cam.ScreenToWorldPoint(GetMousePosition());
             Vector2 mousePos2D = new Vector2(mouseWorldPos.x, mouseWorldPos.y);
 
             // Cek Raycast 2D
@@ -417,6 +485,7 @@ namespace TanamSawit.UI
 
         private void OnGUI()
         {
+            if (IsExcludedScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)) return;
             if (!isPopupOpen) return;
 
             InitStylesIfNeeded();

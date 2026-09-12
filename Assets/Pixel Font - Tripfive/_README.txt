@@ -24,3 +24,6 @@ http://u3d.as/v5t
 
 Want more fonts?
 http://u3d.as/w4v
+
+git config --global user.email "rafinadhif40@gmail.com"
+git config --global user.name "Rafi Nadhif"
