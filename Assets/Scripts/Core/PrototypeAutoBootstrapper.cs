@@ -25,6 +25,8 @@ namespace TanamSawit.Core
         // tidak memuat apa pun secara otomatis di background.
         // Jika ingin memasang [MANAGERS] di suatu scene, gunakan menu:
         // 'Tanam Sawit > 🚀 1-Klik: Pasang [MANAGERS] ke Scene Ini'
+
+        [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.AfterSceneLoad)]
         public static void InitializeOnPlay()
         {
             string currentSceneName = SceneManager.GetActiveScene().name;
@@ -37,13 +39,13 @@ namespace TanamSawit.Core
                 return;
             }
 
-            // Cek apakah GameManager sudah ada di scene
-            if (GameManager.Instance == null)
+            // Cari atau buat GameObject [MANAGERS]
+            GameObject managersHost = GameObject.Find("[MANAGERS]");
+            if (managersHost == null)
             {
                 Debug.Log("<color=#00FF66><b>[Tanam Sawit]</b> Memulai Auto-Bootstrapper Prototype Tycoon...</color>");
 
-                // Buat GameObject [MANAGERS] secara otomatis di memori
-                GameObject managersHost = new GameObject("[MANAGERS]");
+                managersHost = new GameObject("[MANAGERS]");
                 UnityEngine.Object.DontDestroyOnLoad(managersHost);
 
                 // Pasang semua sistem core
@@ -66,7 +68,36 @@ namespace TanamSawit.Core
                 // Pasang HUD Prototype Interaktif di layar Game View
                 managersHost.AddComponent<TycoonHUD>();
 
+                // Pasang ModernTycoonHUD (ganti IMGUI lama di scene gameplay terpadu)
+                if (SceneManager.GetActiveScene().name.ToLower().Contains("gameplay") ||
+                    !SceneManager.GetActiveScene().name.ToLower().Contains("movement"))
+                {
+                    managersHost.AddComponent<ModernTycoonHUD>();
+                }
+
                 Debug.Log("<color=#00FF66><b>[Tanam Sawit]</b> Semua Manager & HUD berhasil diaktifkan secara otomatis!</color>");
+            }
+
+            // Pastikan SettingsManager selalu ada (bahkan jika [MANAGERS] sudah ada di scene)
+            EnsureComponent<SettingsManager>(managersHost);
+
+            // Pastikan MainMenuSystem selalu ada untuk mengatur transisi menu ke gameplay
+            if (managersHost.GetComponent<TanamSawit.Core.MainMenuSystem>() == null)
+            {
+                managersHost.AddComponent<TanamSawit.Core.MainMenuSystem>();
+                Debug.Log("<color=#00FF66><b>[Tanam Sawit]</b> MainMenuSystem ditambahkan ke [MANAGERS].</color>");
+            }
+        }
+
+        /// <summary>
+        /// Menambahkan komponen T ke GameObject jika belum ada.
+        /// </summary>
+        private static void EnsureComponent<T>(GameObject host) where T : Component
+        {
+            if (host.GetComponent<T>() == null)
+            {
+                host.AddComponent<T>();
+                Debug.Log($"<b>[Tanam Sawit]</b> {typeof(T).Name} ditambahkan ke {host.name}.");
             }
         }
 

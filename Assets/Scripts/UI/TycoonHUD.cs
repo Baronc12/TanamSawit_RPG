@@ -17,6 +17,10 @@ namespace TanamSawit.UI
         [Header("Pengaturan Tampilan")]
         [SerializeField] private bool showPrototypeGUI = true;
 
+        [Header("Integration dengan Modern HUD")]
+        [Tooltip("Jika true, TycoonHUD IMGUI lama akan dinonaktifkan untuk memberi ruang ModernTycoonHUD di scene yang sama.")]
+        [SerializeField] private bool disableWhenModernHUDActive = true;
+
         private int selectedTab = 0;
         private readonly string[] tabNames = new string[] { "🌾 Kebun", "🚜 Lahan", "💳 Kredit", "📊 Sepupu", "💾 Save", "⚙️ Setting" };
         private string lastSaveMessage = "";
@@ -44,6 +48,12 @@ namespace TanamSawit.UI
 
         private void OnGUI()
         {
+            // Jika ModernTycoonHUD aktif dan opsi nonaktifkan di-enable, sembunyikan IMGUI lama
+            if (disableWhenModernHUDActive && ModernTycoonHUD.Instance != null)
+            {
+                return;
+            }
+
             if (!showPrototypeGUI) return;
 
             // Box Panel Utama

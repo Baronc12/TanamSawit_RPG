@@ -203,7 +203,9 @@ namespace TanamSawit.UI
             // 2. Fallback: Cari yang mengandung kata "setting"
             if (inSceneSettingObject == null)
             {
+#pragma warning disable CS0618
                 var allObjects = FindObjectsByType<GameObject>(FindObjectsSortMode.None);
+#pragma warning restore CS0618
                 foreach (var go in allObjects)
                 {
                     string lowerName = go.name.ToLower();
@@ -309,7 +311,9 @@ namespace TanamSawit.UI
         /// </summary>
         private void FindAndSetupMainMenuHoverButtons()
         {
+#pragma warning disable CS0618
             TextMesh[] menuLabels = FindObjectsByType<TextMesh>(FindObjectsSortMode.None);
+#pragma warning restore CS0618
             foreach (TextMesh menuLabel in menuLabels)
             {
                 string identifier = $"{menuLabel.gameObject.name} {menuLabel.text}".ToLowerInvariant();

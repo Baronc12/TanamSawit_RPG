@@ -32,7 +32,7 @@ namespace TanamSawit.Managers
 
         #region Game State
         [Header("State Permainan")]
-        [SerializeField] private GameState currentState = GameState.Playing;
+        [SerializeField] private GameState currentState = GameState.MainMenu;
 
         /// <summary>
         /// Mendapatkan state aktif saat ini.

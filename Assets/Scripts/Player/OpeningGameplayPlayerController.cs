@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TanamSawit.Environment;
+using TanamSawit.Managers;
 
 namespace TanamSawit.Player
 {
@@ -18,6 +20,8 @@ namespace TanamSawit.Player
         [Header("Animasi")]
         [SerializeField, Min(1f)] private float walkFramesPerSecond = 10f;
         [SerializeField] private bool placeAtCameraCenterOnStart = true;
+        [SerializeField] private bool isMovementLocked = false;
+        public bool IsMovementLocked => isMovementLocked;
 
         private SpriteRenderer spriteRenderer;
         private Sprite[] walkFrames;
@@ -26,6 +30,27 @@ namespace TanamSawit.Player
 
         private void Awake()
         {
+            if (!gameObject.CompareTag("Player"))
+            {
+                try { gameObject.tag = "Player"; } catch {}
+            }
+
+            // Pastikan memiliki Collider2D dan Rigidbody2D kinematis agar event trigger bekerja konsisten
+            if (GetComponent<Collider2D>() == null)
+            {
+                var col = gameObject.AddComponent<BoxCollider2D>();
+                col.size = new Vector2(0.8f, 1.2f);
+                col.offset = new Vector2(0f, 0.4f);
+            }
+
+            var rb = GetComponent<Rigidbody2D>();
+            if (rb == null)
+            {
+                rb = gameObject.AddComponent<Rigidbody2D>();
+                rb.bodyType = RigidbodyType2D.Kinematic;
+                rb.simulated = true;
+            }
+
             spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.sortingOrder = 20;
             CreateWalkFrames();
@@ -33,15 +58,47 @@ namespace TanamSawit.Player
 
         private void Start()
         {
-            if (placeAtCameraCenterOnStart && Camera.main != null)
+            // Saat berada di state MainMenu, kamera belum mengikuti karakter.
+            // Kita posisikan karakter di dekat kamera tapi kunci gerakannya sampai
+            // pengguna menekan tombol Play pada main menu.
+            bool inMenu = GameManager.Instance != null &&
+                          GameManager.Instance.CurrentState == GameState.MainMenu;
+            if (inMenu)
+            {
+                isMovementLocked = true;
+                if (placeAtCameraCenterOnStart && Camera.main != null)
+                {
+                    Vector3 cameraPosition = Camera.main.transform.position;
+                    transform.position = new Vector3(cameraPosition.x, cameraPosition.y - 1.5f, 0f);
+                }
+            }
+            else if (placeAtCameraCenterOnStart && Camera.main != null)
             {
                 Vector3 cameraPosition = Camera.main.transform.position;
                 transform.position = new Vector3(cameraPosition.x, cameraPosition.y - 1.5f, 0f);
             }
         }
 
+        public void SetMovementLocked(bool locked)
+        {
+            isMovementLocked = locked;
+        }
+
         private void Update()
         {
+            // Jangan bergerak jika input dikunci oleh modal dialog, saat transisi,
+            // atau ketika masih berada di state MainMenu (belum menekan Play).
+            bool transitionActive = AreaTransitionManager.Instance != null && AreaTransitionManager.Instance.IsTransitioning;
+            bool inMainMenu = GameManager.Instance != null &&
+                              GameManager.Instance.CurrentState == GameState.MainMenu;
+            if (isMovementLocked || transitionActive || inMainMenu)
+            {
+                animationTimer = 0f;
+                currentFrame = 0;
+                ShowFrame(currentFrame);
+                return;
+            }
+
             Vector2 movement = ReadWasdInput();
             bool isMoving = movement.sqrMagnitude > 0f;
 
