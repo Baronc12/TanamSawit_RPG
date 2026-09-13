@@ -21,29 +21,29 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 4663589495061128892, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+      value: {fileID: -9094734800969629820, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
     - time: 0.083333336
-      value: {fileID: 867580616, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+      value: {fileID: -1234459287, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
     - time: 0.16666667
-      value: {fileID: -2143925604, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+      value: {fileID: 381203108, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
     - time: 0.25
-      value: {fileID: -1199486376, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+      value: {fileID: 4618117, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
     - time: 0.33333334
-      value: {fileID: -1556156552, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+      value: {fileID: -687042887, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
     - time: 0.41666666
-      value: {fileID: -609361609, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+      value: {fileID: 948915830, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
     - time: 0.5
-      value: {fileID: 874524498, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+      value: {fileID: 1696464615, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
     - time: 0.5833333
-      value: {fileID: 711334709, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+      value: {fileID: -556071894, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
     - time: 0.6666667
-      value: {fileID: -66146173, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+      value: {fileID: 1222296179, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
     - time: 0.75
-      value: {fileID: -987197824, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+      value: {fileID: 1115235327, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
     - time: 0.8333333
-      value: {fileID: 932121745, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+      value: {fileID: 1231212288, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
     - time: 0.9166667
-      value: {fileID: 147253607, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+      value: {fileID: 777772695, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -67,18 +67,18 @@ AnimationClip:
       isSerializeReferenceCurve: 0
       metaData: 0
     pptrCurveMapping:
-    - {fileID: 4663589495061128892, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
-    - {fileID: 867580616, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
-    - {fileID: -2143925604, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
-    - {fileID: -1199486376, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
-    - {fileID: -1556156552, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
-    - {fileID: -609361609, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
-    - {fileID: 874524498, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
-    - {fileID: 711334709, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
-    - {fileID: -66146173, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
-    - {fileID: -987197824, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
-    - {fileID: 932121745, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
-    - {fileID: 147253607, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+    - {fileID: -9094734800969629820, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
+    - {fileID: -1234459287, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
+    - {fileID: 381203108, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
+    - {fileID: 4618117, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
+    - {fileID: -687042887, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
+    - {fileID: 948915830, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
+    - {fileID: 1696464615, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
+    - {fileID: -556071894, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
+    - {fileID: 1222296179, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
+    - {fileID: 1115235327, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
+    - {fileID: 1231212288, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
+    - {fileID: 777772695, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

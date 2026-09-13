@@ -328,7 +328,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -600,7 +600,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -681,7 +681,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -1674,7 +1674,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -1755,7 +1755,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -2110,7 +2110,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -3025,7 +3025,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -4001,7 +4001,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -4082,7 +4082,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -4429,7 +4429,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -4963,7 +4963,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -5044,7 +5044,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -5850,7 +5850,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -5931,7 +5931,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -6162,7 +6162,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -6701,7 +6701,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -7102,7 +7102,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -7646,7 +7646,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -8004,7 +8004,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -8772,7 +8772,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -8853,7 +8853,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -8992,7 +8992,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -9073,7 +9073,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -9362,7 +9362,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -10448,7 +10448,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -10529,7 +10529,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -10668,7 +10668,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -10749,7 +10749,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -11196,7 +11196,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -11702,7 +11702,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -12280,7 +12280,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -12361,7 +12361,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -12500,7 +12500,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -12581,7 +12581,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -13548,7 +13548,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -13938,7 +13938,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -14019,7 +14019,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -14952,7 +14952,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -15172,7 +15172,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -15392,7 +15392,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -15473,7 +15473,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -15754,7 +15754,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -15835,7 +15835,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -16296,7 +16296,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -16994,7 +16994,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -17260,7 +17260,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -17480,7 +17480,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -19108,7 +19108,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -19610,7 +19610,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -20408,7 +20408,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -20489,7 +20489,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -21490,7 +21490,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -21571,7 +21571,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -21906,7 +21906,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -22870,7 +22870,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -22983,7 +22983,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2032515587}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: MAINMENU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22998,7 +22998,7 @@ Transform:
   m_GameObject: {fileID: 2032515586}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38.11, y: 0, z: 0}
+  m_LocalPosition: {x: -6.9, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -23126,7 +23126,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -23207,7 +23207,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -23346,7 +23346,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -23427,7 +23427,7 @@ Sprite:
         format: 0
         dimension: 0
       m_DataSize: 80
-      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf000000000000000000000000000000000000000000000000000000000000000000000000
+      _typelessdata: 000000bf0000003f000000000000003f0000003f00000000000000bf000000bf000000000000003f000000bf00000000000000000000803f0000803f0000803f00000000000000000000803f00000000
     m_Bindpose: []
     m_BlendShapes:
       vertices: []
@@ -23813,7 +23813,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:

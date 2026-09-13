@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 843938640}
   - component: {fileID: 843938639}
   m_Layer: 0
-  m_Name: Gemini_Generated_Image_k80nmqk80nmqk80n_3
+  m_Name: main_character
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,7 +208,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -1199486376, guid: 6132525a7049b5b4aa8f623473295962, type: 3}
+  m_Sprite: {fileID: -9094734800969629820, guid: 0ed23e4afce4e78448f883e98fa7add5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
