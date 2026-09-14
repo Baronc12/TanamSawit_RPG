@@ -64,17 +64,10 @@ namespace TanamSawit.Core
                 managersHost.AddComponent<GridManager>();
                 managersHost.AddComponent<EcologySpawner>();
 
-                // Pasang HUD Prototype Interaktif di layar Game View
-                managersHost.AddComponent<TycoonHUD>();
+                // Pasang UI uGUI (menggantikan IMGUI TycoonHUD/ModernTycoonHUD)
+                UIRoot.EnsureExists();
 
-                // Pasang ModernTycoonHUD (ganti IMGUI lama di scene gameplay terpadu)
-                if (SceneManager.GetActiveScene().name.ToLower().Contains("gameplay") ||
-                    !SceneManager.GetActiveScene().name.ToLower().Contains("movement"))
-                {
-                    managersHost.AddComponent<ModernTycoonHUD>();
-                }
-
-                Debug.Log("<color=#00FF66><b>[Tanam Sawit]</b> Semua Manager & HUD berhasil diaktifkan secara otomatis!</color>");
+                Debug.Log("<color=#00FF66><b>[Tanam Sawit]</b> Semua Manager & UI berhasil diaktifkan secara otomatis!</color>");
             }
 
             // Pastikan SettingsManager selalu ada (bahkan jika [MANAGERS] sudah ada di scene)

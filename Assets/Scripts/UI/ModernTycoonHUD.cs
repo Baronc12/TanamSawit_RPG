@@ -24,6 +24,13 @@ namespace TanamSawit.UI
     {
         public static ModernTycoonHUD Instance { get; private set; }
 
+        // ── Strangler flags: set to false when uGUI panel replaces each section ──
+        private const bool SHOW_TOPBAR = false;       // replaced by TopBarUI
+        private const bool SHOW_TICKER = false;       // replaced by NotificationTickerUI
+        private const bool SHOW_TABLET = false;        // replaced by TabletUI
+        private const bool SHOW_FACILITY_MODAL = false; // replaced by FacilityModalUI
+        private const bool SHOW_GAME_OVER = false;     // replaced by GameOverUI
+
         // ── Styles ────────────────────────────────────────────────────────
         private GUIStyle topBarStyle;
         private GUIStyle topBarLabelStyle;
@@ -259,13 +266,13 @@ namespace TanamSawit.UI
 
             InitStyles();
 
-            DrawTopBar();
-            DrawNotificationTicker();
+            if (SHOW_TOPBAR) DrawTopBar();
+            if (SHOW_TICKER) DrawNotificationTicker();
 
-            if (facilityModalOpen) DrawFacilityModal();
-            else if (tabletOpen) DrawPocketTablet();
+            if (SHOW_FACILITY_MODAL && facilityModalOpen) DrawFacilityModal();
+            else if (SHOW_TABLET && tabletOpen) DrawPocketTablet();
 
-            DrawGameOverBanner();
+            if (SHOW_GAME_OVER) DrawGameOverBanner();
         }
 
         // ── Top Bar ───────────────────────────────────────────────────────

@@ -45,18 +45,15 @@ namespace TanamSawit.EditorTools
             managersGo.AddComponent<GridManager>();
             managersGo.AddComponent<EcologySpawner>();
 
-            // Pasang HUD Prototype Interaktif di layar Game View
-            managersGo.AddComponent<TycoonHUD>();
-
-            // Pasang ModernTycoonHUD untuk gameplay terpadu
-            managersGo.AddComponent<ModernTycoonHUD>();
+            // Pasang UI uGUI (menggantikan IMGUI TycoonHUD/ModernTycoonHUD)
+            TanamSawit.UI.UIRoot.EnsureExists();
 
             // Tandai scene berubah agar bisa di-Ctrl+S
             EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
             Selection.activeGameObject = managersGo;
 
             EditorUtility.DisplayDialog("Sukses!",
-                "GameObject [MANAGERS] dan seluruh sistem GDD (Ekonomi, Waktu, Pekerja, Karma, Rival, HUD) + ModernTycoonHUD telah berhasil dipasang!\n\nSekarang Anda cukup tekan tombol PLAY di Unity.",
+                "GameObject [MANAGERS] dan seluruh sistem GDD (Ekonomi, Waktu, Pekerja, Karma, Rival) + UI uGUI telah berhasil dipasang!\n\nSekarang Anda cukup tekan tombol PLAY di Unity.",
                 "Mantap!");
         }
 

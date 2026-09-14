@@ -100,17 +100,10 @@ namespace TanamSawit.EditorTools
                 managers.AddComponent<SettingsManager>();
                 managers.AddComponent<GridManager>();
                 managers.AddComponent<EcologySpawner>();
-                managers.AddComponent<ModernTycoonHUD>();
-                managers.AddComponent<TycoonHUD>();
+                TanamSawit.UI.UIRoot.EnsureExists();
 
                 Undo.RegisterCreatedObjectUndo(managers, "Create [MANAGERS]");
                 Debug.Log("[UnifiedSceneBuilder] [MANAGERS] created with all systems");
-            }
-            else
-            {
-                // Ensure ModernTycoonHUD is present
-                if (managers.GetComponent<ModernTycoonHUD>() == null)
-                    managers.AddComponent<ModernTycoonHUD>();
             }
         }
 
