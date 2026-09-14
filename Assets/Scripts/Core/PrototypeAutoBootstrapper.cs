@@ -55,7 +55,6 @@ namespace TanamSawit.Core
                 managersHost.AddComponent<WorkerManager>();
                 managersHost.AddComponent<BuildingManager>();
                 managersHost.AddComponent<LoanManager>();
-                managersHost.AddComponent<EcologyManager>();
                 managersHost.AddComponent<EnvironmentalKarmaManager>();
                 managersHost.AddComponent<RivalManager>();
                 managersHost.AddComponent<SaveManager>();

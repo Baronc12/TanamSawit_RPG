@@ -94,7 +94,6 @@ namespace TanamSawit.EditorTools
                 managers.AddComponent<WorkerManager>();
                 managers.AddComponent<BuildingManager>();
                 managers.AddComponent<LoanManager>();
-                managers.AddComponent<EcologyManager>();
                 managers.AddComponent<EnvironmentalKarmaManager>();
                 managers.AddComponent<RivalManager>();
                 managers.AddComponent<SaveManager>();

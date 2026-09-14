@@ -36,7 +36,6 @@ namespace TanamSawit.EditorTools
             managersGo.AddComponent<WorkerManager>();
             managersGo.AddComponent<BuildingManager>();
             managersGo.AddComponent<LoanManager>();
-            managersGo.AddComponent<EcologyManager>();
             managersGo.AddComponent<EnvironmentalKarmaManager>();
             managersGo.AddComponent<RivalManager>();
             managersGo.AddComponent<SaveManager>();

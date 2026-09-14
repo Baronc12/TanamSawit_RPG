@@ -119,6 +119,15 @@ namespace TanamSawit.Managers
         {
             if (data == null) return false;
 
+            // Cek kuota kapasitas pekerja (BuildingManager owns capacity)
+            if (BuildingManager.Instance != null && workers.Count >= BuildingManager.Instance.MaxWorkerCapacity)
+            {
+                string capMsg = "Kuota pekerja penuh! Beli lahan untuk menambah kuota.";
+                Debug.LogWarning($"[WorkerManager] {capMsg}");
+                OnWorkerEventTriggered?.Invoke(capMsg);
+                return false;
+            }
+
             // Cek biaya rekrut
             if (EconomyManager.Instance != null && !EconomyManager.Instance.SpendMoney(data.hireCost, $"Rekrut {data.workerTitle}"))
             {
