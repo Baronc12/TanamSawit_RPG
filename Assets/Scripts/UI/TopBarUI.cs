@@ -92,17 +92,18 @@ namespace TanamSawit.UI
             _timeText.color = UIRoot.TextGold;
             _timeText.alignment = TextAnchor.MiddleLeft;
 
+            // Keuangan utama di kiri agar selalu terlihat saat pemain mengambil pinjaman
+            _cashText = CreateLabel("Cash", bar, 160, 13);
+            _cashText.color = UIRoot.TextGreen;
+
+            _debtText = CreateLabel("Debt", bar, 170, 13);
+            _debtText.color = UIRoot.TextRed;
+
             // Spacer
             UIRoot.CreateRect("Spacer1", bar);
 
-            // Kas
-            _cashText = CreateLabel("Cash", bar, 160, 13);
-
             // Net Worth
             _netWorthText = CreateLabel("NetWorth", bar, 190, 13);
-
-            // Hutang (disembunyikan jika 0)
-            _debtText = CreateLabel("Debt", bar, 170, 13);
 
             // Spacer
             UIRoot.CreateRect("Spacer2", bar);
@@ -199,15 +200,12 @@ namespace TanamSawit.UI
             if (LoanManager.Instance != null)
             {
                 double debt = LoanManager.Instance.TotalDebt;
-                if (debt > 0)
-                {
-                    _debtText.color = UIRoot.TextRed;
-                    _debtText.text = $"\uD83D\uDCB3 Hutang: {EconomyManager.FormatCurrencyCompact(debt)}";
-                }
-                else
-                {
-                    _debtText.text = "";
-                }
+                _debtText.color = debt > 0 ? UIRoot.TextRed : UIRoot.TextDefault;
+                _debtText.text = $"\uD83D\uDCB3 Hutang: {EconomyManager.FormatCurrencyCompact(debt)}";
+            }
+            else
+            {
+                _debtText.text = "\uD83D\uDCB3 Hutang: --";
             }
         }
 

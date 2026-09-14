@@ -141,7 +141,7 @@ namespace TanamSawit.UI
                 title = "\uD83D\uDCE6 Gudang TBS",
                 getDescription = () =>
                 {
-                    if (wm == null) return "";
+                    if (wm == null) return "Data gudang belum tersedia.\nWorkerManager belum siap.";
                     return $"Stok TBS: {wm.TbsStockTon:F1} Ton\nStok CPO: {wm.CpoStockTon:F1} Ton\nPabrik: {(wm.HasFactory ? "Aktif" : "Belum ada")}";
                 },
                 buttons = new List<FacilityButtonSpec>
@@ -169,7 +169,7 @@ namespace TanamSawit.UI
                 title = "\uD83C\uDFE8 Mess Pekerja",
                 getDescription = () =>
                 {
-                    if (wm == null) return "";
+                    if (wm == null) return "Data pekerja belum tersedia.\nWorkerManager belum siap.";
                     var sb = new System.Text.StringBuilder();
                     sb.AppendLine($"Pekerja Aktif: {wm.ActiveWorkersCount} orang");
                     sb.AppendLine();
@@ -194,7 +194,7 @@ namespace TanamSawit.UI
                 title = "\uD83C\uDFDA Kos-kosan",
                 getDescription = () =>
                 {
-                    if (loan == null) return "";
+                    if (loan == null) return "Data kos belum tersedia.\nLoanManager belum siap.";
                     return $"Kos Dimiliki: {loan.OwnedBoardingHouses} unit\nPassive Income: Rp 1.500.000 / unit / bulan";
                 },
                 buttons = new List<FacilityButtonSpec>
@@ -216,7 +216,7 @@ namespace TanamSawit.UI
                 title = "\uD83C\uDFE6 Bank Konvensional",
                 getDescription = () => loan != null
                     ? $"Hutang Bank Aktif: {EconomyManager.FormatCurrency(loan.BankDebt)}"
-                    : "",
+                    : "Data hutang bank belum tersedia.\nLoanManager belum siap.",
                 buttons = new List<FacilityButtonSpec>
                 {
                     FacilityButtonSpec.Create("\uD83D\uDCCB Pinjam Rp 50 Jt",
@@ -242,7 +242,7 @@ namespace TanamSawit.UI
                 title = "\uD83D\uDCF1 Kantor Pinjol",
                 getDescription = () =>
                 {
-                    if (loan == null) return "";
+                    if (loan == null) return "Data hutang pinjol belum tersedia.\nLoanManager belum siap.";
                     return $"Hutang Pinjol: {EconomyManager.FormatCurrency(loan.PinjolDebt)}\n\u26A0\uFE0F Bunga harian 2% berlipat ganda! Teror debt collector jika gagal bayar!";
                 },
                 buttons = new List<FacilityButtonSpec>
@@ -267,7 +267,7 @@ namespace TanamSawit.UI
                 title = "\uD83D\uDCB0 Warung Rentenir Madura",
                 getDescription = () =>
                 {
-                    if (loan == null) return "";
+                    if (loan == null) return "Data hutang rentenir belum tersedia.\nLoanManager belum siap.";
                     return $"Hutang Rentenir: {EconomyManager.FormatCurrency(loan.RentenirDebt)}\nBunga 1% per hari. Jangan sampai gagal bayar!";
                 },
                 buttons = new List<FacilityButtonSpec>
@@ -293,7 +293,7 @@ namespace TanamSawit.UI
                 title = "\uD83C\uDFED Pabrik Pengolahan CPO",
                 getDescription = () =>
                 {
-                    if (wm == null) return "";
+                    if (wm == null) return "Data pabrik belum tersedia.\nWorkerManager belum siap.";
                     var sb = new System.Text.StringBuilder();
                     sb.AppendLine($"Status Pabrik: {(wm.HasFactory ? "Beroperasi" : "Belum Dibangun")}");
                     sb.AppendLine($"Stok TBS: {wm.TbsStockTon:F1} Ton | CPO: {wm.CpoStockTon:F1} Ton");
@@ -332,7 +332,7 @@ namespace TanamSawit.UI
                 title = "\uD83C\uDF93 Yayasan Pendidikan CSR",
                 getDescription = () =>
                 {
-                    if (bm == null) return "";
+                    if (bm == null) return "Data yayasan belum tersedia.\nBuildingManager belum siap.";
                     return $"Status Yayasan: {(bm.HasFoundation ? "Sudah Berdiri" : "Belum Dibangun")}\nBonus: Semua pekerja baru mendapat +10 Intelligence.";
                 },
                 buttons = new List<FacilityButtonSpec>
@@ -356,7 +356,7 @@ namespace TanamSawit.UI
                 title = "\uD83D\uDCCA Billboard Saingan Sepupu",
                 getDescription = () =>
                 {
-                    if (rival == null || econ == null) return "";
+                    if (rival == null || econ == null) return "Data evaluasi belum tersedia.\nManager belum siap.";
                     double playerNW = econ.GetNetWorth();
                     double cousinNW = rival.CousinCurrentNetWorth;
                     bool isLeading = playerNW >= cousinNW;

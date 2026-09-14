@@ -78,20 +78,27 @@ namespace TanamSawit.UI
             center.anchorMin = new Vector2(0.5f, 0.5f);
             center.anchorMax = new Vector2(0.5f, 0.5f);
             center.pivot = new Vector2(0.5f, 0.5f);
-            center.sizeDelta = new Vector2(560, 480);
+            center.sizeDelta = new Vector2(620, 520);
             center.anchoredPosition = Vector2.zero;
 
             // Title
-            _titleText = UIRoot.CreateText("Title", center, "", 18, UIRoot.TextGold, TextAnchor.MiddleCenter, FontStyle.Bold);
-            SetRect(_titleText.rectTransform, new Vector2(0, 1), new Vector2(1, 1), new Vector2(16, -14), new Vector2(-16, -46));
+            _titleText = UIRoot.CreateText("Title", center, "", 20, UIRoot.TextGold, TextAnchor.MiddleCenter, FontStyle.Bold);
+            AddTextOutline(_titleText);
+            SetRect(_titleText.rectTransform, new Vector2(0, 1), new Vector2(1, 1), new Vector2(16, -54), new Vector2(-16, -14));
 
             // Description
-            _descText = UIRoot.CreateText("Desc", center, "", 13, UIRoot.TextDefault, TextAnchor.UpperLeft, FontStyle.Normal);
-            SetRect(_descText.rectTransform, new Vector2(0, 1), new Vector2(1, 1), new Vector2(16, -54), new Vector2(-16, -260));
+            var valuePanel = UIRoot.CreatePanel("ValuePanel", center, new Color(0.02f, 0.04f, 0.03f, 0.9f));
+            SetRect(valuePanel, new Vector2(0, 1), new Vector2(1, 1), new Vector2(16, -300), new Vector2(-16, -62));
+
+            _descText = UIRoot.CreateText("Desc", valuePanel, "", 18, Color.white, TextAnchor.UpperLeft, FontStyle.Normal);
+            AddTextOutline(_descText);
+            _descText.horizontalOverflow = HorizontalWrapMode.Wrap;
+            _descText.verticalOverflow = VerticalWrapMode.Truncate;
+            SetRect(_descText.rectTransform, Vector2.zero, Vector2.one, new Vector2(14, 10), new Vector2(-14, -10));
 
             // Button list area
             _buttonList = UIRoot.CreateRect("ButtonList", center);
-            SetRect(_buttonList, new Vector2(0, 0), new Vector2(1, 1), new Vector2(16, 50), new Vector2(-16, -268));
+            SetRect(_buttonList, new Vector2(0, 0), new Vector2(1, 1), new Vector2(16, 58), new Vector2(-16, -312));
 
             var vlg = _buttonList.gameObject.AddComponent<VerticalLayoutGroup>();
             vlg.spacing = 6;
@@ -213,7 +220,9 @@ namespace TanamSawit.UI
             if (_currentDef.getDescription != null)
             {
                 string desc = _currentDef.getDescription();
+                _descText.color = Color.white;
                 _descText.text = desc;
+                _descText.SetVerticesDirty();
                 Debug.Log($"[FacilityModalUI] RefreshContent: desc set to '{desc?.Substring(0, Mathf.Min(50, desc.Length))}...'");
             }
             else
@@ -253,6 +262,13 @@ namespace TanamSawit.UI
             rt.anchorMax = anchorMax;
             rt.offsetMin = offsetMin;
             rt.offsetMax = offsetMax;
+        }
+
+        private static void AddTextOutline(Text text)
+        {
+            var outline = text.gameObject.AddComponent<Outline>();
+            outline.effectColor = new Color(0f, 0f, 0f, 0.9f);
+            outline.effectDistance = new Vector2(1f, -1f);
         }
     }
 }

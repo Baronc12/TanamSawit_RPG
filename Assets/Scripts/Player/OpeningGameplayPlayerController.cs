@@ -16,9 +16,13 @@ namespace TanamSawit.Player
 
         [Header("Gerakan")]
         [SerializeField, Min(0.1f)] private float moveSpeed = 3.5f;
+        [SerializeField, Min(1f)] private float runSpeedMultiplier = 1.6f;
+        [SerializeField] private bool isRunning;
+        public bool IsRunning => isRunning;
 
         [Header("Animasi")]
         [SerializeField, Min(1f)] private float walkFramesPerSecond = 10f;
+        [SerializeField, Range(0.4f, 1f)] private float characterScale = 0.65f;
         [SerializeField] private bool placeAtCameraCenterOnStart = true;
         [SerializeField] private bool isMovementLocked = false;
         public bool IsMovementLocked => isMovementLocked;
@@ -64,6 +68,7 @@ namespace TanamSawit.Player
 
             spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.sortingOrder = 20;
+            transform.localScale = Vector3.one * characterScale;
             CreateWalkFrames();
         }
 
@@ -111,6 +116,12 @@ namespace TanamSawit.Player
                 return;
             }
 
+            if (IsRunTogglePressed())
+            {
+                isRunning = !isRunning;
+                Debug.Log($"[OpeningGameplayPlayer] Mode kecepatan: {(isRunning ? "Lari" : "Jalan")}");
+            }
+
             Vector2 movement = ReadWasdInput();
             bool isMoving = movement.sqrMagnitude > 0f;
 
@@ -140,7 +151,25 @@ namespace TanamSawit.Player
                 if (rb != null) rb.linearVelocity = Vector2.zero;
                 return;
             }
-            rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
+            float currentSpeed = moveSpeed * (isRunning ? runSpeedMultiplier : 1f);
+            rb.MovePosition(rb.position + moveInput * currentSpeed * Time.fixedDeltaTime);
+        }
+
+        private static bool IsRunTogglePressed()
+        {
+#if ENABLE_INPUT_SYSTEM
+            var keyboard = UnityEngine.InputSystem.Keyboard.current;
+            if (keyboard != null)
+                return keyboard.leftShiftKey.wasPressedThisFrame || keyboard.rightShiftKey.wasPressedThisFrame;
+#endif
+            try
+            {
+                return Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.RightShift);
+            }
+            catch
+            {
+                return false;
+            }
         }
 
         /// <summary>

@@ -160,7 +160,7 @@ namespace TanamSawit.EditorTools
                 cam = camGO.AddComponent<Camera>();
             }
             cam.orthographic = true;
-            cam.orthographicSize = 6f;
+            cam.orthographicSize = 8f;
             cam.clearFlags = CameraClearFlags.SolidColor;
             cam.backgroundColor = new Color(0.05f, 0.05f, 0.05f, 1f);
             cam.tag = "MainCamera";

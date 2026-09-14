@@ -328,7 +328,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 3136
+    settingsRaw: 64
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -1454,7 +1454,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -2110,7 +2110,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 3136
+    settingsRaw: 64
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -2414,6 +2414,7 @@ MonoBehaviour:
   cousinCurrentNetWorth: 0
   cousinAnnualGrowthRate: 0.08
   targetEvaluationYear: 2034
+  targetNetWorthForGoodEnding: 1000000000
   finalEnding: 0
 --- !u!114 &188694907
 MonoBehaviour:
@@ -2473,8 +2474,6 @@ MonoBehaviour:
   cpoStockTon: 0
   pricePerTonTBS: 2500000
   pricePerTonCPO: 12000000
-  hasFactory: 0
-  factoryBuildCost: 100000000
 --- !u!114 &188694910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2497,6 +2496,7 @@ MonoBehaviour:
   currentDay: 1
   currentMonth: 1
   currentYear: 2024
+  startHour: 6
   currentGameSpeed: 1
 --- !u!114 &188694911
 MonoBehaviour:
@@ -5325,7 +5325,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TanamSawit.Player.OpeningGameplayPlayerController
   moveSpeed: 3.5
-  walkFramesPerSecond: 10
+  runSpeedMultiplier: 1.6
+  isRunning: 0
+  walkFramesPerSecond: 8
+  characterScale: 0.65
   placeAtCameraCenterOnStart: 1
   isMovementLocked: 0
 --- !u!212 &479731045
@@ -5686,7 +5689,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 8
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -7281,6 +7284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TanamSawit.Environment.AreaTransitionManager
   currentAreaName: Area Kebun Sawit
+  currentAreaId: kebun
   isTransitioning: 0
   fadeDuration: 0.45
   holdDuration: 0.5
@@ -9362,7 +9366,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 3136
+    settingsRaw: 64
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -14576,7 +14580,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -18406,7 +18410,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b685cec87fcda4c499cbbd246bb187a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TanamSawit.Environment.WorldBuildingBuilder
-  areaSpacing: 60
+  areaSpacing: 100
   areaWidth: 50
   areaHeight: 40
   colorKebun: {r: 0.26, g: 0.62, b: 0.2, a: 1}
@@ -18764,7 +18768,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -19610,7 +19614,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 3136
+    settingsRaw: 64
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:
@@ -20142,7 +20146,7 @@ Sprite:
       height: 1
     textureRectOffset: {x: 0, y: 0}
     atlasRectOffset: {x: -1, y: -1}
-    settingsRaw: 64
+    settingsRaw: 3136
     uvTransform: {x: 1, y: 0.5, z: 1, w: 0.5}
     downscaleMultiplier: 1
   m_AtlasRD:

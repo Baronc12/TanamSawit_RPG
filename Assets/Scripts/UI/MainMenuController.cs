@@ -4,9 +4,8 @@ namespace TanamSawit.UI
 {
     /// <summary>
     /// Mengontrol tombol Play, Settings, dan Quit pada main menu.
-    /// Pada arsitektur ini, main menu dan gameplay berada di scene yang sama.
-    /// Tekan PLAY akan memulai gameplay: mengaktifkan kamera follow dan
-    /// membuka gerakan pemain melalui MainMenuSystem.
+    /// Main menu dan gameplay berada di scene yang sama; PLAY membuka gerakan
+    /// pemain dan mengaktifkan kamera gameplay melalui MainMenuSystem.
     /// </summary>
     public class MainMenuController : MonoBehaviour
     {

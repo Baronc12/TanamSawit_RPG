@@ -50,7 +50,7 @@ namespace TanamSawit.UI
             panelRt.anchorMin = new Vector2(1, 0.5f);
             panelRt.anchorMax = new Vector2(1, 0.5f);
             panelRt.pivot = new Vector2(1, 0.5f);
-            panelRt.sizeDelta = new Vector2(520, 520);
+            panelRt.sizeDelta = new Vector2(560, 600);
             panelRt.anchoredPosition = new Vector2(-20, 0);
 
             var bg = _panel.AddComponent<Image>();
@@ -59,12 +59,13 @@ namespace TanamSawit.UI
             bg.type = Image.Type.Sliced;
 
             // Header
-            var header = UIRoot.CreateText("Header", _panel.transform, "\uD83D\uDCF1 STATUS RINGKASAN", 16, UIRoot.TextGreen, TextAnchor.MiddleCenter, FontStyle.Bold);
-            SetRect(header.rectTransform, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0, -14), new Vector2(0, -40));
+            var header = UIRoot.CreateText("Header", _panel.transform, "\uD83D\uDCF1 STATUS RINGKASAN", 22, UIRoot.TextGreen, TextAnchor.MiddleCenter, FontStyle.Bold);
+            AddTextOutline(header);
+            SetRect(header.rectTransform, new Vector2(0, 1), new Vector2(1, 1), new Vector2(0, -42), new Vector2(0, -10));
 
             // Tab buttons row
             var tabRow = UIRoot.CreateRect("TabRow", _panel.transform);
-            SetRect(tabRow, new Vector2(0, 1), new Vector2(1, 1), new Vector2(10, -44), new Vector2(-10, -74));
+            SetRect(tabRow, new Vector2(0, 1), new Vector2(1, 1), new Vector2(10, -82), new Vector2(-10, -48));
             var hlg = tabRow.gameObject.AddComponent<HorizontalLayoutGroup>();
             hlg.spacing = 4;
             hlg.childControlWidth = true;
@@ -75,24 +76,29 @@ namespace TanamSawit.UI
             {
                 int idx = i;
                 _tabButtons[i] = UIRoot.CreateButton($"Tab_{_tabNames[i]}", tabRow, _tabNames[i],
-                    UIRoot.BgButton, () => SelectTab(idx), 12);
+                    UIRoot.BgButton, () => SelectTab(idx), 16);
+                AddTextOutline(_tabButtons[i].GetComponentInChildren<Text>());
             }
 
             // Content area (scrollable text)
             _contentArea = UIRoot.CreateRect("ContentArea", _panel.transform);
-            SetRect(_contentArea, Vector2.zero, Vector2.one, new Vector2(10, 50), new Vector2(-10, -82));
+            SetRect(_contentArea, Vector2.zero, Vector2.one, new Vector2(10, 58), new Vector2(-10, -90));
 
             var scrollBg = _contentArea.gameObject.AddComponent<Image>();
             scrollBg.color = new Color(0, 0, 0, 0.3f);
             scrollBg.raycastTarget = true;
 
-            _contentText = UIRoot.CreateText("Content", _contentArea, "", 13, UIRoot.TextDefault, TextAnchor.UpperLeft, FontStyle.Normal);
-            SetRect(_contentText.rectTransform, Vector2.zero, Vector2.one, new Vector2(8, 8), new Vector2(-8, -8));
+            _contentText = UIRoot.CreateText("Content", _contentArea, "", 18, Color.white, TextAnchor.UpperLeft, FontStyle.Normal);
+            _contentText.horizontalOverflow = HorizontalWrapMode.Wrap;
+            _contentText.verticalOverflow = VerticalWrapMode.Overflow;
+            AddTextOutline(_contentText);
+            SetRect(_contentText.rectTransform, Vector2.zero, Vector2.one, new Vector2(14, 12), new Vector2(-14, -12));
 
             // Close button
             var closeBtn = UIRoot.CreateButton("CloseBtn", _panel.transform, "\u274C Tutup [Tab]",
-                UIRoot.BgButtonDanger, () => Toggle(), 13);
-            SetRect(closeBtn.GetComponent<RectTransform>(), new Vector2(0, 0), new Vector2(1, 0), new Vector2(10, 8), new Vector2(-10, 38));
+                UIRoot.BgButtonDanger, () => Toggle(), 16);
+            AddTextOutline(closeBtn.GetComponentInChildren<Text>());
+            SetRect(closeBtn.GetComponent<RectTransform>(), new Vector2(0, 0), new Vector2(1, 0), new Vector2(10, 10), new Vector2(-10, 50));
 
             SelectTab(0);
         }
@@ -239,6 +245,14 @@ namespace TanamSawit.UI
             rt.anchorMax = anchorMax;
             rt.offsetMin = offsetMin;
             rt.offsetMax = offsetMax;
+        }
+
+        private static void AddTextOutline(Text text)
+        {
+            if (text == null) return;
+            var outline = text.gameObject.AddComponent<Outline>();
+            outline.effectColor = new Color(0f, 0f, 0f, 0.9f);
+            outline.effectDistance = new Vector2(1f, -1f);
         }
 
         // ── Update (refresh saat terbuka) ─────────────────────────────────

@@ -39,6 +39,7 @@ namespace TanamSawit.Core
 #pragma warning disable CS0618
             cachedPlayer = FindFirstObjectByType<OpeningGameplayPlayerController>();
 #pragma warning restore CS0618
+
         }
 
         private void Start()
@@ -124,7 +125,7 @@ namespace TanamSawit.Core
                 GameManager.Instance.StartGame();
             }
 
-            // Buka gerakan pemain.
+            // Buka kunci pergerakan MC.
             UnlockPlayerMovement();
 
             // Aktifkan follow kamera.
