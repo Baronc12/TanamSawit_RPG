@@ -82,6 +82,10 @@ namespace TanamSawit.Core
                 managersHost.AddComponent<TanamSawit.Core.MainMenuSystem>();
                 Debug.Log("<color=#00FF66><b>[Tanam Sawit]</b> MainMenuSystem ditambahkan ke [MANAGERS].</color>");
             }
+
+            // Pastikan UIRoot (dan FacilityModalUI) selalu dibuat, bahkan ketika
+            // [MANAGERS] sudah ada di scene sehingga UI uGUI tidak terlewat.
+            UIRoot.EnsureExists();
         }
 
         /// <summary>
