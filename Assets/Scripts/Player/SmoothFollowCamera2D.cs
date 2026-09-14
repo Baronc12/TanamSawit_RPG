@@ -31,6 +31,8 @@ namespace TanamSawit.Player
         }
 
         private Vector3 currentVelocity = Vector3.zero;
+        private Bounds? worldBounds;
+        private Camera cam;
 
         private void Awake()
         {
@@ -40,6 +42,7 @@ namespace TanamSawit.Player
                 return;
             }
             Instance = this;
+            cam = GetComponent<Camera>();
         }
 
         private void Start()
@@ -89,6 +92,54 @@ namespace TanamSawit.Player
             destination.z = offset.z; // Kunci sumbu Z kamera tetap pada jarak 2D
 
             transform.position = Vector3.SmoothDamp(transform.position, destination, ref currentVelocity, smoothTime);
+
+            // Clamp posisi kamera dalam batas area aktif
+            if (worldBounds.HasValue)
+            {
+                ClampToBounds();
+            }
+        }
+
+        private void ClampToBounds()
+        {
+            if (cam == null) cam = GetComponent<Camera>();
+            if (cam == null) return;
+
+            Bounds b = worldBounds.Value;
+            float halfH = cam.orthographicSize;
+            float halfW = halfH * cam.aspect;
+
+            Vector3 pos = transform.position;
+
+            // Jika area lebih kecil dari viewport pada sumbu X, pusatkan; selalu clamp
+            if (b.size.x >= halfW * 2f)
+                pos.x = Mathf.Clamp(pos.x, b.min.x + halfW, b.max.x - halfW);
+            else
+                pos.x = b.center.x;
+
+            if (b.size.y >= halfH * 2f)
+                pos.y = Mathf.Clamp(pos.y, b.min.y + halfH, b.max.y - halfH);
+            else
+                pos.y = b.center.y;
+
+            pos.z = transform.position.z;
+            transform.position = pos;
+        }
+
+        /// <summary>
+        /// Menetapkan batas area aktif untuk kamera. Dipanggil saat pemasuki area baru.
+        /// </summary>
+        public void SetBounds(Bounds bounds)
+        {
+            worldBounds = bounds;
+        }
+
+        /// <summary>
+        /// Menghapus batas area (mis. saat main menu). Kamera bebas mengikuti.
+        /// </summary>
+        public void ClearBounds()
+        {
+            worldBounds = null;
         }
 
         /// <summary>
@@ -97,7 +148,25 @@ namespace TanamSawit.Player
         public void SnapTo(Vector3 position)
         {
             currentVelocity = Vector3.zero;
-            transform.position = new Vector3(position.x + offset.x, position.y + offset.y, offset.z);
+            Vector3 snapped = new Vector3(position.x + offset.x, position.y + offset.y, offset.z);
+
+            // Jika bounds aktif, clamp posisi snap juga
+            if (worldBounds.HasValue)
+            {
+                if (cam == null) cam = GetComponent<Camera>();
+                if (cam != null)
+                {
+                    Bounds b = worldBounds.Value;
+                    float halfH = cam.orthographicSize;
+                    float halfW = halfH * cam.aspect;
+                    if (b.size.x >= halfW * 2f)
+                        snapped.x = Mathf.Clamp(snapped.x, b.min.x + halfW, b.max.x - halfW);
+                    if (b.size.y >= halfH * 2f)
+                        snapped.y = Mathf.Clamp(snapped.y, b.min.y + halfH, b.max.y - halfH);
+                }
+            }
+
+            transform.position = snapped;
         }
     }
 }

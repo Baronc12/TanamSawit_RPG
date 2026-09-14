@@ -20,6 +20,10 @@ Run this checklist at the end of **every** implementation phase. All checks must
 - [ ] Sprite flips (flipX) when changing horizontal direction
 - [ ] Camera follows player smoothly (no jitter)
 - [ ] Player stops at perimeter walls (Phase 3+ — before Phase 3, player walks through walls, note as known issue)
+- [ ] Player slides along walls without snagging (Phase 3+)
+- [ ] Player blocked by facility buildings (Phase 3+)
+- [ ] Camera stops at area edges showing no out-of-bounds background (Phase 3+)
+- [ ] No residual sliding after save/load teleport (Phase 3+ — Teleport() zeros velocity)
 
 ## 3. Area Transitions (4 Areas, 6 Portals)
 

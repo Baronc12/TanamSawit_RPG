@@ -54,6 +54,7 @@ namespace TanamSawit.Environment
 
         private GameObject worldRoot;
         private readonly List<GameObject> builtObjects = new List<GameObject>();
+        private int worldLayer = -1;
 
         private void Awake()
         {
@@ -63,6 +64,7 @@ namespace TanamSawit.Environment
                 return;
             }
             Instance = this;
+            worldLayer = LayerMask.NameToLayer("World");
         }
 
         private void Start()
@@ -169,6 +171,8 @@ namespace TanamSawit.Environment
             go.transform.localPosition = localPos;
             var col = go.AddComponent<BoxCollider2D>();
             col.size = size;
+            if (worldLayer >= 0)
+                go.layer = worldLayer;
         }
 
         // ─── Jalan Penghubung ─────────────────────────────────────────────
@@ -230,6 +234,11 @@ namespace TanamSawit.Environment
             var col = go.AddComponent<BoxCollider2D>();
             col.isTrigger = true;
             col.size = new Vector2(4f, 2f);
+
+            // Set layer Portal jika tersedia
+            int portalLayer = LayerMask.NameToLayer("Portal");
+            if (portalLayer >= 0)
+                go.layer = portalLayer;
 
             var portal = go.AddComponent<AreaPortalTrigger>();
             portal.Configure(targetArea, targetPos, requireKey: false);
@@ -342,6 +351,13 @@ namespace TanamSawit.Environment
             // Komponen interaksi
             var facility = go.AddComponent<InteractableFacility>();
             facility.Configure(type, name, hint, Mathf.Max(size.x, size.y) * 0.7f + 1f);
+
+            // Solid collider agar pemain tidak bisa menembus bangunan
+            var solidCol = go.AddComponent<BoxCollider2D>();
+            solidCol.size = size;
+            solidCol.offset = Vector2.zero;
+            if (worldLayer >= 0)
+                go.layer = worldLayer;
         }
 
         // ─── Primitif Visual ──────────────────────────────────────────────

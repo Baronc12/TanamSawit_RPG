@@ -45,6 +45,7 @@ namespace TanamSawit.Environment
                 { "Area Kebun Sawit", "kebun" },
                 { "Area Perumahan", "perumahan" },
                 { "Area Kota", "kota" },
+                { "Area Pabrik CPO", "pabrik" },
                 { "Area Pabrik", "pabrik" },
             };
 
@@ -102,11 +103,17 @@ namespace TanamSawit.Environment
                 GameObject player = GameObject.FindWithTag("Player");
                 if (player != null)
                 {
-                    player.transform.position = new Vector3(playerPosition.x, playerPosition.y, player.transform.position.z);
+                    var ctrl = player.GetComponent<OpeningGameplayPlayerController>();
+                    if (ctrl != null)
+                        ctrl.Teleport(playerPosition);
+                    else
+                        player.transform.position = new Vector3(playerPosition.x, playerPosition.y, player.transform.position.z);
                 }
 
+                // Set camera bounds for the new area, then snap
                 if (SmoothFollowCamera2D.Instance != null)
                 {
+                    SmoothFollowCamera2D.Instance.SetBounds(AreaBounds.Get(areaId));
                     SmoothFollowCamera2D.Instance.SnapTo(playerPosition);
                 }
 
@@ -162,12 +169,20 @@ namespace TanamSawit.Environment
 
             if (player != null)
             {
-                player.transform.position = new Vector3(targetPosition.x, targetPosition.y, player.transform.position.z);
+                var ctrl = player.GetComponent<OpeningGameplayPlayerController>();
+                if (ctrl != null)
+                    ctrl.Teleport(targetPosition);
+                else
+                    player.transform.position = new Vector3(targetPosition.x, targetPosition.y, player.transform.position.z);
             }
 
-            // Reposisi kamera langsung (Snap) agar tidak bergeser meluncur
+            // Tentukan area ID untuk bounds
+            string newAreaId = AreaNameToId.TryGetValue(targetArea, out var aid) ? aid : currentAreaId;
+
+            // Set camera bounds dan reposisi kamera langsung (Snap)
             if (SmoothFollowCamera2D.Instance != null)
             {
+                SmoothFollowCamera2D.Instance.SetBounds(AreaBounds.Get(newAreaId));
                 SmoothFollowCamera2D.Instance.SnapTo(targetPosition);
             }
             else if (Camera.main != null)
@@ -176,7 +191,7 @@ namespace TanamSawit.Environment
             }
 
             currentAreaName = targetArea;
-            currentAreaId = AreaNameToId.TryGetValue(targetArea, out var id) ? id : currentAreaId;
+            currentAreaId = newAreaId;
             OnAreaChanged?.Invoke(currentAreaName);
 
             // Jeda sesaat di layar gelap (Simulasi Loading)
@@ -240,6 +255,48 @@ namespace TanamSawit.Environment
             }
 
             GUI.color = prevColor;
+        }
+    }
+
+    /// <summary>
+    /// Batas dunia per-area (harus cocok dengan WorldBuildingBuilder areaWidth/areaHeight).
+    /// Digunakan oleh SmoothFollowCamera2D.SetBounds() dan MinimapUI.
+    /// </summary>
+    public static class AreaBounds
+    {
+        // Harus cocok dengan WorldBuildingBuilder.areaWidth / areaHeight
+        public const float AreaWidth = 50f;
+        public const float AreaHeight = 40f;
+
+        public static readonly Bounds Kebun = new Bounds(
+            new Vector3(0f, 0f, 0f),
+            new Vector3(AreaWidth, AreaHeight, 1f));
+
+        public static readonly Bounds Perumahan = new Bounds(
+            new Vector3(60f, 0f, 0f),
+            new Vector3(AreaWidth, AreaHeight, 1f));
+
+        public static readonly Bounds Kota = new Bounds(
+            new Vector3(120f, 0f, 0f),
+            new Vector3(AreaWidth, AreaHeight, 1f));
+
+        public static readonly Bounds Pabrik = new Bounds(
+            new Vector3(0f, -60f, 0f),
+            new Vector3(AreaWidth, AreaHeight, 1f));
+
+        /// <summary>
+        /// Mengembalikan Bounds untuk area ID tertentu, atau Kebun sebagai default.
+        /// </summary>
+        public static Bounds Get(string areaId)
+        {
+            switch (areaId)
+            {
+                case "kebun": return Kebun;
+                case "perumahan": return Perumahan;
+                case "kota": return Kota;
+                case "pabrik": return Pabrik;
+                default: return Kebun;
+            }
         }
     }
 }

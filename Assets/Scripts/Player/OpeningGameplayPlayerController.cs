@@ -27,6 +27,8 @@ namespace TanamSawit.Player
         private Sprite[] walkFrames;
         private float animationTimer;
         private int currentFrame;
+        private Rigidbody2D rb;
+        private Vector2 moveInput;
 
         private void Awake()
         {
@@ -35,7 +37,7 @@ namespace TanamSawit.Player
                 try { gameObject.tag = "Player"; } catch {}
             }
 
-            // Pastikan memiliki Collider2D dan Rigidbody2D kinematis agar event trigger bekerja konsisten
+            // Pastikan memiliki Collider2D dan Rigidbody2D dinamis agar fisika & trigger bekerja
             if (GetComponent<Collider2D>() == null)
             {
                 var col = gameObject.AddComponent<BoxCollider2D>();
@@ -43,13 +45,22 @@ namespace TanamSawit.Player
                 col.offset = new Vector2(0f, 0.4f);
             }
 
-            var rb = GetComponent<Rigidbody2D>();
+            rb = GetComponent<Rigidbody2D>();
             if (rb == null)
             {
                 rb = gameObject.AddComponent<Rigidbody2D>();
-                rb.bodyType = RigidbodyType2D.Kinematic;
-                rb.simulated = true;
             }
+            // Dynamic body dengan gravityScale 0 = gerakan top-down via MovePosition
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.gravityScale = 0f;
+            rb.freezeRotation = true;
+            rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+            rb.interpolation = RigidbodyInterpolation2D.Interpolate;
+
+            // Set layer Player jika tersedia di Project Settings
+            int playerLayer = LayerMask.NameToLayer("Player");
+            if (playerLayer >= 0)
+                gameObject.layer = playerLayer;
 
             spriteRenderer = GetComponent<SpriteRenderer>();
             spriteRenderer.sortingOrder = 20;
@@ -93,6 +104,7 @@ namespace TanamSawit.Player
                               GameManager.Instance.CurrentState == GameState.MainMenu;
             if (isMovementLocked || transitionActive || inMainMenu)
             {
+                moveInput = Vector2.zero;
                 animationTimer = 0f;
                 currentFrame = 0;
                 ShowFrame(currentFrame);
@@ -105,7 +117,7 @@ namespace TanamSawit.Player
             if (isMoving)
             {
                 movement.Normalize();
-                transform.position += (Vector3)(movement * moveSpeed * Time.deltaTime);
+                moveInput = movement;
 
                 if (movement.x != 0f)
                     spriteRenderer.flipX = movement.x < 0f;
@@ -114,10 +126,38 @@ namespace TanamSawit.Player
             }
             else
             {
+                moveInput = Vector2.zero;
                 animationTimer = 0f;
                 currentFrame = 0;
                 ShowFrame(currentFrame);
             }
+        }
+
+        private void FixedUpdate()
+        {
+            if (isMovementLocked || rb == null)
+            {
+                if (rb != null) rb.linearVelocity = Vector2.zero;
+                return;
+            }
+            rb.MovePosition(rb.position + moveInput * moveSpeed * Time.fixedDeltaTime);
+        }
+
+        /// <summary>
+        /// Teleport instan pemain ke posisi dunia. Menyetel transform.position dan rb.position
+        /// sekaligus agar interpolasi Rigidbody2D tidak menyebabkan slide residual.
+        /// Dipanggil oleh AreaTransitionManager (portal & save/load).
+        /// </summary>
+        public void Teleport(Vector3 worldPosition)
+        {
+            Vector3 pos = new Vector3(worldPosition.x, worldPosition.y, transform.position.z);
+            transform.position = pos;
+            if (rb != null)
+            {
+                rb.position = new Vector2(pos.x, pos.y);
+                rb.linearVelocity = Vector2.zero;
+            }
+            moveInput = Vector2.zero;
         }
 
         private static Vector2 ReadWasdInput()
