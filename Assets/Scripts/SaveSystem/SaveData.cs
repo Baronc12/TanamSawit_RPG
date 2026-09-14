@@ -14,12 +14,22 @@ namespace TanamSawit.SaveSystem
         #region Metadata Save
         public string saveTimestamp;
         public string saveGameVersion = "1.0.0";
+        public int saveVersion = 2;          // 1 = legacy single-slot saves
+        public string saveSlotName;          // e.g. "Slot 1"
+        public float playTimeSeconds;
         #endregion
 
         #region Waktu & Kalender
         public int currentDay = 1;
         public int currentMonth = 1;
         public int currentYear = 2024;
+        public int gameSpeedIndex;           // (int)GameSpeed: 0=Paused,1=Normal,2=Fast,4=SuperFast
+        #endregion
+
+        #region Posisi Pemain & Area
+        public string currentAreaId;         // "kebun" | "perumahan" | "kota" | "pabrik"
+        public float playerPosX;
+        public float playerPosY;
         #endregion
 
         #region Keuangan & Lahan

@@ -3,12 +3,14 @@ using System.IO;
 using UnityEngine;
 using TanamSawit.Managers;
 using TanamSawit.Buildings;
+using TanamSawit.Environment;
 
 namespace TanamSawit.SaveSystem
 {
     /// <summary>
-    /// SaveManager mengelola serialisasi data progres pemain ke format JSON di disk lokal.
-    /// Dilengkapi fitur Manual Save, Manual Load, dan Auto-Save otomatis setiap pergantian bulan.
+    /// SaveManager v2: Multi-slot JSON save system with versioning and migration.
+    /// 3 manual slots (0-2) + 1 autosave slot (99).
+    /// Saves player position, current area, game speed, and play time.
     /// </summary>
     [DefaultExecutionOrder(-50)]
     public class SaveManager : MonoBehaviour
@@ -19,8 +21,8 @@ namespace TanamSawit.SaveSystem
         [SerializeField] private bool dontDestroyOnLoad = true;
 
         [Header("Konfigurasi Penyimpanan")]
-        [Tooltip("Nama file save di persistentDataPath.")]
-        [SerializeField] private string saveFileName = "tanamsawit_save.json";
+        [Tooltip("Nama file save lama (single-slot) untuk migrasi otomatis.")]
+        [SerializeField] private string legacySaveFileName = "tanamsawit_save.json";
 
         [Tooltip("Otomatis simpan data saat berganti bulan.")]
         [SerializeField] private bool enableAutoSaveMonthly = true;
@@ -32,14 +34,27 @@ namespace TanamSawit.SaveSystem
         [SerializeField] private string lastSaveTime = "-";
         public string LastSaveTime => lastSaveTime;
 
+        #region Constants
+        public const int ManualSlotCount = 3;
+        private const int AutoSaveSlot = 99;
+        #endregion
+
         #region Events
-        /// <summary>
-        /// Dipanggil setiap kali terjadi operasi simpan/muat data dengan pesan status untuk UI.
-        /// </summary>
         public event Action<string> OnSaveStatusChanged;
         #endregion
 
-        private string SaveFilePath => Path.Combine(Application.persistentDataPath, saveFileName);
+        private int lastUsedSlot = 0;
+        private float accumulatedPlayTime = 0f;
+        private float sessionStartTime = 0f;
+        private bool legacyImported = false;
+
+        private static string GetSlotPath(int slot)
+        {
+            string fileName = slot == AutoSaveSlot ? "save_autosave.json" : $"save_slot{slot}.json";
+            return Path.Combine(Application.persistentDataPath, fileName);
+        }
+
+        private string LegacyFilePath => Path.Combine(Application.persistentDataPath, legacySaveFileName);
 
         private void Awake()
         {
@@ -60,7 +75,11 @@ namespace TanamSawit.SaveSystem
 
         private void Start()
         {
-            // Subscribe ke event pergantian bulan TimeManager untuk Auto-Save
+            sessionStartTime = Time.time;
+
+            // Auto-import legacy single-slot save into slot 0 on first run
+            TryImportLegacySave();
+
             if (TimeManager.Instance != null && enableAutoSaveMonthly)
             {
                 TimeManager.Instance.OnMonthPassed += HandleAutoSaveOnMonthPassed;
@@ -79,16 +98,81 @@ namespace TanamSawit.SaveSystem
         {
             if (autoSaveOnApplicationQuit && GameManager.Instance != null && GameManager.Instance.CurrentState == GameState.Playing)
             {
-                SaveGame(isAutoSave: true);
+                SaveGame(lastUsedSlot);
             }
         }
 
+        #region Legacy Import
+        /// <summary>
+        /// Auto-imports the old single-slot save file into slot 0 on first run.
+        /// </summary>
+        private void TryImportLegacySave()
+        {
+            if (legacyImported) return;
+            legacyImported = true;
+
+            if (!File.Exists(LegacyFilePath)) return;
+            if (File.Exists(GetSlotPath(0))) return; // slot 0 already exists, don't overwrite
+
+            try
+            {
+                File.Copy(LegacyFilePath, GetSlotPath(0));
+                Debug.Log($"[SaveManager] Legacy save imported to slot 0: {GetSlotPath(0)}");
+            }
+            catch (Exception ex)
+            {
+                Debug.LogWarning($"[SaveManager] Failed to import legacy save: {ex.Message}");
+            }
+        }
+        #endregion
+
+        #region Migration
+        /// <summary>
+        /// Migrates old save data to the current version. Only adds fields; never removes.
+        /// </summary>
+        private GameSaveData Migrate(GameSaveData data)
+        {
+            if (data.saveVersion < 2)
+            {
+                // v1 -> v2: fill new fields with defaults
+                data.currentAreaId = data.currentAreaId ?? "kebun";
+                data.playerPosX = data.playerPosX; // 0 = Kebun spawn
+                data.playerPosY = data.playerPosY;
+                data.gameSpeedIndex = data.gameSpeedIndex == 0 ? (int)GameSpeed.Normal : data.gameSpeedIndex;
+                data.factoryDamaged = data.factoryDamaged;
+                data.landCount = data.landCount;
+                data.maxWorkerCapacity = data.maxWorkerCapacity == 0 ? 5 : data.maxWorkerCapacity;
+                data.playTimeSeconds = data.playTimeSeconds;
+                data.saveSlotName = data.saveSlotName ?? $"Slot {lastUsedSlot + 1}";
+                data.saveVersion = 2;
+                Debug.Log("[SaveManager] Migrasi save v1 -> v2");
+            }
+            return data;
+        }
+        #endregion
+
         #region Operasi Save
         /// <summary>
-        /// Mengumpulkan seluruh data dari manager dan menyimpannya ke file JSON.
+        /// Parameterless save — delegates to last-used manual slot (default 0).
         /// </summary>
-        /// <param name="isAutoSave">True jika dipicu oleh sistem otomatis</param>
-        public void SaveGame(bool isAutoSave = false)
+        public void SaveGame()
+        {
+            SaveGame(lastUsedSlot);
+        }
+
+        /// <summary>
+        /// Legacy bool overload for backwards compatibility.
+        /// isAutoSave=true → autosave slot; isAutoSave=false → last-used manual slot.
+        /// </summary>
+        public void SaveGame(bool isAutoSave)
+        {
+            SaveGame(isAutoSave ? AutoSaveSlot : lastUsedSlot);
+        }
+
+        /// <summary>
+        /// Saves game state to a specific slot index.
+        /// </summary>
+        public void SaveGame(int slot)
         {
             try
             {
@@ -96,6 +180,9 @@ namespace TanamSawit.SaveSystem
 
                 // 1. Metadata
                 data.saveTimestamp = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+                data.saveVersion = 2;
+                data.saveSlotName = slot == AutoSaveSlot ? "Autosave" : $"Slot {slot + 1}";
+                data.playTimeSeconds = accumulatedPlayTime + (Time.time - sessionStartTime);
                 lastSaveTime = data.saveTimestamp;
 
                 // 2. Kalender & Waktu
@@ -104,9 +191,22 @@ namespace TanamSawit.SaveSystem
                     data.currentDay = TimeManager.Instance.CurrentDay;
                     data.currentMonth = TimeManager.Instance.CurrentMonth;
                     data.currentYear = TimeManager.Instance.CurrentYear;
+                    data.gameSpeedIndex = (int)TimeManager.Instance.CurrentGameSpeed;
                 }
 
-                // 3. Keuangan & Lahan
+                // 3. Posisi Pemain & Area
+                if (AreaTransitionManager.Instance != null)
+                {
+                    data.currentAreaId = AreaTransitionManager.Instance.CurrentAreaId;
+                }
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                if (player != null)
+                {
+                    data.playerPosX = player.transform.position.x;
+                    data.playerPosY = player.transform.position.y;
+                }
+
+                // 4. Keuangan & Lahan
                 if (EconomyManager.Instance != null)
                 {
                     data.currentMoney = EconomyManager.Instance.CurrentMoney;
@@ -114,7 +214,7 @@ namespace TanamSawit.SaveSystem
                     data.currentLandPercentage = EconomyManager.Instance.CurrentLandPercentage;
                 }
 
-                // 4. Hutang & Properti Kos
+                // 5. Hutang & Properti Kos
                 if (LoanManager.Instance != null)
                 {
                     data.bankDebt = LoanManager.Instance.BankDebt;
@@ -123,7 +223,7 @@ namespace TanamSawit.SaveSystem
                     data.ownedBoardingHouses = LoanManager.Instance.OwnedBoardingHouses;
                 }
 
-                // 5. Pekerja & Pabrik Sawit
+                // 6. Pekerja & Hasil Kebun
                 if (WorkerManager.Instance != null)
                 {
                     data.workers = new System.Collections.Generic.List<Worker>(WorkerManager.Instance.Workers);
@@ -131,7 +231,7 @@ namespace TanamSawit.SaveSystem
                     data.cpoStockTon = WorkerManager.Instance.CpoStockTon;
                 }
 
-                // 5b. Bangunan & Pabrik (BuildingManager owns factory state)
+                // 7. Bangunan & Pabrik (BuildingManager owns factory state)
                 if (BuildingManager.Instance != null)
                 {
                     data.hasFactory = BuildingManager.Instance.HasFactory;
@@ -139,7 +239,7 @@ namespace TanamSawit.SaveSystem
                     data.maxWorkerCapacity = BuildingManager.Instance.MaxWorkerCapacity;
                 }
 
-                // 6. Karma Ekologi
+                // 8. Karma Ekologi
                 if (EnvironmentalKarmaManager.Instance != null)
                 {
                     data.karmaLevel = (int)EnvironmentalKarmaManager.Instance.CurrentKarma;
@@ -151,7 +251,7 @@ namespace TanamSawit.SaveSystem
                     data.triggered100 = flags.t100;
                 }
 
-                // 7. Sepupu Rival
+                // 9. Sepupu Rival
                 if (RivalManager.Instance != null)
                 {
                     data.cousinNetWorth = RivalManager.Instance.CousinCurrentNetWorth;
@@ -161,12 +261,23 @@ namespace TanamSawit.SaveSystem
                 // Serialisasi ke format JSON
                 string json = JsonUtility.ToJson(data, true);
 
-                // Tulis ke file persistent disk
-                File.WriteAllText(SaveFilePath, json);
+                // Tulis ke file
+                string filePath = GetSlotPath(slot);
+                File.WriteAllText(filePath, json);
 
-                string typePrefix = isAutoSave ? "[AUTO-SAVE]" : "[MANUAL-SAVE]";
+                // Track last-used slot for manual saves
+                if (slot != AutoSaveSlot)
+                {
+                    lastUsedSlot = slot;
+                }
+
+                // Update accumulated play time
+                accumulatedPlayTime = data.playTimeSeconds;
+                sessionStartTime = Time.time;
+
+                string typePrefix = slot == AutoSaveSlot ? "[AUTO-SAVE]" : $"[MANUAL-SAVE Slot {slot + 1}]";
                 string statusMsg = $"{typePrefix} Data berhasil disimpan ke JSON ({lastSaveTime})";
-                Debug.Log($"<color=#00FF66>{statusMsg}</color>\nPath: {SaveFilePath}");
+                Debug.Log($"<color=#00FF66>{statusMsg}</color>\nPath: {filePath}");
                 OnSaveStatusChanged?.Invoke(statusMsg);
             }
             catch (Exception ex)
@@ -180,14 +291,21 @@ namespace TanamSawit.SaveSystem
 
         #region Operasi Load
         /// <summary>
-        /// Membaca file JSON dari disk dan mendistribusikan datanya kembali ke semua Manager.
+        /// Parameterless load — delegates to last-used manual slot (default 0).
         /// </summary>
-        /// <returns>True jika file ditemukan dan berhasil dimuat, False jika gagal.</returns>
         public bool LoadGame()
         {
-            if (!HasSaveFile())
+            return LoadGame(lastUsedSlot);
+        }
+
+        /// <summary>
+        /// Loads game state from a specific slot index.
+        /// </summary>
+        public bool LoadGame(int slot)
+        {
+            if (!HasSaveFile(slot))
             {
-                string noFileMsg = "[LOAD] Tidak ditemukan file savegame di disk!";
+                string noFileMsg = $"[LOAD] Tidak ditemukan file savegame di slot {slot + 1}!";
                 Debug.LogWarning(noFileMsg);
                 OnSaveStatusChanged?.Invoke(noFileMsg);
                 return false;
@@ -195,7 +313,7 @@ namespace TanamSawit.SaveSystem
 
             try
             {
-                string json = File.ReadAllText(SaveFilePath);
+                string json = File.ReadAllText(GetSlotPath(slot));
                 GameSaveData data = JsonUtility.FromJson<GameSaveData>(json);
 
                 if (data == null)
@@ -204,19 +322,25 @@ namespace TanamSawit.SaveSystem
                     return false;
                 }
 
+                // Migrate old save data
+                data = Migrate(data);
+
+                // Track slot
+                lastUsedSlot = slot;
+
                 // 1. Pulihkan Waktu
                 if (TimeManager.Instance != null)
                 {
                     TimeManager.Instance.SetDate(data.currentDay, data.currentMonth, data.currentYear);
                 }
 
-                // 2. Pulihkan Hutang & Kos-kosan terlebih dahulu agar valuasi liabilitas tepat
+                // 2. Pulihkan Hutang & Kos-kosan
                 if (LoanManager.Instance != null)
                 {
                     LoanManager.Instance.LoadState(data.bankDebt, data.pinjolDebt, data.rentenirDebt, data.ownedBoardingHouses);
                 }
 
-                // 3. Pulihkan Ekonomi & Lahan (mereset flag kebangkrutan)
+                // 3. Pulihkan Ekonomi & Lahan
                 if (EconomyManager.Instance != null)
                 {
                     EconomyManager.Instance.LoadState(data.currentMoney, data.currentLandPercentage, data.otherAssetsValuation);
@@ -238,11 +362,11 @@ namespace TanamSawit.SaveSystem
                 if (EnvironmentalKarmaManager.Instance != null)
                 {
                     EnvironmentalKarmaManager.Instance.LoadState(
-                        (KarmaLevel)data.karmaLevel, 
-                        data.lastIncidentLog, 
-                        data.triggered75, 
-                        data.triggered85, 
-                        data.triggered90, 
+                        (KarmaLevel)data.karmaLevel,
+                        data.lastIncidentLog,
+                        data.triggered75,
+                        data.triggered85,
+                        data.triggered90,
                         data.triggered100
                     );
                 }
@@ -259,6 +383,31 @@ namespace TanamSawit.SaveSystem
                     EnvironmentalKarmaManager.Instance.RestoreKarmaSideEffects();
                 }
 
+                // 7. Pulihkan Posisi Pemain & Area
+                string areaId = !string.IsNullOrEmpty(data.currentAreaId) ? data.currentAreaId : "kebun";
+                Vector3 playerPos = new Vector3(data.playerPosX, data.playerPosY, 0f);
+
+                // Use area center as fallback if player position is zero/unset
+                if (data.playerPosX == 0f && data.playerPosY == 0f && AreaTransitionManager.AreaCenters.TryGetValue(areaId, out var center))
+                {
+                    playerPos = center;
+                }
+
+                if (AreaTransitionManager.Instance != null)
+                {
+                    AreaTransitionManager.Instance.TeleportToArea(areaId, playerPos, skipFade: true);
+                }
+
+                // 8. Pulihkan Game Speed
+                if (TimeManager.Instance != null && data.gameSpeedIndex > 0)
+                {
+                    TimeManager.Instance.SetSpeed((GameSpeed)data.gameSpeedIndex);
+                }
+
+                // 9. Pulihkan Play Time
+                accumulatedPlayTime = data.playTimeSeconds;
+                sessionStartTime = Time.time;
+
                 // Pulihkan state ke Playing jika save data masih sehat
                 if (GameManager.Instance != null && GameManager.Instance.CurrentState == GameState.GameOver)
                 {
@@ -269,7 +418,7 @@ namespace TanamSawit.SaveSystem
                 }
 
                 lastSaveTime = data.saveTimestamp;
-                string statusMsg = $"[LOAD SUKSES] Data savegame ({lastSaveTime}) berhasil dipulihkan!";
+                string statusMsg = $"[LOAD SUKSES] Data savegame slot {slot + 1} ({lastSaveTime}) berhasil dipulihkan!";
                 Debug.Log($"<color=#00FF66>{statusMsg}</color>");
                 OnSaveStatusChanged?.Invoke(statusMsg);
                 return true;
@@ -284,41 +433,112 @@ namespace TanamSawit.SaveSystem
         }
         #endregion
 
+        #region Slot Summaries
+        /// <summary>
+        /// Returns summaries of all save slots (3 manual + 1 autosave) for UI display.
+        /// Tolerates missing/corrupt files.
+        /// </summary>
+        public SaveSlotSummary[] GetSlotSummaries()
+        {
+            var summaries = new SaveSlotSummary[ManualSlotCount + 1];
+
+            for (int i = 0; i < ManualSlotCount; i++)
+            {
+                summaries[i] = ReadSlotSummary(i, i);
+            }
+            summaries[ManualSlotCount] = ReadSlotSummary(AutoSaveSlot, ManualSlotCount);
+
+            return summaries;
+        }
+
+        private SaveSlotSummary ReadSlotSummary(int slot, int index)
+        {
+            var summary = new SaveSlotSummary
+            {
+                SlotIndex = index,
+                Exists = false,
+                SlotName = slot == AutoSaveSlot ? "Autosave" : $"Slot {slot + 1}"
+            };
+
+            try
+            {
+                string path = GetSlotPath(slot);
+                if (!File.Exists(path)) return summary;
+
+                string json = File.ReadAllText(path);
+                var data = JsonUtility.FromJson<GameSaveData>(json);
+                if (data == null) return summary;
+
+                summary.Exists = true;
+                summary.SaveVersion = data.saveVersion;
+                summary.RealWorldTimestamp = data.saveTimestamp ?? "-";
+                summary.InGameYear = data.currentYear;
+                summary.InGameMonth = data.currentMonth;
+                summary.InGameDay = data.currentDay;
+                summary.NetWorth = data.savedNetWorth;
+                summary.PlayTimeSeconds = data.playTimeSeconds;
+            }
+            catch
+            {
+                // Corrupt file — treat as empty slot
+                summary.Exists = false;
+            }
+
+            return summary;
+        }
+        #endregion
+
         #region Helper Functions
         /// <summary>
-        /// Cek apakah file savegame tersedia di disk.
+        /// Cek apakah file savegame tersedia di slot tertentu (default slot 0).
         /// </summary>
         public bool HasSaveFile()
         {
-            return File.Exists(SaveFilePath);
+            return HasSaveFile(0);
+        }
+
+        public bool HasSaveFile(int slot)
+        {
+            return File.Exists(GetSlotPath(slot));
         }
 
         /// <summary>
-        /// Menghapus file savegame (untuk fitur 'Mulai Game Baru dari Nol').
+        /// Menghapus file savegame di slot tertentu (default slot 0).
         /// </summary>
         public void DeleteSaveFile()
         {
-            if (HasSaveFile())
+            DeleteSaveFile(0);
+        }
+
+        public void DeleteSaveFile(int slot)
+        {
+            string path = GetSlotPath(slot);
+            if (File.Exists(path))
             {
-                File.Delete(SaveFilePath);
-                string msg = "[SAVE] File penyimpanan berhasil dihapus.";
+                File.Delete(path);
+                string msg = $"[SAVE] File penyimpanan slot {slot + 1} berhasil dihapus.";
                 Debug.Log(msg);
                 OnSaveStatusChanged?.Invoke(msg);
             }
         }
 
         /// <summary>
-        /// Mendapatkan path file penyimpanan lokal di OS pemain.
+        /// Mendapatkan path file penyimpanan lokal di OS pemain (slot 0).
         /// </summary>
         public string GetSaveFilePath()
         {
-            return SaveFilePath;
+            return GetSlotPath(0);
+        }
+
+        public string GetSaveFilePath(int slot)
+        {
+            return GetSlotPath(slot);
         }
 
         private void HandleAutoSaveOnMonthPassed(int month, int year)
         {
             Debug.Log($"[SaveManager] Pergantian bulan ({month}/{year}) tercapai -> Melakukan Auto-Save...");
-            SaveGame(isAutoSave: true);
+            SaveGame(AutoSaveSlot);
         }
         #endregion
     }

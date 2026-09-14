@@ -17,10 +17,36 @@ namespace TanamSawit.Environment
 
         [Header("Status Area")]
         [SerializeField] private string currentAreaName = "Area Kebun Sawit";
+        [SerializeField] private string currentAreaId = "kebun";
         [SerializeField] private bool isTransitioning = false;
 
         public string CurrentAreaName => currentAreaName;
+        public string CurrentAreaId => currentAreaId;
         public bool IsTransitioning => isTransitioning;
+
+        /// <summary>
+        /// Maps area IDs to center positions (must match WorldBuildingBuilder constants).
+        /// </summary>
+        public static readonly System.Collections.Generic.Dictionary<string, Vector3> AreaCenters =
+            new System.Collections.Generic.Dictionary<string, Vector3>
+            {
+                { "kebun", new Vector3(0f, 0f, 0f) },
+                { "perumahan", new Vector3(60f, 0f, 0f) },
+                { "kota", new Vector3(120f, 0f, 0f) },
+                { "pabrik", new Vector3(0f, -60f, 0f) },
+            };
+
+        /// <summary>
+        /// Maps area display names to machine-readable IDs.
+        /// </summary>
+        private static readonly System.Collections.Generic.Dictionary<string, string> AreaNameToId =
+            new System.Collections.Generic.Dictionary<string, string>
+            {
+                { "Area Kebun Sawit", "kebun" },
+                { "Area Perumahan", "perumahan" },
+                { "Area Kota", "kota" },
+                { "Area Pabrik", "pabrik" },
+            };
 
         [Header("Pengaturan Waktu Fade")]
         [SerializeField] private float fadeDuration = 0.45f;
@@ -62,6 +88,50 @@ namespace TanamSawit.Environment
         {
             if (isTransitioning) return;
             StartCoroutine(TransitionRoutine(targetArea, targetPosition));
+        }
+
+        /// <summary>
+        /// Teleports player to an area by ID without requiring a portal.
+        /// Used by SaveManager on load. Optionally skips fade animation.
+        /// </summary>
+        public void TeleportToArea(string areaId, Vector3 playerPosition, bool skipFade = true)
+        {
+            if (skipFade)
+            {
+                // Instant teleport — no fade
+                GameObject player = GameObject.FindWithTag("Player");
+                if (player != null)
+                {
+                    player.transform.position = new Vector3(playerPosition.x, playerPosition.y, player.transform.position.z);
+                }
+
+                if (SmoothFollowCamera2D.Instance != null)
+                {
+                    SmoothFollowCamera2D.Instance.SnapTo(playerPosition);
+                }
+
+                currentAreaId = areaId;
+                currentAreaName = GetAreaDisplayName(areaId);
+                OnAreaChanged?.Invoke(currentAreaName);
+            }
+            else
+            {
+                // Full transition with fade
+                string displayName = GetAreaDisplayName(areaId);
+                TransitionToArea(displayName, playerPosition);
+            }
+        }
+
+        private string GetAreaDisplayName(string areaId)
+        {
+            switch (areaId)
+            {
+                case "kebun": return "Area Kebun Sawit";
+                case "perumahan": return "Area Perumahan";
+                case "kota": return "Area Kota";
+                case "pabrik": return "Area Pabrik";
+                default: return areaId;
+            }
         }
 
         private IEnumerator TransitionRoutine(string targetArea, Vector3 targetPosition)
@@ -106,6 +176,7 @@ namespace TanamSawit.Environment
             }
 
             currentAreaName = targetArea;
+            currentAreaId = AreaNameToId.TryGetValue(targetArea, out var id) ? id : currentAreaId;
             OnAreaChanged?.Invoke(currentAreaName);
 
             // Jeda sesaat di layar gelap (Simulasi Loading)
