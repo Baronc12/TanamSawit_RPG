@@ -15,6 +15,7 @@ namespace TanamSawit.UI
         public static TopBarUI Instance { get; private set; }
 
         private Text _dateAreaText;
+        private Text _timeText;
         private Text _cashText;
         private Text _netWorthText;
         private Text _debtText;
@@ -85,6 +86,11 @@ namespace TanamSawit.UI
 
             // Tanggal & Area
             _dateAreaText = CreateLabel("DateArea", bar, 280, 13);
+
+            // Jam dalam sehari (siang/malam)
+            _timeText = CreateLabel("Clock", bar, 70, 13);
+            _timeText.color = UIRoot.TextGold;
+            _timeText.alignment = TextAnchor.MiddleLeft;
 
             // Spacer
             UIRoot.CreateRect("Spacer1", bar);
@@ -174,6 +180,11 @@ namespace TanamSawit.UI
                     ? AreaTransitionManager.Instance.CurrentAreaName
                     : "Area Kebun Sawit";
                 _dateAreaText.text = $"\uD83D\uDCC5 {TimeManager.Instance.GetFormattedDate()}  \uD83D\uDCCD {area}";
+
+                // Jam + ikon siang/malam
+                float h = TimeManager.Instance.HourOfDay;
+                string icon = (h >= 6f && h < 18f) ? "\u2600" : "\u263D";
+                _timeText.text = $"{icon} {TimeManager.Instance.GetFormattedTime()}";
             }
 
             if (EconomyManager.Instance != null)

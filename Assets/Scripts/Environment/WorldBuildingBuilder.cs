@@ -56,6 +56,7 @@ namespace TanamSawit.Environment
         private GameObject worldRoot;
         private readonly List<GameObject> builtObjects = new List<GameObject>();
         private int worldLayer = -1;
+        private TilemapAreaBuilder tilemapBuilder;
 
         private void Awake()
         {
@@ -83,11 +84,15 @@ namespace TanamSawit.Environment
 
             worldRoot = new GameObject("=== [WORLD_4_AREA] ===");
 
+            // Tilemap builder untuk ground ber-tiling
+            tilemapBuilder = worldRoot.AddComponent<TilemapAreaBuilder>();
+            tilemapBuilder.InitGrid(worldRoot.transform);
+
             Color[] colors = { colorKebun, colorPerumahan, colorKota, colorPabrik };
 
             for (int i = 0; i < 4; i++)
             {
-                BuildArea(AreaNames[i], AreaCenters[i], colors[i], worldRoot.transform);
+                BuildArea(i, AreaNames[i], AreaCenters[i], colors[i], worldRoot.transform);
             }
 
             // Jalan penghubung
@@ -115,6 +120,9 @@ namespace TanamSawit.Environment
 
         private void ClearWorld()
         {
+            if (tilemapBuilder != null)
+                tilemapBuilder.ClearTiles();
+
             foreach (var obj in builtObjects)
             {
                 if (obj != null)
@@ -128,16 +136,19 @@ namespace TanamSawit.Environment
 
         // ─── Area Ground ───────────────────────────────────────────────────
 
-        private void BuildArea(string areaName, Vector2 center, Color groundColor, Transform parent)
+        private void BuildArea(int areaIndex, string areaName, Vector2 center, Color groundColor, Transform parent)
         {
             GameObject areaRoot = new GameObject(areaName);
             areaRoot.transform.SetParent(parent);
             areaRoot.transform.position = new Vector3(center.x, center.y, 0f);
             builtObjects.Add(areaRoot);
 
-            // Ground tanah berwarna
-            CreateColoredSprite(areaRoot.transform, $"Ground_{areaName}", Vector3.zero,
-                new Vector2(areaWidth, areaHeight), groundColor, 0);
+            // Ground ber-tiling (gantikan flat colored sprite)
+            if (tilemapBuilder != null)
+                tilemapBuilder.BuildAreaTiles(areaIndex, center, areaWidth, areaHeight);
+            else
+                CreateColoredSprite(areaRoot.transform, $"Ground_{areaName}", Vector3.zero,
+                    new Vector2(areaWidth, areaHeight), groundColor, 0);
 
             // Label nama area
             CreateTextLabel(areaRoot.transform, areaName, new Vector3(0f, areaHeight * 0.5f - 1.5f, -1f));

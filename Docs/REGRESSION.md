@@ -140,6 +140,21 @@ Run this checklist at the end of **every** implementation phase. All checks must
 - [ ] Speed 4x → day advances ~0.75s
 - [ ] Pause → time stops
 
+## 13. Visual / Art (Phase 6)
+
+- [ ] Each area has tiled ground (3 shades of color, visible variation up close)
+- [ ] Ground tiles align with perimeter wall colliders (no gaps, no z-fighting)
+- [ ] Road tiles visible between areas (dark path connecting areas)
+- [ ] Day/night overlay visible: warm tint at dawn (6am), clear noon, orange dusk (6pm), dark blue night (10pm+)
+- [ ] Day/night cycle advances correctly at 1x, 2x, 4x speeds
+- [ ] Clock display in top bar shows "HH:MM" with sun/moon icon
+- [ ] Minimap visible in bottom-right corner (square RawImage with border)
+- [ ] Minimap shows world from above (ground, buildings, NPCs visible as colored shapes)
+- [ ] Minimap camera follows player position
+- [ ] Minimap area label updates on portal transition
+- [ ] Facilities remain readable at night (overlay not too dark)
+- [ ] Frame rate stable in densest area (Kota) — tilemap chunking keeps draw calls sane
+
 ---
 
 ## Tags & Layers Requirements (Phase 3+)
@@ -153,13 +168,13 @@ After Phase 3 (Physics & Collision), these Unity Tags & Layers must exist:
 - `World` (walls, buildings, solid colliders)
 - `Player` (player character)
 - `Portal` (area transition trigger zones)
-- `Minimap` (Phase 6 — minimap icon sprites)
+- `Minimap` (Phase 6 — **optional**; minimap renders all layers by default. Add this layer only if you want minimap icon sprites isolated from the main camera view.)
 
 **Physics 2D Matrix (Edit → Project Settings → Physics 2D):**
 - Player ↔ World: checked (collision)
 - Player ↔ Portal: checked (trigger)
 - Player ↔ Player: unchecked
-- Minimap ↔ *: unchecked (minimap camera culling handles isolation)
+- Minimap ↔ *: N/A (layer optional; minimap camera renders all layers excluding UI)
 
 ---
 

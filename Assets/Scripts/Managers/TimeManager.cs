@@ -55,11 +55,26 @@ namespace TanamSawit.Managers
         public int CurrentMonth => currentMonth;
         public int CurrentYear => currentYear;
 
+        [Tooltip("Jam awal saat hari dimulai (0-24). 6 = 06:00 pagi.")]
+        [SerializeField] private float startHour = 6f;
+
         [SerializeField] private GameSpeed currentGameSpeed = GameSpeed.Normal;
         public GameSpeed CurrentGameSpeed => currentGameSpeed;
 
         private float dayTimer = 0f;
         private GameSpeed speedBeforePause = GameSpeed.Normal;
+        private int lastHourInt = -1;
+        #endregion
+
+        #region Jam dalam Sehari
+        /// <summary>
+        /// Jam saat ini dalam sehari (0.0 - 24.0). Dihitung dari dayTimer.
+        /// Saat hari berganti (dayTimer reset), jam kembali ke startHour.
+        /// </summary>
+        public float HourOfDay => Mathf.Repeat(startHour + 24f * dayTimer / secondsPerDay, 24f);
+
+        /// <summary>Dipanggil setiap kali jam berubah (integer hour berganti).</summary>
+        public event Action<float> OnHourChanged;
         #endregion
 
         #region Nama Bulan
@@ -143,6 +158,14 @@ namespace TanamSawit.Managers
                 dayTimer -= secondsPerDay;
                 AdvanceDay();
             }
+
+            // Cek perubahan jam (integer hour)
+            int currentHourInt = Mathf.FloorToInt(HourOfDay);
+            if (currentHourInt != lastHourInt)
+            {
+                lastHourInt = currentHourInt;
+                OnHourChanged?.Invoke(HourOfDay);
+            }
         }
 
         /// <summary>
@@ -197,6 +220,7 @@ namespace TanamSawit.Managers
             currentMonth = Mathf.Clamp(month, 1, monthsPerYear);
             currentYear = Mathf.Max(1, year);
             dayTimer = 0f;
+            lastHourInt = -1; // paksa OnHourChanged terpicu setelah load
 
             OnDayPassed?.Invoke(currentDay, currentMonth, currentYear);
         }
@@ -275,6 +299,29 @@ namespace TanamSawit.Managers
         public float GetDayProgress()
         {
             return Mathf.Clamp01(dayTimer / secondsPerDay);
+        }
+
+        /// <summary>
+        /// Mendapatkan string jam format "HH:MM" (contoh: "06:30", "14:45").
+        /// </summary>
+        public string GetFormattedTime()
+        {
+            float h = HourOfDay;
+            int hours = Mathf.FloorToInt(h);
+            int minutes = Mathf.FloorToInt((h - hours) * 60f);
+            return $"{hours:D2}:{minutes:D2}";
+        }
+
+        /// <summary>
+        /// Mengatur jam dalam sehari (dipanggil oleh SaveManager saat Load).
+        /// Menyesuaikan dayTimer agar sesuai dengan jam yang ditentukan.
+        /// </summary>
+        public void SetHour(float hour)
+        {
+            hour = Mathf.Repeat(hour, 24f);
+            dayTimer = (hour - startHour) / 24f * secondsPerDay;
+            if (dayTimer < 0f) dayTimer += secondsPerDay;
+            lastHourInt = Mathf.FloorToInt(HourOfDay);
         }
         #endregion
     }

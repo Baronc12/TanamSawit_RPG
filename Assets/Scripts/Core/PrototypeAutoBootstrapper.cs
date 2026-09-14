@@ -64,6 +64,9 @@ namespace TanamSawit.Core
                 managersHost.AddComponent<GridManager>();
                 managersHost.AddComponent<EcologySpawner>();
 
+                // Pasang siklus siang-malam
+                managersHost.AddComponent<TanamSawit.Environment.DayNightCycle>();
+
                 // Pasang UI uGUI (menggantikan IMGUI TycoonHUD/ModernTycoonHUD)
                 UIRoot.EnsureExists();
 

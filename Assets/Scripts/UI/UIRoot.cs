@@ -73,6 +73,7 @@ namespace TanamSawit.UI
             go.AddComponent<FacilityModalUI>();
             go.AddComponent<DialogueUI>();
             go.AddComponent<GameOverUI>();
+            go.AddComponent<MinimapUI>();
         }
 
         private void Awake()
