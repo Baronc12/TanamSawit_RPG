@@ -42,8 +42,8 @@ namespace TanamSawit.UI
 
         private void OnEnable()
         {
+            Debug.Log("[FacilityModalUI] OnEnable: subscribing to OnFacilityInteracted.");
             InteractableFacility.OnFacilityInteracted += HandleFacilityInteracted;
-            Debug.Log("[FacilityModalUI] OnEnable: subscribed to OnFacilityInteracted.");
         }
 
         private void OnDisable()
@@ -116,10 +116,10 @@ namespace TanamSawit.UI
             try
             {
                 _currentDef = FacilityModalDefinitions.Get(type);
+                Debug.Log($"[FacilityModalUI] _currentDef set. title='{_currentDef?.title}', hasDesc={_currentDef?.getDescription != null}, buttonCount={_currentDef?.buttons?.Count}");
                 if (_titleText != null)
                     _titleText.text = _currentDef.title;
                 RebuildButtons();
-                // RefreshContent dipanggil di Update() setelah panel aktif
             }
             catch (System.Exception ex)
             {
@@ -203,11 +203,23 @@ namespace TanamSawit.UI
 
         private void RefreshContent()
         {
-            if (_currentDef == null || !_panel.activeSelf) return;
+            if (_currentDef == null || !_panel.activeSelf)
+            {
+                Debug.Log($"[FacilityModalUI] RefreshContent early-out: _currentDef==null={_currentDef == null}, _panel.activeSelf={_panel?.activeSelf}");
+                return;
+            }
 
             // Update description
             if (_currentDef.getDescription != null)
-                _descText.text = _currentDef.getDescription();
+            {
+                string desc = _currentDef.getDescription();
+                _descText.text = desc;
+                Debug.Log($"[FacilityModalUI] RefreshContent: desc set to '{desc?.Substring(0, Mathf.Min(50, desc.Length))}...'");
+            }
+            else
+            {
+                Debug.LogWarning("[FacilityModalUI] RefreshContent: _currentDef.getDescription is null");
+            }
 
             // Update button visibility
             if (_currentDef.buttons != null)
