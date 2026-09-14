@@ -87,10 +87,10 @@ namespace TanamSawit.UI
                 econ.OnMoneyChanged += HandleMoneyChanged;
                 econ.OnBankruptcy += HandleBankruptcy;
             }
-            if (EcologyManager.Instance != null)
+            if (EnvironmentalKarmaManager.Instance != null)
             {
-                EcologyManager.Instance.OnEcologyEvent += HandleEcologyEvent;
-                EcologyManager.Instance.OnEndingTriggered += HandleEndingEvent;
+                EnvironmentalKarmaManager.Instance.OnEcologyEvent += HandleEcologyEvent;
+                EnvironmentalKarmaManager.Instance.OnEndingTriggered += HandleEndingEvent;
             }
             if (loan != null)
                 loan.OnLoanEventTriggered += HandleLoanEvent;
@@ -106,10 +106,10 @@ namespace TanamSawit.UI
                 econ.OnMoneyChanged -= HandleMoneyChanged;
                 econ.OnBankruptcy -= HandleBankruptcy;
             }
-            if (EcologyManager.Instance != null)
+            if (EnvironmentalKarmaManager.Instance != null)
             {
-                EcologyManager.Instance.OnEcologyEvent -= HandleEcologyEvent;
-                EcologyManager.Instance.OnEndingTriggered -= HandleEndingEvent;
+                EnvironmentalKarmaManager.Instance.OnEcologyEvent -= HandleEcologyEvent;
+                EnvironmentalKarmaManager.Instance.OnEndingTriggered -= HandleEndingEvent;
             }
             if (loan != null)
                 loan.OnLoanEventTriggered -= HandleLoanEvent;

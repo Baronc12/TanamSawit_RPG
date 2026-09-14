@@ -239,9 +239,10 @@ namespace TanamSawit.SaveSystem
                     RivalManager.Instance.LoadState(data.cousinNetWorth, (GameEnding)data.finalEnding);
                 }
 
-                if (EcologyManager.Instance != null)
+                if (EnvironmentalKarmaManager.Instance != null)
                 {
-                    EcologyManager.Instance.ResetEndingStates();
+                    EnvironmentalKarmaManager.Instance.ResetEndingStates();
+                    EnvironmentalKarmaManager.Instance.RestoreKarmaSideEffects();
                 }
 
                 // Pulihkan state ke Playing jika save data masih sehat

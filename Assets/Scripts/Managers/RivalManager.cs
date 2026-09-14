@@ -37,6 +37,9 @@ namespace TanamSawit.Managers
         [SerializeField] private int targetEvaluationYear = 2034; // 10 tahun dari 2024
         public int TargetEvaluationYear => targetEvaluationYear;
 
+        [Tooltip("Target Net Worth absolut untuk Good Ending (Rp 1 Miliar). Ported dari EcologyManager.")]
+        [SerializeField] private double targetNetWorthForGoodEnding = 1_000_000_000;
+
         [Header("Hasil Akhir Permainan")]
         [SerializeField] private GameEnding finalEnding = GameEnding.BelumSelesai;
         public GameEnding FinalEnding => finalEnding;
@@ -110,6 +113,14 @@ namespace TanamSawit.Managers
                 finalEnding = GameEnding.GoodEnding_SawitTycoon;
                 string msg = $"[SELAMAT - GOOD ENDING] Raja Sawit Sejati! Net Worth Anda ({EconomyManager.FormatCurrency(playerNetWorth)}) berhasil melampaui sepupu ({EconomyManager.FormatCurrency(cousinCurrentNetWorth)}). Sepupu Anda terkejut dan memohon pinjaman modal!";
                 Debug.Log(msg);
+                OnEndingReached?.Invoke(finalEnding, msg);
+            }
+            else if (playerNetWorth < targetNetWorthForGoodEnding)
+            {
+                // Worse bad ending — ported from EcologyManager (failed to reach Rp 1 Miliar absolute target)
+                finalEnding = GameEnding.BadEnding_FailedHeir;
+                string msg = $"[BAD ENDING: THE FAILED HEIR]\nGame Over! Net Worth Anda hanya {EconomyManager.FormatCurrency(playerNetWorth)} (Gagal mencapai target Rp 1 Miliar). Warisan kakek habis dan Anda kalah dari sepupu!";
+                Debug.LogWarning(msg);
                 OnEndingReached?.Invoke(finalEnding, msg);
             }
             else

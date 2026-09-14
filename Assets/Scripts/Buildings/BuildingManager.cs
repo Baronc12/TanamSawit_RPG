@@ -140,7 +140,7 @@ namespace TanamSawit.Buildings
         }
 
         /// <summary>
-        /// Dipanggil oleh EcologyManager saat Event Gajah merusak pabrik.
+        /// Dipanggil oleh EnvironmentalKarmaManager saat Event Gajah merusak pabrik.
         /// </summary>
         public void DamageFactory()
         {

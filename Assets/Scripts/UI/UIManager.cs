@@ -61,11 +61,11 @@ namespace TanamSawit.UI
                 TimeManager.Instance.OnDayPassed += HandleDayPassed;
             }
 
-            // Subscribe ke event EcologyManager
-            if (EcologyManager.Instance != null)
+            // Subscribe ke event EnvironmentalKarmaManager (ecology/ending notifications)
+            if (EnvironmentalKarmaManager.Instance != null)
             {
-                EcologyManager.Instance.OnEcologyEvent += HandleEcologyNotification;
-                EcologyManager.Instance.OnEndingTriggered += HandleEndingNotification;
+                EnvironmentalKarmaManager.Instance.OnEcologyEvent += HandleEcologyNotification;
+                EnvironmentalKarmaManager.Instance.OnEndingTriggered += HandleEndingNotification;
             }
 
             // Subscribe ke event LoanManager
@@ -92,10 +92,10 @@ namespace TanamSawit.UI
                 TimeManager.Instance.OnDayPassed -= HandleDayPassed;
             }
 
-            if (EcologyManager.Instance != null)
+            if (EnvironmentalKarmaManager.Instance != null)
             {
-                EcologyManager.Instance.OnEcologyEvent -= HandleEcologyNotification;
-                EcologyManager.Instance.OnEndingTriggered -= HandleEndingNotification;
+                EnvironmentalKarmaManager.Instance.OnEcologyEvent -= HandleEcologyNotification;
+                EnvironmentalKarmaManager.Instance.OnEndingTriggered -= HandleEndingNotification;
             }
 
             if (LoanManager.Instance != null)
