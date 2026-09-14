@@ -53,6 +53,12 @@ namespace TanamSawit.Environment
         private GUIStyle promptStyle;
         private bool stylesReady = false;
 
+        // Diagnostic state (temporary — for debugging interaction issue)
+        internal static bool _lastEdgeDetected;       // true if EOrSpace() returned true this frame
+        internal static bool _lastInteractCalled;     // true if Interact() was called this frame
+        internal static int _lastEdgeFrame = -1;       // frame count of last edge detection
+        internal static string _lastDiagMsg = "";      // diagnostic message
+
         // Event untuk dipanggil FacilityModalUI / DialogueActionRouter
         public static event Action<FacilityType, string> OnFacilityInteracted;
 
@@ -117,6 +123,8 @@ namespace TanamSawit.Environment
 
         private void Update()
         {
+            _lastInteractCalled = false;
+
             // Jangan proses interaksi jika modal (facility/dialog/gameover) sedang terbuka
             if (UIRoot.IsModalOpen)
             {
@@ -133,12 +141,21 @@ namespace TanamSawit.Environment
 
             if (playerInRange && IsInteractPressed())
             {
+                _lastEdgeDetected = true;
+                _lastEdgeFrame = Time.frameCount;
+                Debug.Log($"<color=#FFEE55>[InteractableFacility]</color> Edge detected on frame {Time.frameCount} for {displayName}");
                 Interact();
+            }
+            else
+            {
+                _lastEdgeDetected = false;
             }
         }
 
         private void Interact()
         {
+            _lastInteractCalled = true;
+
             // Kunci pergerakan MC saat modal sedang dibuka
 #pragma warning disable CS0618
             var controller = FindFirstObjectByType<OpeningGameplayPlayerController>();
@@ -147,11 +164,12 @@ namespace TanamSawit.Environment
 
             if (OnFacilityInteracted == null)
             {
-                Debug.LogWarning("[InteractableFacility] OnFacilityInteracted has no subscribers! " +
-                    "FacilityModalUI may not be initialized. Ensure UIRoot.EnsureExists() was called.");
+                _lastDiagMsg = "OnFacilityInteracted has NO subscribers! FacilityModalUI not initialized?";
+                Debug.LogWarning("[InteractableFacility] " + _lastDiagMsg);
             }
             else
             {
+                _lastDiagMsg = $"Firing OnFacilityInteracted for {displayName} ({facilityType})";
                 OnFacilityInteracted.Invoke(facilityType, displayName);
             }
             Debug.Log($"<color=#00FF88>[Interaksi]</color> Memilih fasilitas: {displayName} ({facilityType})");
@@ -209,6 +227,49 @@ namespace TanamSawit.Environment
             // Teks interaksi
             string promptText = $"<b>{displayName}</b>  |  <color=#FFEE55>[E]</color> {interactionHint}";
             GUI.Label(boxRect, promptText, promptStyle);
+
+            // ── Diagnostic overlay (temporary) ──
+            DrawDiagnosticOverlay();
+        }
+
+        /// <summary>Temporary on-screen diagnostic to trace interaction failures.</summary>
+        private void DrawDiagnosticOverlay()
+        {
+            float dy = 60f;
+            float dw = 520f;
+            float dh = 140f;
+            float dx = (Screen.width - dw) * 0.5f;
+
+            Rect diagRect = new Rect(dx, dy, dw, dh);
+            GUI.DrawTexture(diagRect, promptBg);
+
+            GUIStyle ds = new GUIStyle(GUI.skin.label)
+            {
+                fontSize = 12,
+                alignment = TextAnchor.UpperLeft,
+                richText = true
+            };
+            ds.normal.textColor = Color.white;
+
+            bool hasSubs = OnFacilityInteracted != null;
+            bool uiRootOk = UIRoot.Instance != null;
+            bool modalOpen = UIRoot.IsModalOpen;
+            bool facilityModalOk = FacilityModalUI.Instance != null;
+
+            int framesSinceEdge = (_lastEdgeFrame >= 0) ? (Time.frameCount - _lastEdgeFrame) : -1;
+            string edgeStr = _lastEdgeDetected ? "THIS FRAME" :
+                              (framesSinceEdge >= 0 ? $"{framesSinceEdge} frames ago" : "never");
+
+            string diag = $"<color=#00FF66><b>--- INTERACTION DEBUG ---</b></color>\n" +
+                          $"InRange: <color=#{(playerInRange ? "00FF00" : "FF0000")}>{playerInRange}</color>  " +
+                          $"Edge: <color=#{(_lastEdgeDetected ? "00FF00" : "FFAA00")}>{edgeStr}</color>\n" +
+                          $"OnFacilityInteracted subs: <color=#{(hasSubs ? "00FF00" : "FF0000")}>{hasSubs}</color>  " +
+                          $"FacilityModalUI: <color=#{(facilityModalOk ? "00FF00" : "FF0000")}>{facilityModalOk}</color>\n" +
+                          $"UIRoot.Instance: <color=#{(uiRootOk ? "00FF00" : "FF0000")}>{uiRootOk}</color>  " +
+                          $"IsModalOpen: <color=#{(modalOpen ? "FF0000" : "00FF00")}>{modalOpen}</color>\n" +
+                          $"LastMsg: {_lastDiagMsg}";
+
+            GUI.Label(diagRect, diag, ds);
         }
 
         // ── Input ─────────────────────────────────────────────────────

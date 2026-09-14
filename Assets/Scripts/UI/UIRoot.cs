@@ -63,6 +63,8 @@ namespace TanamSawit.UI
         {
             if (Instance != null) return;
 
+            Debug.Log("[UIRoot] EnsureExists() called — creating [UI_ROOT] GameObject.");
+
             var go = new GameObject("[UI_ROOT]");
             DontDestroyOnLoad(go);
             Instance = go.AddComponent<UIRoot>();
@@ -75,6 +77,8 @@ namespace TanamSawit.UI
             go.AddComponent<DialogueUI>();
             go.AddComponent<GameOverUI>();
             go.AddComponent<MinimapUI>();
+
+            Debug.Log("[UIRoot] EnsureExists() complete — all panel controllers added.");
         }
 
         private void Awake()

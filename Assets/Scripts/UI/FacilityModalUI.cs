@@ -37,16 +37,19 @@ namespace TanamSawit.UI
             Instance = this;
             BuildUI();
             _panel.SetActive(false);
+            Debug.Log("[FacilityModalUI] Awake complete. Panel built and hidden.");
         }
 
         private void OnEnable()
         {
             InteractableFacility.OnFacilityInteracted += HandleFacilityInteracted;
+            Debug.Log("[FacilityModalUI] OnEnable: subscribed to OnFacilityInteracted.");
         }
 
         private void OnDisable()
         {
             InteractableFacility.OnFacilityInteracted -= HandleFacilityInteracted;
+            Debug.Log("[FacilityModalUI] OnDisable: unsubscribed from OnFacilityInteracted.");
         }
 
         // ── Build UI ─────────────────────────────────────────────────────
@@ -55,6 +58,10 @@ namespace TanamSawit.UI
         {
             // Dim backdrop
             _panel = new GameObject("FacilityModal");
+            if (UIRoot.PanelRoot == null)
+            {
+                Debug.LogError("[FacilityModalUI] UIRoot.PanelRoot is null! Panel will not be parented to canvas.");
+            }
             _panel.transform.SetParent(UIRoot.PanelRoot, false);
 
             var backdropRt = _panel.AddComponent<RectTransform>();
@@ -102,10 +109,22 @@ namespace TanamSawit.UI
 
         private void HandleFacilityInteracted(FacilityType type, string name)
         {
-            _currentDef = FacilityModalDefinitions.Get(type);
-            _titleText.text = _currentDef.title;
-            RebuildButtons();
-            RefreshContent();
+            Debug.Log($"<color=#00FF88>[FacilityModalUI]</color> HandleFacilityInteracted called: {type} / {name}");
+
+            // Bangun konten modal dengan try-catch agar ShowModal selalu dipanggil
+            // meski ada exception saat membangun konten (mis. manager null).
+            try
+            {
+                _currentDef = FacilityModalDefinitions.Get(type);
+                if (_titleText != null)
+                    _titleText.text = _currentDef.title;
+                RebuildButtons();
+                // RefreshContent dipanggil di Update() setelah panel aktif
+            }
+            catch (System.Exception ex)
+            {
+                Debug.LogError($"[FacilityModalUI] Exception building content: {ex}");
+            }
 
             // Kunci pergerakan MC
             var player = GameObject.FindWithTag("Player");
@@ -115,7 +134,17 @@ namespace TanamSawit.UI
                 if (ctrl != null) ctrl.SetMovementLocked(true);
             }
 
-            UIRoot.Instance.ShowModal(_panel);
+            // ShowModal HARUS selalu dipanggil
+            if (UIRoot.Instance != null)
+            {
+                UIRoot.Instance.ShowModal(_panel);
+                Debug.Log("<color=#00FF88>[FacilityModalUI]</color> ShowModal called successfully.");
+            }
+            else
+            {
+                Debug.LogError("[FacilityModalUI] UIRoot.Instance is null! Cannot show modal.");
+                if (_panel != null) _panel.SetActive(true);
+            }
         }
 
         // ── Button management ────────────────────────────────────────────
