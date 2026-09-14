@@ -2,6 +2,7 @@ using System;
 using System.IO;
 using UnityEngine;
 using TanamSawit.Managers;
+using TanamSawit.Buildings;
 
 namespace TanamSawit.SaveSystem
 {
@@ -128,7 +129,14 @@ namespace TanamSawit.SaveSystem
                     data.workers = new System.Collections.Generic.List<Worker>(WorkerManager.Instance.Workers);
                     data.tbsStockTon = WorkerManager.Instance.TbsStockTon;
                     data.cpoStockTon = WorkerManager.Instance.CpoStockTon;
-                    data.hasFactory = WorkerManager.Instance.HasFactory;
+                }
+
+                // 5b. Bangunan & Pabrik (BuildingManager owns factory state)
+                if (BuildingManager.Instance != null)
+                {
+                    data.hasFactory = BuildingManager.Instance.HasFactory;
+                    data.factoryDamaged = BuildingManager.Instance.IsFactoryDamaged;
+                    data.maxWorkerCapacity = BuildingManager.Instance.MaxWorkerCapacity;
                 }
 
                 // 6. Karma Ekologi
@@ -217,7 +225,13 @@ namespace TanamSawit.SaveSystem
                 // 4. Pulihkan Pekerja & Pabrik
                 if (WorkerManager.Instance != null)
                 {
-                    WorkerManager.Instance.LoadState(data.workers, data.tbsStockTon, data.cpoStockTon, data.hasFactory);
+                    WorkerManager.Instance.LoadState(data.workers, data.tbsStockTon, data.cpoStockTon);
+                }
+
+                // 4b. Pulihkan Bangunan (BuildingManager owns factory/capacity state)
+                if (BuildingManager.Instance != null)
+                {
+                    BuildingManager.Instance.LoadState(data.hasFactory, data.factoryDamaged, data.landCount, data.maxWorkerCapacity);
                 }
 
                 // 5. Pulihkan Karma Ekologi

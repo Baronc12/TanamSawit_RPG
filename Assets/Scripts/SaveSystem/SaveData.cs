@@ -43,6 +43,12 @@ namespace TanamSawit.SaveSystem
         public bool hasFactory;
         #endregion
 
+        #region Bangunan & Pabrik (BuildingManager-owned state)
+        public bool factoryDamaged;
+        public int landCount;
+        public int maxWorkerCapacity;
+        #endregion
+
         #region Karma Ekologi
         public int karmaLevel;
         public string lastIncidentLog;

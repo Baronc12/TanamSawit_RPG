@@ -177,6 +177,23 @@ namespace TanamSawit.Buildings
         }
         #endregion
 
+        #region Save/Load
+        /// <summary>
+        /// Restores building/factory state from save data.
+        /// </summary>
+        public void LoadState(bool savedHasFactory, bool savedIsFactoryDamaged, int savedLandCount, int savedMaxWorkerCapacity)
+        {
+            hasFactory = savedHasFactory;
+            isFactoryDamaged = savedIsFactoryDamaged;
+            maxWorkerCapacity = Mathf.Max(1, savedMaxWorkerCapacity);
+
+            if (hasFactory && EconomyManager.Instance != null)
+            {
+                EconomyManager.Instance.SetOtherAssetsValuation(factoryCost);
+            }
+        }
+        #endregion
+
         private void Notify(string msg)
         {
             Debug.Log(msg);

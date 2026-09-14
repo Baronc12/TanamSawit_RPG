@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TanamSawit.Workers;
+using TanamSawit.Buildings;
 
 namespace TanamSawit.Managers
 {
@@ -52,10 +53,10 @@ namespace TanamSawit.Managers
         [SerializeField] private double pricePerTonTBS = 2_500_000;
         [SerializeField] private double pricePerTonCPO = 12_000_000;
 
-        [Header("Pabrik Sawit")]
-        [SerializeField] private bool hasFactory = false;
-        public bool HasFactory => hasFactory;
-        [SerializeField] private double factoryBuildCost = 100_000_000;
+        [Header("Pabrik Sawit — delegated to BuildingManager")]
+        // Factory state is owned by BuildingManager (canonical: Rp 150jt cost, 2.2x multiplier).
+        // HasFactory/BuildFactory are forwarding facades during migration.
+        public bool HasFactory => BuildingManager.Instance != null && BuildingManager.Instance.HasFactory;
 
         public event Action<string> OnWorkerEventTriggered;
 
@@ -127,15 +128,9 @@ namespace TanamSawit.Managers
 
             // Cek bonus Yayasan Pendidikan CSR jika ada
             int bonusIntelligence = 0;
-            var bmType = Type.GetType("TanamSawit.Buildings.BuildingManager, Assembly-CSharp");
-            if (bmType != null)
+            if (BuildingManager.Instance != null && BuildingManager.Instance.HasFoundation)
             {
-                var instance = bmType.GetProperty("Instance")?.GetValue(null);
-                if (instance != null)
-                {
-                    bool hasFoundation = (bool)(bmType.GetProperty("HasFoundation")?.GetValue(instance) ?? false);
-                    if (hasFoundation) bonusIntelligence = 10;
-                }
+                bonusIntelligence = 10;
             }
 
             // Buat objek visual di scene
@@ -263,19 +258,13 @@ namespace TanamSawit.Managers
 
         public bool BuildFactory()
         {
-            if (hasFactory) return false;
-            if (EconomyManager.Instance != null && EconomyManager.Instance.SpendMoney(factoryBuildCost, "Bangun Pabrik CPO"))
-            {
-                hasFactory = true;
-                EconomyManager.Instance.SetOtherAssetsValuation(factoryBuildCost);
-                return true;
-            }
-            return false;
+            // Forward to BuildingManager (canonical: Rp 150jt cost, owns factory state)
+            return BuildingManager.Instance != null && BuildingManager.Instance.BuildFactory();
         }
 
         public bool ProcessTbsToCpo()
         {
-            if (!hasFactory || tbsStockTon < 5f) return false;
+            if (!HasFactory || tbsStockTon < 5f) return false;
             float batches = Mathf.Floor(tbsStockTon / 5f);
             tbsStockTon -= batches * 5f;
             cpoStockTon += batches * 1.0f;
@@ -321,7 +310,10 @@ namespace TanamSawit.Managers
         #endregion
 
         #region Save / Load
-        public void LoadState(List<Worker> savedWorkers, float tbs, float cpo, bool factory)
+        /// <summary>
+        /// Loads worker data and TBS/CPO stocks. Factory state is owned by BuildingManager.
+        /// </summary>
+        public void LoadState(List<Worker> savedWorkers, float tbs, float cpo)
         {
             if (savedWorkers != null && savedWorkers.Count > 0)
             {
@@ -329,11 +321,6 @@ namespace TanamSawit.Managers
             }
             tbsStockTon = Mathf.Max(0, tbs);
             cpoStockTon = Mathf.Max(0, cpo);
-            hasFactory = factory;
-            if (hasFactory && EconomyManager.Instance != null)
-            {
-                EconomyManager.Instance.SetOtherAssetsValuation(factoryBuildCost);
-            }
         }
         #endregion
     }

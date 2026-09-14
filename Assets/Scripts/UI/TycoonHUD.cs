@@ -3,6 +3,7 @@ using TMPro;
 using TanamSawit.Managers;
 using TanamSawit.SaveSystem;
 using TanamSawit.Environment;
+using TanamSawit.Buildings;
 
 namespace TanamSawit.UI
 {
@@ -183,7 +184,7 @@ namespace TanamSawit.UI
                 {
                     if (GUILayout.Button("Bangun Pabrik CPO (Rp 100 Jt)"))
                     {
-                        wm.BuildFactory();
+                        BuildingManager.Instance.BuildFactory();
                     }
                 }
                 else

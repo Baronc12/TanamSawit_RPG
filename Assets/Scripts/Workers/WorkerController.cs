@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using TanamSawit.Managers;
+using TanamSawit.Buildings;
 
 namespace TanamSawit.Workers
 {
@@ -112,21 +113,9 @@ namespace TanamSawit.Workers
             double baseEarnings = 250_000 + (currentExperience * 25_000) + (currentIntelligence * 10_000);
 
             // Periksa apakah ada multiplier dari Pabrik Sawit (BuildingManager)
-            double factoryMultiplier = 1.0;
-            var bmType = System.Type.GetType("TanamSawit.Buildings.BuildingManager, Assembly-CSharp");
-            if (bmType != null)
-            {
-                var instanceProp = bmType.GetProperty("Instance");
-                var instance = instanceProp?.GetValue(null);
-                if (instance != null)
-                {
-                    var multiplierProp = bmType.GetProperty("FactoryMultiplier");
-                    if (multiplierProp != null)
-                    {
-                        factoryMultiplier = (double)multiplierProp.GetValue(instance);
-                    }
-                }
-            }
+            double factoryMultiplier = BuildingManager.Instance != null
+                ? BuildingManager.Instance.FactoryMultiplier
+                : 1.0;
 
             double totalIncome = baseEarnings * factoryMultiplier;
 
