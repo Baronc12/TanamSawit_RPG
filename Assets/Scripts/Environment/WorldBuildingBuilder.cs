@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TanamSawit.Managers;
+using TanamSawit.NPC;
 
 namespace TanamSawit.Environment
 {
@@ -102,6 +103,9 @@ namespace TanamSawit.Environment
             BuildPerumahanFacilities();
             BuildKotaFacilities();
             BuildPabrikFacilities();
+
+            // NPC dengan dialog
+            BuildNPCs();
 
             // Simpan spawn points
             RegisterSpawnPoints();
@@ -326,6 +330,194 @@ namespace TanamSawit.Environment
             // Pabrik CPO
             BuildFacilityBuilding(parent, "🏭 Pabrik Pengolahan CPO", new Vector3(0f, 5f, 0f),
                 FacilityType.PabrikCPO, "Bangun / Kelola Pabrik CPO", new Color(0.5f, 0.45f, 0.3f), new Vector2(14f, 9f));
+        }
+
+
+        // ─── NPC dengan Dialog ───────────────────────────────────────────
+
+        private void BuildNPCs()
+        {
+            // Mandor — Kebun (pekerja/rekrut)
+            BuildNPC(AreaNames[0], "Mandor Kebun", new Vector3(8f, -6f, 0f),
+                NPCIdentity.CreateRuntime("mandor", "Pak Bambang", "Mandor Kebun", new Color(0.7f, 0.55f, 0.2f)),
+                CreateMandorDialogue(), wander: true);
+
+            // Pegawai Bank — Kota
+            BuildNPC(AreaNames[2], "Pegawai Bank", new Vector3(-12f, 10f, 0f),
+                NPCIdentity.CreateRuntime("pegawai_bank", "Ibu Siti", "Pegawai Bank Konvensional", new Color(0.2f, 0.35f, 0.7f)),
+                CreateBankDialogue(), wander: false);
+
+            // Debt Collector Pinjol — Kota
+            BuildNPC(AreaNames[2], "Debt Collector", new Vector3(2f, 8f, 0f),
+                NPCIdentity.CreateRuntime("debt_collector", "Budi Toll", "Debt Collector Pinjol", new Color(0.8f, 0.2f, 0.2f)),
+                CreatePinjolDialogue(), wander: true);
+
+            // Rentenir — Perumahan
+            BuildNPC(AreaNames[1], "Rentenir Madura", new Vector3(-8f, 6f, 0f),
+                NPCIdentity.CreateRuntime("rentenir", "Pak Slamet", "Rentenir Madura", new Color(0.6f, 0.4f, 0.1f)),
+                CreateRentenirDialogue(), wander: false);
+
+            // Sepupu (Rival) — Kota
+            BuildNPC(AreaNames[2], "Sepupu Rival", new Vector3(10f, -8f, 0f),
+                NPCIdentity.CreateRuntime("sepupu", "Eddy Sepupu", "Sepupu Saingan", new Color(0.25f, 0.25f, 0.3f)),
+                CreateSepupuDialogue(), wander: false);
+
+            // Kepala Desa — Perumahan
+            BuildNPC(AreaNames[1], "Kepala Desa", new Vector3(8f, -4f, 0f),
+                NPCIdentity.CreateRuntime("kepala_desa", "Pak Kades", "Kepala Desa", new Color(0.3f, 0.6f, 0.3f)),
+                CreateKepalaDesaDialogue(), wander: false);
+        }
+
+        private void BuildNPC(string areaName, string label, Vector3 localPos,
+            NPCIdentity identity, DialogueAsset dialogue, bool wander)
+        {
+            var parent = worldRoot.transform.Find(areaName);
+            if (parent == null) return;
+
+            var go = new GameObject($"NPC_{identity.displayName}");
+            go.transform.SetParent(parent);
+            go.transform.localPosition = localPos;
+            builtObjects.Add(go);
+
+            // Visual: colored sprite
+            Color npcColor = identity.accentColor;
+            CreateColoredSprite(go.transform, "NPC_Body", new Vector3(0f, 0.5f, 0f), new Vector2(1.2f, 1.6f), npcColor, 5);
+            CreateColoredSprite(go.transform, "NPC_Head", new Vector3(0f, 1.5f, 0f), new Vector2(0.8f, 0.8f),
+                Color.Lerp(npcColor, Color.white, 0.3f), 5);
+
+            // Label
+            CreateTextLabel(go.transform, label, new Vector3(0f, 2.2f, -0.2f));
+
+            // NPC component
+            var npc = go.AddComponent<NPCInteractable>();
+            npc.Configure(identity, dialogue, 2.5f, wander);
+        }
+
+        // ─── Runtime Dialogue Assets ─────────────────────────────────────
+
+        private static DialogueAsset CreateMandorDialogue()
+        {
+            var dlg = DialogueAsset.CreateRuntime(
+                NPCIdentity.CreateRuntime("mandor", "Pak Bambang", "Mandor Kebun", new Color(0.7f, 0.55f, 0.2f)));
+            dlg.nodes.Add(new DialogueAsset.DialogueNode
+            {
+                text = "Halo, Bos! Pekerja lagi panen TBS di kebun. Hasilnya lumayan hari ini!",
+                autoNext = 1
+            });
+            dlg.nodes.Add(new DialogueAsset.DialogueNode
+            {
+                text = "Mau rekrut pekerja baru? Pergi ke Mess Pekerja di Perumahan untuk menambah tenaga kerja.",
+                choices = new System.Collections.Generic.List<DialogueAsset.DialogueChoice>
+                {
+                    new DialogueAsset.DialogueChoice { text = "Ya, buka Mess Pekerja", actionId = "recruit_worker", nextNodeIndex = -1 },
+                    new DialogueAsset.DialogueChoice { text = "Nanti saja", actionId = "end_dialogue", nextNodeIndex = -1 },
+                }
+            });
+            return dlg;
+        }
+
+        private static DialogueAsset CreateBankDialogue()
+        {
+            var dlg = DialogueAsset.CreateRuntime(
+                NPCIdentity.CreateRuntime("pegawai_bank", "Ibu Siti", "Pegawai Bank", new Color(0.2f, 0.35f, 0.7f)));
+            dlg.nodes.Add(new DialogueAsset.DialogueNode
+            {
+                text = "Selamat datang di Bank Konvensional. Kami menawarkan pinjaman dengan bunga 5% per tahun.",
+                autoNext = 1
+            });
+            dlg.nodes.Add(new DialogueAsset.DialogueNode
+            {
+                text = "Mau mengajukan pinjaman? Bunga kami paling rendah di kota!",
+                choices = new System.Collections.Generic.List<DialogueAsset.DialogueChoice>
+                {
+                    new DialogueAsset.DialogueChoice { text = "Ya, buka layanan Bank", actionId = "open_bank_modal", nextNodeIndex = -1 },
+                    new DialogueAsset.DialogueChoice { text = "Tidak, terima kasih", actionId = "end_dialogue", nextNodeIndex = -1 },
+                }
+            });
+            return dlg;
+        }
+
+        private static DialogueAsset CreatePinjolDialogue()
+        {
+            var dlg = DialogueAsset.CreateRuntime(
+                NPCIdentity.CreateRuntime("debt_collector", "Budi Toll", "Debt Collector Pinjol", new Color(0.8f, 0.2f, 0.2f)));
+            dlg.nodes.Add(new DialogueAsset.DialogueNode
+            {
+                text = "HEI! Hutang Pinjol kamu menumpuk! Bunga 2% per hari, lho! Mau cairkan lagi atau bayar?",
+                autoNext = 1
+            });
+            dlg.nodes.Add(new DialogueAsset.DialogueNode
+            {
+                text = "Jangan telat bayar, atau saya kirim debt collector lagi ke rumahmu!",
+                choices = new System.Collections.Generic.List<DialogueAsset.DialogueChoice>
+                {
+                    new DialogueAsset.DialogueChoice { text = "Buka layanan Pinjol", actionId = "open_pinjol_modal", nextNodeIndex = -1 },
+                    new DialogueAsset.DialogueChoice { text = "Aku akan bayar nanti", actionId = "end_dialogue", nextNodeIndex = -1 },
+                }
+            });
+            return dlg;
+        }
+
+        private static DialogueAsset CreateRentenirDialogue()
+        {
+            var dlg = DialogueAsset.CreateRuntime(
+                NPCIdentity.CreateRuntime("rentenir", "Pak Slamet", "Rentenir Madura", new Color(0.6f, 0.4f, 0.1f)));
+            dlg.nodes.Add(new DialogueAsset.DialogueNode
+            {
+                text = "Butuh uang tunai cepat? Saya bisa bantu. Bunga hanya 1% per hari, murah!",
+                autoNext = 1
+            });
+            dlg.nodes.Add(new DialogueAsset.DialogueNode
+            {
+                text = "Tapi ingat, jangan sampai gagal bayar. Saya tidak segan mengambil jaminan Anda.",
+                choices = new System.Collections.Generic.List<DialogueAsset.DialogueChoice>
+                {
+                    new DialogueAsset.DialogueChoice { text = "Lihat layanan Rentenir", actionId = "open_rentenir_modal", nextNodeIndex = -1 },
+                    new DialogueAsset.DialogueChoice { text = "Tidak, terima kasih", actionId = "end_dialogue", nextNodeIndex = -1 },
+                }
+            });
+            return dlg;
+        }
+
+        private static DialogueAsset CreateSepupuDialogue()
+        {
+            var dlg = DialogueAsset.CreateRuntime(
+                NPCIdentity.CreateRuntime("sepupu", "Eddy Sepupu", "Sepupu Saingan", new Color(0.25f, 0.25f, 0.3f)));
+            dlg.nodes.Add(new DialogueAsset.DialogueNode
+            {
+                text = "Hahaha! Masih sibuk di kebun kecilmu? Net worth saya sudah miliaran, lho!",
+                autoNext = 1
+            });
+            dlg.nodes.Add(new DialogueAsset.DialogueNode
+            {
+                text = "Kita lihat siapa yang menang di tahun evaluasi. Jangan kecewa ya, Sepupu!",
+                choices = new System.Collections.Generic.List<DialogueAsset.DialogueChoice>
+                {
+                    new DialogueAsset.DialogueChoice { text = "Kita lihat nanti...", actionId = "end_dialogue", nextNodeIndex = -1 },
+                }
+            });
+            return dlg;
+        }
+
+        private static DialogueAsset CreateKepalaDesaDialogue()
+        {
+            var dlg = DialogueAsset.CreateRuntime(
+                NPCIdentity.CreateRuntime("kepala_desa", "Pak Kades", "Kepala Desa", new Color(0.3f, 0.6f, 0.3f)));
+            dlg.nodes.Add(new DialogueAsset.DialogueNode
+            {
+                text = "Halo, anak muda. Saya perhatikan ekspansi lahanmu semakin pesat.",
+                autoNext = 1
+            });
+            dlg.nodes.Add(new DialogueAsset.DialogueNode
+            {
+                isDynamicText = true,
+                text = "",
+                choices = new System.Collections.Generic.List<DialogueAsset.DialogueChoice>
+                {
+                    new DialogueAsset.DialogueChoice { text = "Terima kasih, Pak Kades", actionId = "end_dialogue", nextNodeIndex = -1 },
+                }
+            });
+            return dlg;
         }
 
         // ─── Helper Builders ──────────────────────────────────────────────

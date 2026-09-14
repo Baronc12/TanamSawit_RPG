@@ -52,8 +52,14 @@ namespace TanamSawit.Environment
         private GUIStyle promptStyle;
         private bool stylesReady = false;
 
-        // Event untuk dipanggil ModernTycoonHUD
+        // Event untuk dipanggil FacilityModalUI / DialogueActionRouter
         public static event Action<FacilityType, string> OnFacilityInteracted;
+
+        /// <summary>Memicu OnFacilityInteracted dari luar (mis. dari dialog NPC).</summary>
+        public static void InvokeInteraction(FacilityType type, string name)
+        {
+            OnFacilityInteracted?.Invoke(type, name);
+        }
 
         // Singleton register agar ModernTycoonHUD bisa subscribe
         private static System.Collections.Generic.List<InteractableFacility> allFacilities

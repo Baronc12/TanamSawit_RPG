@@ -71,6 +71,7 @@ namespace TanamSawit.UI
             go.AddComponent<NotificationTickerUI>();
             go.AddComponent<TabletUI>();
             go.AddComponent<FacilityModalUI>();
+            go.AddComponent<DialogueUI>();
             go.AddComponent<GameOverUI>();
         }
 
