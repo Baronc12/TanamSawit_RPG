@@ -4,6 +4,7 @@ using UnityEngine;
 using TanamSawit.Managers;
 using TanamSawit.Environment;
 using TanamSawit.Player;
+using TanamSawit.UI;
 
 namespace TanamSawit.Environment
 {
@@ -116,6 +117,13 @@ namespace TanamSawit.Environment
 
         private void Update()
         {
+            // Jangan proses interaksi jika modal (facility/dialog/gameover) sedang terbuka
+            if (UIRoot.IsModalOpen)
+            {
+                playerInRange = false;
+                return;
+            }
+
             // Radius-based proximity check (tidak bergantung Trigger physics)
             Transform playerT = GetPlayerTransform();
             if (playerT == null) return;
@@ -137,7 +145,15 @@ namespace TanamSawit.Environment
 #pragma warning restore CS0618
             if (controller != null) controller.SetMovementLocked(true);
 
-            OnFacilityInteracted?.Invoke(facilityType, displayName);
+            if (OnFacilityInteracted == null)
+            {
+                Debug.LogWarning("[InteractableFacility] OnFacilityInteracted has no subscribers! " +
+                    "FacilityModalUI may not be initialized. Ensure UIRoot.EnsureExists() was called.");
+            }
+            else
+            {
+                OnFacilityInteracted.Invoke(facilityType, displayName);
+            }
             Debug.Log($"<color=#00FF88>[Interaksi]</color> Memilih fasilitas: {displayName} ({facilityType})");
         }
 
@@ -195,21 +211,11 @@ namespace TanamSawit.Environment
             GUI.Label(boxRect, promptText, promptStyle);
         }
 
+        // ── Input ─────────────────────────────────────────────────────
+
         private static bool IsInteractPressed()
         {
-#if ENABLE_INPUT_SYSTEM
-            var kb = UnityEngine.InputSystem.Keyboard.current;
-            if (kb != null && (kb.eKey.wasPressedThisFrame || kb.spaceKey.wasPressedThisFrame))
-                return true;
-#endif
-            try
-            {
-                return Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space);
-            }
-            catch
-            {
-                return false;
-            }
+            return TanamSawit.Core.InputEdgeDetection.EOrSpace();
         }
 
         public void Configure(FacilityType type, string name, string hint = "Tekan [E] untuk Interaksi", float radius = 2f)

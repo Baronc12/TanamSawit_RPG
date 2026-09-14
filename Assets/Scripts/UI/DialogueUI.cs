@@ -15,6 +15,9 @@ namespace TanamSawit.NPC
     {
         public static DialogueUI Instance { get; private set; }
 
+        /// <summary>True jika dialog sedang terbuka.</summary>
+        public bool IsOpen => _isOpen;
+
         private GameObject _panel;
         private Text _nameText;
         private Text _bodyText;
@@ -114,7 +117,10 @@ namespace TanamSawit.NPC
 
             LockPlayer();
             _isOpen = true;
-            _panel.SetActive(true);
+            if (TanamSawit.UI.UIRoot.Instance != null)
+                TanamSawit.UI.UIRoot.Instance.ShowModal(_panel);
+            else
+                _panel.SetActive(true);
 
             ShowCurrentNode();
         }
@@ -123,6 +129,8 @@ namespace TanamSawit.NPC
         {
             _isOpen = false;
             _panel.SetActive(false);
+            if (TanamSawit.UI.UIRoot.Instance != null)
+                TanamSawit.UI.UIRoot.Instance.CloseModal();
             UnlockPlayer();
 
             if (_runner != null)
@@ -201,6 +209,27 @@ namespace TanamSawit.NPC
         {
             if (!_isOpen) return;
 
+            // Self-heal: jika panel ditutup secara eksternal (ShowModal untuk
+            // modal fasilitas lain, atau Tab/Escape via TopBarUI), bersihkan
+            // state dialog tanpa menutup modal yang sekarang aktif.
+            if (!_panel.activeSelf)
+            {
+                _isOpen = false;
+                _isTyping = false;
+                if (_runner != null)
+                {
+                    _runner.OnActionId -= HandleActionId;
+                    _runner.OnDialogueEnd -= CloseDialogue;
+                    _runner = null;
+                }
+                if (_typewriterCoroutine != null)
+                {
+                    StopCoroutine(_typewriterCoroutine);
+                    _typewriterCoroutine = null;
+                }
+                return;
+            }
+
             // E / klik untuk advance atau skip typewriter
             bool advancePressed = IsAdvancePressed();
 
@@ -274,25 +303,12 @@ namespace TanamSawit.NPC
 
         private static bool IsAdvancePressed()
         {
-#if ENABLE_INPUT_SYSTEM
-            var kb = UnityEngine.InputSystem.Keyboard.current;
-            if (kb != null && (kb.eKey.wasPressedThisFrame || kb.spaceKey.wasPressedThisFrame))
-                return true;
-#endif
-            try
-            {
-                return Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0);
-            }
-            catch { return false; }
+            return TanamSawit.Core.InputEdgeDetection.AdvanceDialogue();
         }
 
         private static bool IsEscPressed()
         {
-#if ENABLE_INPUT_SYSTEM
-            var kb = UnityEngine.InputSystem.Keyboard.current;
-            if (kb != null && kb.escapeKey.wasPressedThisFrame) return true;
-#endif
-            try { return Input.GetKeyDown(KeyCode.Escape); } catch { return false; }
+            return TanamSawit.Core.InputEdgeDetection.Escape();
         }
 
         // ── Layout helper ────────────────────────────────────────────────

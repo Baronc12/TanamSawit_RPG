@@ -57,7 +57,7 @@ namespace TanamSawit.Environment
         {
             if (playerInRange && requireInteractionKey)
             {
-                if (IsInteractPressed())
+                if (!TanamSawit.UI.UIRoot.IsModalOpen && IsInteractPressed())
                 {
                     TriggerTransition();
                 }
@@ -85,19 +85,7 @@ namespace TanamSawit.Environment
 
         private static bool IsInteractPressed()
         {
-#if ENABLE_INPUT_SYSTEM
-            var kb = UnityEngine.InputSystem.Keyboard.current;
-            if (kb != null && (kb.eKey.wasPressedThisFrame || kb.spaceKey.wasPressedThisFrame))
-                return true;
-#endif
-            try
-            {
-                return Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space);
-            }
-            catch
-            {
-                return false;
-            }
+            return TanamSawit.Core.InputEdgeDetection.EOrSpace();
         }
 
         public void Configure(string areaName, Vector3 targetPos, bool requireKey = false)

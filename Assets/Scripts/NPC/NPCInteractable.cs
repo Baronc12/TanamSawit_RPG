@@ -50,6 +50,13 @@ namespace TanamSawit.NPC
 
         private void Update()
         {
+            // Jangan proses interaksi jika modal sedang terbuka
+            if (TanamSawit.UI.UIRoot.IsModalOpen)
+            {
+                _playerInRange = false;
+                return;
+            }
+
             // Proximity check
             Transform playerT = GetPlayerTransform();
             if (playerT == null) return;
@@ -160,16 +167,7 @@ namespace TanamSawit.NPC
 
         private static bool IsInteractPressed()
         {
-#if ENABLE_INPUT_SYSTEM
-            var kb = UnityEngine.InputSystem.Keyboard.current;
-            if (kb != null && (kb.eKey.wasPressedThisFrame || kb.spaceKey.wasPressedThisFrame))
-                return true;
-#endif
-            try
-            {
-                return Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Space);
-            }
-            catch { return false; }
+            return TanamSawit.Core.InputEdgeDetection.EOrSpace();
         }
 
         // ── Public config (dipanggil oleh WorldBuildingBuilder) ──────────

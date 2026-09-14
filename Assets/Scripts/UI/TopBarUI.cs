@@ -215,34 +215,18 @@ namespace TanamSawit.UI
 
         private void Update()
         {
-#if ENABLE_INPUT_SYSTEM
-            var kb = UnityEngine.InputSystem.Keyboard.current;
-            if (kb != null && kb.tabKey.wasPressedThisFrame)
+            if (TanamSawit.Core.InputEdgeDetection.Tab())
             {
                 if (UIRoot.IsModalOpen)
                     UIRoot.Instance.CloseModal();
                 else if (TabletUI.Instance != null)
                     TabletUI.Instance.Toggle();
             }
-            if (kb != null && kb.escapeKey.wasPressedThisFrame)
+            if (TanamSawit.Core.InputEdgeDetection.Escape())
             {
                 if (UIRoot.IsModalOpen) UIRoot.Instance.CloseModal();
                 else if (TabletUI.Instance != null && TabletUI.Instance.IsOpen) TabletUI.Instance.Toggle();
             }
-#else
-            if (Input.GetKeyDown(KeyCode.Tab))
-            {
-                if (UIRoot.IsModalOpen)
-                    UIRoot.Instance.CloseModal();
-                else if (TabletUI.Instance != null)
-                    TabletUI.Instance.Toggle();
-            }
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                if (UIRoot.IsModalOpen) UIRoot.Instance.CloseModal();
-                else if (TabletUI.Instance != null && TabletUI.Instance.IsOpen) TabletUI.Instance.Toggle();
-            }
-#endif
         }
     }
 }

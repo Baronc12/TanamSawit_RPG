@@ -194,21 +194,10 @@ namespace TanamSawit.Core
             if (!gameStarted && GameManager.Instance != null &&
                 GameManager.Instance.CurrentState == GameState.MainMenu)
             {
-#if ENABLE_INPUT_SYSTEM
-                if (UnityEngine.InputSystem.Keyboard.current != null &&
-                    UnityEngine.InputSystem.Keyboard.current.spaceKey.wasPressedThisFrame)
+                if (TanamSawit.Core.InputEdgeDetection.Space())
                 {
                     StartGameplay();
                 }
-#endif
-                try
-                {
-                    if (Input.GetKeyDown(KeyCode.Space))
-                    {
-                        StartGameplay();
-                    }
-                }
-                catch {}
             }
         }
     }

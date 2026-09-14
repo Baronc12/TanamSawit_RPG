@@ -139,34 +139,12 @@ namespace TanamSawit.UI
 
         private static bool IsEscapePressed()
         {
-#if ENABLE_INPUT_SYSTEM
-            if (UnityEngine.InputSystem.Keyboard.current != null && UnityEngine.InputSystem.Keyboard.current.escapeKey.wasPressedThisFrame)
-                return true;
-#endif
-            try
-            {
-                return Input.GetKeyDown(KeyCode.Escape);
-            }
-            catch
-            {
-                return false;
-            }
+            return TanamSawit.Core.InputEdgeDetection.Escape();
         }
 
         private static bool IsMouseButtonDown()
         {
-#if ENABLE_INPUT_SYSTEM
-            if (UnityEngine.InputSystem.Mouse.current != null && UnityEngine.InputSystem.Mouse.current.leftButton.wasPressedThisFrame)
-                return true;
-#endif
-            try
-            {
-                return Input.GetMouseButtonDown(0);
-            }
-            catch
-            {
-                return false;
-            }
+            return TanamSawit.Core.InputEdgeDetection.MouseLeft();
         }
 
         private static Vector3 GetMousePosition()
