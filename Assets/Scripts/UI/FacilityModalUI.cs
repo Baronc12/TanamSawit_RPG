@@ -139,6 +139,8 @@ namespace TanamSawit.UI
             {
                 UIRoot.Instance.ShowModal(_panel);
                 Debug.Log("<color=#00FF88>[FacilityModalUI]</color> ShowModal called successfully.");
+                // Refresh content immediately so title/desc/buttons are up-to-date on first frame
+                RefreshContent();
             }
             else
             {
