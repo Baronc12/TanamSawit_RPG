@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using TanamSawit.NPC;
 
 namespace TanamSawit.UI
 {

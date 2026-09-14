@@ -136,13 +136,10 @@ namespace TanamSawit.SaveSystem
             {
                 // v1 -> v2: fill new fields with defaults
                 data.currentAreaId = data.currentAreaId ?? "kebun";
-                data.playerPosX = data.playerPosX; // 0 = Kebun spawn
-                data.playerPosY = data.playerPosY;
+                // playerPosX/Y, factoryDamaged, landCount, playTimeSeconds
+                // default to 0/false via JSON deserialization — no explicit set needed
                 data.gameSpeedIndex = data.gameSpeedIndex == 0 ? (int)GameSpeed.Normal : data.gameSpeedIndex;
-                data.factoryDamaged = data.factoryDamaged;
-                data.landCount = data.landCount;
                 data.maxWorkerCapacity = data.maxWorkerCapacity == 0 ? 5 : data.maxWorkerCapacity;
-                data.playTimeSeconds = data.playTimeSeconds;
                 data.saveSlotName = data.saveSlotName ?? $"Slot {lastUsedSlot + 1}";
                 data.saveVersion = 2;
                 Debug.Log("[SaveManager] Migrasi save v1 -> v2");

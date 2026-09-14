@@ -259,6 +259,7 @@ namespace TanamSawit.UI
 
         // ── OnGUI ─────────────────────────────────────────────────────────
 
+#pragma warning disable CS0162 // Unreachable code: SHOW_X const flags are intentionally false
         private void OnGUI()
         {
             // Skip saat transisi area
@@ -274,6 +275,7 @@ namespace TanamSawit.UI
 
             if (SHOW_GAME_OVER) DrawGameOverBanner();
         }
+#pragma warning restore CS0162
 
         // ── Top Bar ───────────────────────────────────────────────────────
 
