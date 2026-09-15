@@ -1,0 +1,3725 @@
+fileFormatVersion: 2
+guid: 03ef69e8fd5769049b08801249771419
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 148687057485114367
+    second: ground kebun_sawit_0
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationMethod: 0
+  spriteTessellationDetail: -1
+  spriteGeometrySubdivision: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: ground kebun_sawit_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 817
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffb291c471e301200800000000000000
+      internalID: 148687057485114367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_1
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 817
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae4dac689d101b748949abdda540e4a4
+      internalID: -540079007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_2
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 817
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6f36d4f890fcd4281a8f745907db4b
+      internalID: 1077779030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_3
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 817
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c6cd6f62a88a3488bd8d92e0431815
+      internalID: -728253154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_4
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 817
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40656e0720f00db4b9f97f108353e179
+      internalID: -1862875303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_5
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 817
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 729fba752d3817e41bc6dd94f8d8199e
+      internalID: 1557755867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_6
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 817
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6a0d709b4fa140428766d1c55d0b585
+      internalID: 975787403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_7
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 817
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98c1e49f22dd8b24ab342cc918f8cf71
+      internalID: 1896056348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_8
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 817
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98485031da37eb04d917aaa72a92b92a
+      internalID: -425180925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_9
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 817
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b7c3c4a4656da4598bce0eaabe4882
+      internalID: -1342714484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_10
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 817
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44c2f2c4f52ff6648ac656295151b09c
+      internalID: -584203570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_11
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 817
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2202dc74a3e99864d9678acdaf3d6a6e
+      internalID: 1002619139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 749
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fda3a3d88e835e47938bf902faa7276
+      internalID: -1253210110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_13
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 749
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321054037daa20243813aa0be67a2f06
+      internalID: -1623838887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_14
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 749
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25813afe9d439af4f9ecaeb80b26ef32
+      internalID: -821596648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_15
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 749
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4352232ea58a44cb3b3f160e11a24b
+      internalID: -453775457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_16
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 749
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83da503d31382eb4683da2855a7f6234
+      internalID: -399501936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_17
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 749
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d56e6f00e3eee479bf761397a4c9bd
+      internalID: 1443099684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_18
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 749
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4857e1b1452748240a905f902e41527a
+      internalID: -887521246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_19
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 749
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 096e6525889299243a5250a200ba8663
+      internalID: -2076359905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_20
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 749
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378769db6e6743a438fcc31959c17e9d
+      internalID: -427017613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_21
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 749
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66bcddef64b51694986d32973c6108b3
+      internalID: 1289991822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_22
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 749
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a942320b0e8518439346e47f765af5c
+      internalID: -1669864727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_23
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 749
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c6b4b7786d4b404d85c3b5f2e7d8870
+      internalID: 1786759205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 681
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa168133f26ecf64387a1b19da8f7a98
+      internalID: -871845745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_25
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 681
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bca469614fb23ba49ba8f1c2ff2045f5
+      internalID: 2121993713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_26
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 681
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf9eac6b4077adc4db45558c6cc5de20
+      internalID: 438632476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_27
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 681
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7c10dcc7bdf09849ae67ef850ce0e67
+      internalID: 764127387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_28
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 681
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2703259c248ed68479d77c51558e0bb9
+      internalID: 1515714470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_29
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 681
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51af1dfcc0a9596409a52fd8f00b248f
+      internalID: 983631450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_30
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 681
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5234140f0eb7d04588c59ddc0b2ab69
+      internalID: -6777959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_31
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 681
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a005308a0130248a55cd2db74cc219
+      internalID: 1528206410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_32
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 681
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 636a11a227dfa83488f24e73cee90d94
+      internalID: -1568695000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_33
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 681
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e1f057f2fde4de48b3e9617437396ea
+      internalID: -760536028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_34
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 681
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e50165ac8d571974d988fe68c068d59b
+      internalID: -1769529901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_35
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 681
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5783f6d03a84f8c429c655df781fd359
+      internalID: -29882017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 613
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73f38efd229a4184ab4a466d13bee8c3
+      internalID: 1013968914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_37
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 613
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01bda7e7b0c9885469aa28e9602d0ff0
+      internalID: -1990768653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_38
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 613
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724376adfb36bf84a95358170147fe0b
+      internalID: 399525254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_39
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 613
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df05ef47dfe032740bcb96d40c2067f6
+      internalID: -402324652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_40
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 613
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ad332c1f41f0d644864ca54ae202d47
+      internalID: -1210705665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_41
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 613
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b3559991faaf7a419e78e47d0302607
+      internalID: 1417294142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_42
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 613
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10cfd17522d93984190b6e55d683e647
+      internalID: -909254105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_43
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 613
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b957040e4fb28458f59b7f0083778b
+      internalID: -1101110712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_44
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 613
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87b3ad7adde1b074a9590d00e8152d31
+      internalID: -1881350319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_45
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 613
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5caa099da54d7664d86ff1213e47dcbc
+      internalID: -1599969527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_46
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 613
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5c9c50a98e9c434490a8a8ed2c5e33b
+      internalID: -513153438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_47
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 613
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e971ffaecb5f8384c8e9ba56a05d2461
+      internalID: 298547692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 545
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d95e8d5a1d3ad04bb827eb750102aaa
+      internalID: -1985336996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_49
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 545
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99681abdf6dc0d1458a0037f2f8fe63b
+      internalID: 665701129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_50
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 545
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d540c69bdc43b43beca7983e917176
+      internalID: 1464914582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_51
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 545
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a2ddffcc79769d4588f58fd53eae9c0
+      internalID: 1453521880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_52
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 545
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b45ddc73d8ed134296df7585578667d
+      internalID: 401429499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_53
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 545
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dafa7a8b7eca1ec4998d8c8a769d7ba6
+      internalID: -1087901724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_54
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 545
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511f5d52957dcbb49b70538de08df9d8
+      internalID: -735327277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_55
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 545
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07480711a1deb8b4282dfd7f7ba591c8
+      internalID: -1949715433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_56
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 545
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 655b4065a0d64a8438e82b66d14b13ee
+      internalID: 778806150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_57
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 545
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94fd882e550a2694387c121b157a53c2
+      internalID: 1183816662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_58
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 545
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b87b204288932fb43b511636edb782d4
+      internalID: 237606550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_59
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 545
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9244345594b3a1f488485df2eb864d72
+      internalID: 148016106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 477
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c60ed54c782702340aa38ceb2263d116
+      internalID: 884827313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_61
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 477
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5775164d25d7ae9478c469c9355030f2
+      internalID: 1253897619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_62
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 477
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99236ce9d4dead548a5b239ff8a2ac62
+      internalID: -619236785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_63
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 477
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6b3a4cdbe72a0047847cf22813af56f
+      internalID: 49060830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_64
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 477
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcf0aa34149aaf843bf530df30daed5d
+      internalID: 1867574338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_65
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 477
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe8b7832c5ac9a4494bf83d55ef3c9d
+      internalID: 993444288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_66
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 477
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8706fd9a6b6d94cb0bfa26b92c08b3
+      internalID: -1689481546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_67
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 477
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 058cddd14d08a5f4680cd510cc8fa559
+      internalID: -1415516410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_68
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 477
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be93985847868de429eb6d6e14dacfb7
+      internalID: -1166226904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_69
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 477
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d303926b6a5f1e4aa7432fe27bb5de6
+      internalID: 1156758883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_70
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 477
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd06eef4b2f6e814f956228246ca6da3
+      internalID: 770384400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_71
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 477
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2da11fb390ee3b4fb2ac8884aaac665
+      internalID: -1260317209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 409
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe6130cc2995774486f80e6a4ce3afd
+      internalID: -329733599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_73
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 409
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d57841d0e9436443a643dccb38dcc36
+      internalID: -604069510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_74
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 409
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b21b12bea1065438615fc0357076bc
+      internalID: -1737892293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_75
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 409
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 652a967b6515b2448931fd6b6aadd692
+      internalID: 454929302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_76
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 409
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 420442677bde34e479ceb9e8b0081f61
+      internalID: -595004453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_77
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 409
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 887c056750d62ee49821c8f9a7075bce
+      internalID: -2033931910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_78
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 409
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97b5d79206cda6b4d9d1f7514ff1612d
+      internalID: -1844757864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_79
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 409
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd8be5fd0bbd1c74d9fda6365dc8834f
+      internalID: 845787827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_80
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 409
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0bc60495ec39b64c8f55b96e279c35b
+      internalID: 2081651131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_81
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 409
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f99d93d377202a34e8817e8da4067e20
+      internalID: -1376006632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_82
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 409
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e04173b1efbc0394ea494873a5833654
+      internalID: -52065772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_83
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 409
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7baea8099486894448889f58cc440ef1
+      internalID: 508304458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 341
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42da9ca68529e264687dbf6d4e195027
+      internalID: 1670800182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_85
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 341
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed8f5e38dbf05849a64574dd0457003
+      internalID: 271043964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_86
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 341
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898dee3e07be8d540b59b2828e474d88
+      internalID: 1374588496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_87
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 341
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8348c6e65cd26c64ba83aefaf56a9ee5
+      internalID: -312363915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_88
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 341
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb11d60dc8b55fe42ad3c611432a0691
+      internalID: 1611175694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_89
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 341
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305c3e4472686a642b5019acdf9d8eaf
+      internalID: 664489079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_90
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 341
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b09d58db9735a8428ddef3742aa2a89
+      internalID: -268597500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_91
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 341
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2878a4c7e7666cd4ea6a24b852be8908
+      internalID: 570210775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_92
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 341
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e128cebb82039c4a926ae23a6e78241
+      internalID: -846089294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_93
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 341
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37de4da6853333f42aa842245b4e8721
+      internalID: -191059624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_94
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 341
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dfd85bd0c5dce847a96ed6cfb96d894
+      internalID: -225209780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_95
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 341
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faadd09411f7191418ab1070a5a56a86
+      internalID: 690522645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 273
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccb70c1d0ee73f44a95e160c8963b05d
+      internalID: -1010755194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_97
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 273
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b241ef0435e4d6f4f8f8190be094bb63
+      internalID: 1815191017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_98
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 273
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bc7be132ddc9634ca34540bcd78feed
+      internalID: 426269415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_99
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 273
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec78f9e3a330744ab254ea12feefd2c
+      internalID: 1353201380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_100
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 273
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e526f7dad4764694b8dc0a60a4453863
+      internalID: -1322723202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_101
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 273
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2b97df977e19d34086a95a2cd275792
+      internalID: -1686966040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_102
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 273
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17203b77ed5e97748ad71afb31e7a51b
+      internalID: -172195216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_103
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 273
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92071687bea7ac843a137f89b8ab2655
+      internalID: 545712138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_104
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 273
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 467828d17d0ef4f4c9e512125a9fa5a2
+      internalID: 1067554458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_105
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 273
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2326dbb8cf660d14b8165589fd826cb8
+      internalID: 75327406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_106
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 273
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bde443829838e9f4492dd6749a82e521
+      internalID: -1853801301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_107
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 273
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49a35a8f3e6cb0d4c8020e8ffcc7a06b
+      internalID: -1698824828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 205
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec46b901d85c7c2478f922d00b62e214
+      internalID: -1161392152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_109
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 205
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc19648be06ab904b83dc6709c955b5c
+      internalID: 1130408903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_110
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 205
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b05302b824094aa448ee37e862ccd0ed
+      internalID: 1117830831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_111
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 205
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 235fea159c9deee48a5e7cf764acaf5b
+      internalID: -1973067835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_112
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 205
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03c464f9236e87f4686bcfbe53d3ccf9
+      internalID: -1506895847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_113
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 205
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9901c37667400f4393a6bcf118d8337
+      internalID: -268058554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_114
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 205
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bdfb48008c247d489606b8a19b210e0
+      internalID: 1816815985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_115
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 205
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0cf29fef522dfb4f979a039ef49ae07
+      internalID: -126631748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_116
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 205
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ba948a5e2433b40903b0bdcf65504c
+      internalID: -1361486158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_117
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 205
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd2081b129105e4483018ad3f8d88a8
+      internalID: -1977134374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_118
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 205
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dd75b70fff951040b08bed1f1ced71d
+      internalID: -951688059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_119
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 205
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df628900cc38ccf41b5f0c7283b2f691
+      internalID: 1839589912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 137
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89e75b761639912499164874cda766bf
+      internalID: 799801520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_121
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 137
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee3a78be3adb2dd4496c3aaa0cc8cff0
+      internalID: -1061994335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_122
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 137
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 274b9e63266b15748b4f6ed6823ef046
+      internalID: -1804259496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_123
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 137
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21d1ce01cb103584ca347726487d623b
+      internalID: 243245006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_124
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 137
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9ba52ab4ef2414aa347bdb8fd40b4c
+      internalID: -180866881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_125
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 137
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18caa57945916b642a48a548bd6b2810
+      internalID: 930474784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_126
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 137
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecc096f91298c094388ddc9b0e46346e
+      internalID: -442200664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_127
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 137
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbb9a7784fa29c34da00b4724172e2d9
+      internalID: -1942484054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_128
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 137
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac25471cf0b6494ca5668dd3f350af5
+      internalID: -346711518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_129
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 137
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1fd5429c67d6744e8fdcd02ab0d7421
+      internalID: 637449769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_130
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 137
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77c12508daf712e449999c9c62f55b74
+      internalID: -908780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_131
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 137
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43f0f97f3d85c984eaec9eb2a21c9eba
+      internalID: -123162805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_132
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 69
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55e0303f4a95b247a2df0410f62a7f6
+      internalID: 1090024437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_133
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 69
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23fbe5c8f9d168245aa097c7d9b6d69e
+      internalID: 139668537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_134
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 69
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4287788e00824a040a83b9e7b2f4ef75
+      internalID: -1167895233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_135
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 69
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc3bc265771b30a40b84a5227729b506
+      internalID: 160204388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_136
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 69
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b310ab927b8235c449a7314f6f544a69
+      internalID: -1896121734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_137
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 69
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a2c60822ee12b458666331c0c9a56c
+      internalID: 2047009358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_138
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 69
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02081b5473ec724fada7ef7d9929611
+      internalID: 277251331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_139
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 69
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e3e5dc82df3a24896ef8960eeb7295
+      internalID: 1663688191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_140
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 69
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7568354ace9e9d94ebb16505a62dc546
+      internalID: 523019979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_141
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 69
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9609d487188634892628bc00a294f4
+      internalID: -1911821071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_142
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 69
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95dc3985f22315a4e9e0e3a53c7fd61a
+      internalID: 2071057487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_143
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 69
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8d97ce5346f8ef43a292008eef09672
+      internalID: -1130371549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c721d67233328604bb258b5218fb22d6
+      internalID: -2007572183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_145
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0983d8329c7ee364fbb6ba6b0e8be151
+      internalID: -37643950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_146
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 1
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c3a1ef394cf30409e10e94ebb949f2
+      internalID: -1264100633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_147
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 1
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef715e6d3781c7047a6bdad2d22d5598
+      internalID: -1192232685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_148
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ad9a37b8f512a84f84397cd7f375fca
+      internalID: -1205616858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_149
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 1
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e71055cee9f6b24a8291c30103908fd
+      internalID: -2105928238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_150
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 1
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ca4cedc6f60fb4cb97afee1060fa04
+      internalID: 239923574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_151
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 1
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 757ed8f5e4cb24540a06d67dc85f0547
+      internalID: -486848191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_152
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a505a363d39be7429976cb0d492eae1
+      internalID: -1220121116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_153
+      rect:
+        serializedVersion: 2
+        x: 765
+        y: 1
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb68c3d842339645a3cdd3e1a458e28
+      internalID: 621849280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_154
+      rect:
+        serializedVersion: 2
+        x: 850
+        y: 1
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c00dda4e094453468489015fbffffd7
+      internalID: -327638636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: ground kebun_sawit_155
+      rect:
+        serializedVersion: 2
+        x: 935
+        y: 1
+        width: 85
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80c55e35a3e8da54b9446229beb5d8a4
+      internalID: 787082390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ceb99bbea719d9246bc14092a8f6ada2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":12.0,"y":13.0},"gridSpriteSize":{"x":85.0,"y":68.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      ground kebun_sawit_0: 148687057485114367
+      ground kebun_sawit_1: -540079007
+      ground kebun_sawit_10: -584203570
+      ground kebun_sawit_100: -1322723202
+      ground kebun_sawit_101: -1686966040
+      ground kebun_sawit_102: -172195216
+      ground kebun_sawit_103: 545712138
+      ground kebun_sawit_104: 1067554458
+      ground kebun_sawit_105: 75327406
+      ground kebun_sawit_106: -1853801301
+      ground kebun_sawit_107: -1698824828
+      ground kebun_sawit_108: -1161392152
+      ground kebun_sawit_109: 1130408903
+      ground kebun_sawit_11: 1002619139
+      ground kebun_sawit_110: 1117830831
+      ground kebun_sawit_111: -1973067835
+      ground kebun_sawit_112: -1506895847
+      ground kebun_sawit_113: -268058554
+      ground kebun_sawit_114: 1816815985
+      ground kebun_sawit_115: -126631748
+      ground kebun_sawit_116: -1361486158
+      ground kebun_sawit_117: -1977134374
+      ground kebun_sawit_118: -951688059
+      ground kebun_sawit_119: 1839589912
+      ground kebun_sawit_12: -1253210110
+      ground kebun_sawit_120: 799801520
+      ground kebun_sawit_121: -1061994335
+      ground kebun_sawit_122: -1804259496
+      ground kebun_sawit_123: 243245006
+      ground kebun_sawit_124: -180866881
+      ground kebun_sawit_125: 930474784
+      ground kebun_sawit_126: -442200664
+      ground kebun_sawit_127: -1942484054
+      ground kebun_sawit_128: -346711518
+      ground kebun_sawit_129: 637449769
+      ground kebun_sawit_13: -1623838887
+      ground kebun_sawit_130: -908780
+      ground kebun_sawit_131: -123162805
+      ground kebun_sawit_132: 1090024437
+      ground kebun_sawit_133: 139668537
+      ground kebun_sawit_134: -1167895233
+      ground kebun_sawit_135: 160204388
+      ground kebun_sawit_136: -1896121734
+      ground kebun_sawit_137: 2047009358
+      ground kebun_sawit_138: 277251331
+      ground kebun_sawit_139: 1663688191
+      ground kebun_sawit_14: -821596648
+      ground kebun_sawit_140: 523019979
+      ground kebun_sawit_141: -1911821071
+      ground kebun_sawit_142: 2071057487
+      ground kebun_sawit_143: -1130371549
+      ground kebun_sawit_144: -2007572183
+      ground kebun_sawit_145: -37643950
+      ground kebun_sawit_146: -1264100633
+      ground kebun_sawit_147: -1192232685
+      ground kebun_sawit_148: -1205616858
+      ground kebun_sawit_149: -2105928238
+      ground kebun_sawit_15: -453775457
+      ground kebun_sawit_150: 239923574
+      ground kebun_sawit_151: -486848191
+      ground kebun_sawit_152: -1220121116
+      ground kebun_sawit_153: 621849280
+      ground kebun_sawit_154: -327638636
+      ground kebun_sawit_155: 787082390
+      ground kebun_sawit_16: -399501936
+      ground kebun_sawit_17: 1443099684
+      ground kebun_sawit_18: -887521246
+      ground kebun_sawit_19: -2076359905
+      ground kebun_sawit_2: 1077779030
+      ground kebun_sawit_20: -427017613
+      ground kebun_sawit_21: 1289991822
+      ground kebun_sawit_22: -1669864727
+      ground kebun_sawit_23: 1786759205
+      ground kebun_sawit_24: -871845745
+      ground kebun_sawit_25: 2121993713
+      ground kebun_sawit_26: 438632476
+      ground kebun_sawit_27: 764127387
+      ground kebun_sawit_28: 1515714470
+      ground kebun_sawit_29: 983631450
+      ground kebun_sawit_3: -728253154
+      ground kebun_sawit_30: -6777959
+      ground kebun_sawit_31: 1528206410
+      ground kebun_sawit_32: -1568695000
+      ground kebun_sawit_33: -760536028
+      ground kebun_sawit_34: -1769529901
+      ground kebun_sawit_35: -29882017
+      ground kebun_sawit_36: 1013968914
+      ground kebun_sawit_37: -1990768653
+      ground kebun_sawit_38: 399525254
+      ground kebun_sawit_39: -402324652
+      ground kebun_sawit_4: -1862875303
+      ground kebun_sawit_40: -1210705665
+      ground kebun_sawit_41: 1417294142
+      ground kebun_sawit_42: -909254105
+      ground kebun_sawit_43: -1101110712
+      ground kebun_sawit_44: -1881350319
+      ground kebun_sawit_45: -1599969527
+      ground kebun_sawit_46: -513153438
+      ground kebun_sawit_47: 298547692
+      ground kebun_sawit_48: -1985336996
+      ground kebun_sawit_49: 665701129
+      ground kebun_sawit_5: 1557755867
+      ground kebun_sawit_50: 1464914582
+      ground kebun_sawit_51: 1453521880
+      ground kebun_sawit_52: 401429499
+      ground kebun_sawit_53: -1087901724
+      ground kebun_sawit_54: -735327277
+      ground kebun_sawit_55: -1949715433
+      ground kebun_sawit_56: 778806150
+      ground kebun_sawit_57: 1183816662
+      ground kebun_sawit_58: 237606550
+      ground kebun_sawit_59: 148016106
+      ground kebun_sawit_6: 975787403
+      ground kebun_sawit_60: 884827313
+      ground kebun_sawit_61: 1253897619
+      ground kebun_sawit_62: -619236785
+      ground kebun_sawit_63: 49060830
+      ground kebun_sawit_64: 1867574338
+      ground kebun_sawit_65: 993444288
+      ground kebun_sawit_66: -1689481546
+      ground kebun_sawit_67: -1415516410
+      ground kebun_sawit_68: -1166226904
+      ground kebun_sawit_69: 1156758883
+      ground kebun_sawit_7: 1896056348
+      ground kebun_sawit_70: 770384400
+      ground kebun_sawit_71: -1260317209
+      ground kebun_sawit_72: -329733599
+      ground kebun_sawit_73: -604069510
+      ground kebun_sawit_74: -1737892293
+      ground kebun_sawit_75: 454929302
+      ground kebun_sawit_76: -595004453
+      ground kebun_sawit_77: -2033931910
+      ground kebun_sawit_78: -1844757864
+      ground kebun_sawit_79: 845787827
+      ground kebun_sawit_8: -425180925
+      ground kebun_sawit_80: 2081651131
+      ground kebun_sawit_81: -1376006632
+      ground kebun_sawit_82: -52065772
+      ground kebun_sawit_83: 508304458
+      ground kebun_sawit_84: 1670800182
+      ground kebun_sawit_85: 271043964
+      ground kebun_sawit_86: 1374588496
+      ground kebun_sawit_87: -312363915
+      ground kebun_sawit_88: 1611175694
+      ground kebun_sawit_89: 664489079
+      ground kebun_sawit_9: -1342714484
+      ground kebun_sawit_90: -268597500
+      ground kebun_sawit_91: 570210775
+      ground kebun_sawit_92: -846089294
+      ground kebun_sawit_93: -191059624
+      ground kebun_sawit_94: -225209780
+      ground kebun_sawit_95: 690522645
+      ground kebun_sawit_96: -1010755194
+      ground kebun_sawit_97: 1815191017
+      ground kebun_sawit_98: 426269415
+      ground kebun_sawit_99: 1353201380
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

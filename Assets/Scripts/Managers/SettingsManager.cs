@@ -321,13 +321,19 @@ namespace TanamSawit.UI
         }
 
         /// <summary>
-        /// Tombol Quit pada prototipe saat ini adalah gambar Tilemap, bukan TextMesh.
-        /// Pasang border putih saat hover langsung pada gambar tersebut.
+        /// Tombol Quit pada prototipe adalah gambar Tilemap di bawah MAINMENU.
+        /// Jangan mencari Tilemap secara global karena gameplay juga memiliki
+        /// Tilemap yang harus tetap walkable.
         /// </summary>
         private static void FindAndSetupQuitGraphicHover()
         {
-            GameObject quitGraphic = GameObject.Find("Tilemap");
-            if (quitGraphic == null || quitGraphic.GetComponent<Tilemap>() == null) return;
+            GameObject menuRoot = GameObject.Find("MAINMENU");
+            if (menuRoot == null) return;
+
+            Tilemap quitTilemap = menuRoot.GetComponentInChildren<Tilemap>(true);
+            if (quitTilemap == null) return;
+
+            GameObject quitGraphic = quitTilemap.gameObject;
 
             Renderer renderer = quitGraphic.GetComponent<Renderer>();
             if (renderer == null) return;
