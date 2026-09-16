@@ -77,6 +77,7 @@ namespace TanamSawit.UI
             go.AddComponent<DialogueUI>();
             go.AddComponent<GameOverUI>();
             go.AddComponent<MinimapUI>();
+            go.AddComponent<ClockUI>();
 
             Debug.Log("[UIRoot] EnsureExists() complete — all panel controllers added.");
         }

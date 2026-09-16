@@ -14,7 +14,7 @@ namespace TanamSawit.SaveSystem
         #region Metadata Save
         public string saveTimestamp;
         public string saveGameVersion = "1.0.0";
-        public int saveVersion = 2;          // 1 = legacy single-slot saves
+        public int saveVersion = 3;          // 1 = legacy, 2 = multi-slot, 3 = pending kos income
         public string saveSlotName;          // e.g. "Slot 1"
         public float playTimeSeconds;
         #endregion
@@ -44,6 +44,7 @@ namespace TanamSawit.SaveSystem
         public double pinjolDebt;
         public double rentenirDebt;
         public int ownedBoardingHouses;
+        public double pendingKosIncome;
         #endregion
 
         #region Pekerja & Hasil Kebun

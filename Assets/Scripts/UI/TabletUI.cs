@@ -149,9 +149,21 @@ namespace TanamSawit.UI
                 sb.AppendLine($"  Net Worth : {EconomyManager.FormatCurrency(EconomyManager.Instance.GetNetWorth())}");
                 sb.AppendLine($"  Lahan     : {EconomyManager.Instance.CurrentLandPercentage:F1}%");
             }
-            if (LoanManager.Instance != null && LoanManager.Instance.TotalDebt > 0)
+            if (LoanManager.Instance != null)
             {
-                sb.AppendLine($"  Hutang Total : {EconomyManager.FormatCurrency(LoanManager.Instance.TotalDebt)}");
+                if (LoanManager.Instance.TotalDebt > 0)
+                {
+                    sb.AppendLine($"  Hutang Total : {EconomyManager.FormatCurrency(LoanManager.Instance.TotalDebt)}");
+                }
+                if (LoanManager.Instance.OwnedBoardingHouses > 0)
+                {
+                    sb.AppendLine();
+                    sb.AppendLine($"  <b>\uD83C\uDFDA Kos-kosan</b>");
+                    sb.AppendLine($"  Unit      : {LoanManager.Instance.OwnedBoardingHouses}");
+                    sb.AppendLine($"  Tertahan  : {EconomyManager.FormatCurrency(LoanManager.Instance.PendingKosIncome)} / {EconomyManager.FormatCurrency(LoanManager.Instance.MaxKosIncome)}");
+                    sb.AppendLine($"  Progress  : {LoanManager.Instance.KosIncomeProgress:P0}");
+                    sb.AppendLine($"  Status    : {(LoanManager.Instance.CanCollectKosIncome ? "\u2705 Bisa dikumpulkan!" : "\u23F3 Belum cukup...")}");
+                }
             }
             _contentText.text = sb.ToString();
         }

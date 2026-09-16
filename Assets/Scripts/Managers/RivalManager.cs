@@ -34,7 +34,7 @@ namespace TanamSawit.Managers
 
         [Header("Batas Waktu Kompetisi")]
         [Tooltip("Tahun game batas akhir evaluasi warisan.")]
-        [SerializeField] private int targetEvaluationYear = 2034; // 10 tahun dari 2024
+        [SerializeField] private int targetEvaluationYear = 2034; // 10 tahun dari September 2024
         public int TargetEvaluationYear => targetEvaluationYear;
 
         [Tooltip("Target Net Worth absolut untuk Good Ending (Rp 1 Miliar). Ported dari EcologyManager.")]

@@ -49,7 +49,15 @@ namespace TanamSawit.Managers
         [SerializeField] private double costPerBoardingHouse = 75_000_000;
         public int OwnedBoardingHouses => ownedBoardingHouses;
 
+        [Header("Akumulasi Income Kos")]
+        [SerializeField] private double pendingKosIncome = 0;
+        public double PendingKosIncome => pendingKosIncome;
+        public double MaxKosIncome => ownedBoardingHouses * incomePerBoardingHouse;
+        public double KosIncomeProgress => MaxKosIncome > 0 ? Mathf.Clamp01((float)(pendingKosIncome / MaxKosIncome)) : 0;
+        public bool CanCollectKosIncome => pendingKosIncome >= incomePerBoardingHouse;
+
         public event Action<string> OnLoanEventTriggered;
+        public event Action<double> OnPendingIncomeChanged; // Fires when pendingKosIncome changes
 
         private void Awake()
         {
@@ -67,13 +75,25 @@ namespace TanamSawit.Managers
             }
         }
 
+        private void Update()
+        {
+            // Accumulate passive income over time
+            if (ownedBoardingHouses > 0 && pendingKosIncome < MaxKosIncome)
+            {
+                // Income per real second = (monthly income * units) / seconds per month
+                float secondsPerDay = TimeManager.Instance != null ? TimeManager.Instance.SecondsPerDay : 1440f;
+                double incomePerSecond = MaxKosIncome / (30f * secondsPerDay);
+                pendingKosIncome = Math.Min(MaxKosIncome, pendingKosIncome + incomePerSecond * Time.deltaTime);
+                OnPendingIncomeChanged?.Invoke(pendingKosIncome);
+            }
+        }
+
         private void Start()
         {
             // Sambungkan ke TimeManager: Setiap hari berganti, cicilan/bunga diproses
             if (TimeManager.Instance != null)
             {
                 TimeManager.Instance.OnDayPassed += HandleDailyLoanProcessing;
-                TimeManager.Instance.OnMonthPassed += HandleMonthlyPassiveIncome;
             }
         }
 
@@ -82,7 +102,6 @@ namespace TanamSawit.Managers
             if (TimeManager.Instance != null)
             {
                 TimeManager.Instance.OnDayPassed -= HandleDailyLoanProcessing;
-                TimeManager.Instance.OnMonthPassed -= HandleMonthlyPassiveIncome;
             }
         }
 
@@ -239,14 +258,6 @@ namespace TanamSawit.Managers
             WorkerManager.Instance?.ApplyPinjolTerrorToWorkers(30f);
         }
 
-        private void HandleMonthlyPassiveIncome(int month, int year)
-        {
-            if (ownedBoardingHouses > 0 && EconomyManager.Instance != null)
-            {
-                double income = ownedBoardingHouses * incomePerBoardingHouse;
-                EconomyManager.Instance.AddMoney(income, $"Passive Income Kos ({ownedBoardingHouses} Unit)");
-            }
-        }
         #endregion
 
         #region Properti Kos-kosan
@@ -260,6 +271,28 @@ namespace TanamSawit.Managers
             Notify($"[KOS] Bangun 1 unit Kos-kosan berhasil! Total unit: {ownedBoardingHouses}.");
             return true;
         }
+
+        /// <summary>
+        /// Mengumpulkan income kos yang sudah terakumulasi.
+        /// Hanya bisa dipanggil jika pendingKosIncome >= incomePerBoardingHouse (Rp 1.500.000).
+        /// </summary>
+        public bool CollectKosIncome()
+        {
+            if (pendingKosIncome < incomePerBoardingHouse)
+            {
+                Notify("[KOS] Belum cukup uang untuk dikumpulkan. Minimal Rp 1.500.000.");
+                return false;
+            }
+
+            if (EconomyManager.Instance == null) return false;
+
+            double amount = pendingKosIncome;
+            EconomyManager.Instance.AddMoney(amount, $"Kumpul Income Kos ({ownedBoardingHouses} Unit)");
+            pendingKosIncome = 0;
+            OnPendingIncomeChanged?.Invoke(pendingKosIncome);
+            Notify($"[KOS] Berhasil mengumpulkan {EconomyManager.FormatCurrency(amount)} dari kos-kosan!");
+            return true;
+        }
         #endregion
 
         private void Notify(string msg)
@@ -269,12 +302,13 @@ namespace TanamSawit.Managers
         }
 
         #region Save / Load
-        public void LoadState(double bank, double pinjol, double rentenir, int boardingHouses)
+        public void LoadState(double bank, double pinjol, double rentenir, int boardingHouses, double pendingIncome = 0)
         {
             bankDebt = Math.Max(0, bank);
             pinjolDebt = Math.Max(0, pinjol);
             rentenirDebt = Math.Max(0, rentenir);
             ownedBoardingHouses = Math.Max(0, boardingHouses);
+            pendingKosIncome = Math.Max(0, pendingIncome);
         }
         #endregion
     }

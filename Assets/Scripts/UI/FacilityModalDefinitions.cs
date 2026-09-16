@@ -195,13 +195,20 @@ namespace TanamSawit.UI
                 getDescription = () =>
                 {
                     if (loan == null) return "Data kos belum tersedia.\nLoanManager belum siap.";
-                    return $"Kos Dimiliki: {loan.OwnedBoardingHouses} unit\nPassive Income: Rp 1.500.000 / unit / bulan";
+                    double pending = loan.PendingKosIncome;
+                    double max = loan.MaxKosIncome;
+                    double progress = loan.KosIncomeProgress;
+                    return $"Kos Dimiliki: {loan.OwnedBoardingHouses} unit\nPassive Income: Rp 1.500.000 / unit / bulan\n\nIncome Tertahan: {EconomyManager.FormatCurrency(pending)} / {EconomyManager.FormatCurrency(max)}\nProgress: {progress:P0}";
                 },
                 buttons = new List<FacilityButtonSpec>
                 {
                     FacilityButtonSpec.Create("\uD83C\uDFDA\uFE0F Bangun 1 Unit Kos-kosan (Rp 75 Jt)",
                         () => loan?.BuyBoardingHouse(),
                         color: UIRoot.BgButtonSuccess),
+                    FacilityButtonSpec.Create("\uD83D\uDCB0 Kumpul Income Kos",
+                        () => loan?.CollectKosIncome(),
+                        isEnabled: () => loan != null && loan.CanCollectKosIncome,
+                        color: UIRoot.BgButton),
                 }
             };
         }

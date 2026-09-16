@@ -218,6 +218,7 @@ namespace TanamSawit.SaveSystem
                     data.pinjolDebt = LoanManager.Instance.PinjolDebt;
                     data.rentenirDebt = LoanManager.Instance.RentenirDebt;
                     data.ownedBoardingHouses = LoanManager.Instance.OwnedBoardingHouses;
+                    data.pendingKosIncome = LoanManager.Instance.PendingKosIncome;
                 }
 
                 // 6. Pekerja & Hasil Kebun
@@ -334,7 +335,7 @@ namespace TanamSawit.SaveSystem
                 // 2. Pulihkan Hutang & Kos-kosan
                 if (LoanManager.Instance != null)
                 {
-                    LoanManager.Instance.LoadState(data.bankDebt, data.pinjolDebt, data.rentenirDebt, data.ownedBoardingHouses);
+                    LoanManager.Instance.LoadState(data.bankDebt, data.pinjolDebt, data.rentenirDebt, data.ownedBoardingHouses, data.pendingKosIncome);
                 }
 
                 // 3. Pulihkan Ekonomi & Lahan

@@ -30,8 +30,9 @@ namespace TanamSawit.Managers
 
         #region Konfigurasi Waktu
         [Header("Konfigurasi Kalender")]
-        [Tooltip("Berapa detik real-time untuk menyelesaikan 1 hari di dalam game pada kecepatan Normal (1x).")]
-        [SerializeField] private float secondsPerDay = 3.0f;
+        [Tooltip("Berapa detik real-time untuk menyelesaikan 1 hari di dalam game pada kecepatan Normal (1x). Default: 1440 detik (24 menit) = 1 detik real = 1 menit game.")]
+        [SerializeField] private float secondsPerDay = 1440f;
+        public float SecondsPerDay => secondsPerDay;
 
         [Tooltip("Jumlah hari dalam satu bulan game.")]
         [SerializeField] private int daysPerMonth = 30;
@@ -41,7 +42,7 @@ namespace TanamSawit.Managers
 
         [Header("Tanggal Mulai")]
         [SerializeField] private int startDay = 1;
-        [SerializeField] private int startMonth = 1;
+        [SerializeField] private int startMonth = 9; // September 2024
         [SerializeField] private int startYear = 2024;
         #endregion
 

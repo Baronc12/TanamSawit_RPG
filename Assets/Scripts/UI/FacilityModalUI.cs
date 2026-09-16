@@ -244,6 +244,12 @@ namespace TanamSawit.UI
                         var btn = _buttonPool[i];
                         bool enabled = spec.isEnabled == null || spec.isEnabled();
                         btn.interactable = enabled;
+                        var img = _buttonGOs[i].GetComponent<Image>();
+                        if (img != null)
+                        {
+                            Color disabledColor = new Color(0.25f, 0.25f, 0.25f, 0.95f); // Greyed out
+                            img.color = enabled ? spec.buttonColor : disabledColor;
+                        }
                     }
                 }
             }
