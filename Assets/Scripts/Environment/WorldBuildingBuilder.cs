@@ -282,6 +282,12 @@ namespace TanamSawit.Environment
             // Gudang TBS
             BuildFacilityBuilding(parent, "📦 Gudang TBS", new Vector3(15f, -5f, 0f),
                 FacilityType.GudangTBS, "Kelola Stok TBS & Jual", new Color(0.5f, 0.35f, 0.15f), new Vector2(8f, 5f));
+
+            // Rumah kayu dari asset gambar agar terlihat langsung di peta Kebun.
+            CreateBuildingAsset(parent, "Rumah_Kebun_Sawit",
+                new Vector3(-10f, -8f, -0.2f),
+                "building/0421c6e8-130b-4892-9758-0e56c07307e5",
+                new Vector2(8f, 7f), 2);
         }
 
         // ─── Fasilitas Perumahan ──────────────────────────────────────────
@@ -578,6 +584,27 @@ namespace TanamSawit.Environment
 
             var sr = go.AddComponent<SpriteRenderer>();
             sr.sprite = Sprite.Create(tex, new Rect(0, 0, 1, 1), new Vector2(0.5f, 0.5f), 1f);
+            sr.sortingOrder = sortOrder;
+        }
+
+        private void CreateBuildingAsset(Transform parent, string name, Vector3 localPos,
+            string resourcePath, Vector2 displaySize, int sortOrder)
+        {
+            Sprite sprite = Resources.Load<Sprite>(resourcePath);
+            if (sprite == null)
+            {
+                Debug.LogWarning($"[WorldBuildingBuilder] Asset bangunan tidak ditemukan: Resources/{resourcePath}");
+                return;
+            }
+
+            var go = new GameObject(name);
+            go.transform.SetParent(parent);
+            go.transform.localPosition = localPos;
+
+            var sr = go.AddComponent<SpriteRenderer>();
+            sr.sprite = sprite;
+            sr.drawMode = SpriteDrawMode.Sliced;
+            sr.size = displaySize;
             sr.sortingOrder = sortOrder;
         }
 
